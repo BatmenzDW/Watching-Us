@@ -16,15 +16,14 @@ gradient = SubResource("Gradient_sfrck")
 [node name="ParanoiaBar" parent="." instance=ExtResource("1_0ba56")]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(319, 179.5)
-scale = Vector2(10.03125, 5.609375)
+position = Vector2(574, 323.50003)
+scale = Vector2(18, 10.109376)
 texture = SubResource("GradientTexture2D_0ba56")
 
 [node name="Player" parent="." instance=ExtResource("2_vsvp5")]
-position = Vector2(323, 209)
+position = Vector2(583, 344)
 scale = Vector2(0.25, 0.25)
 
 [node name="Interactable" parent="." instance=ExtResource("3_8rbpu")]
-position = Vector2(110, 207)
+position = Vector2(343, 256)
 hunger_value = -0.1
-paranoia_value = 0.5

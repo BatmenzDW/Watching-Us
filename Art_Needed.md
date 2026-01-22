@@ -14,3 +14,24 @@
 
 # Textures:
 	- Parent & Child
+
+# Locations:
+	- Pharmacy
+	- Park
+	- Ice Cream Truck
+	- Library
+	- Supermarket
+	- Zoo
+	- Children's Museum
+	- Theatre
+	- Toy Store
+	- Bakery
+	- Department Store
+	- Restaurant
+	- Bar
+
+# Transportation:
+	- Sidewalk
+	- Passing Police Station
+	- Passing Fire Station
+	- Crossing Busy Street

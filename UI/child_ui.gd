@@ -16,9 +16,9 @@ var _current_hunger = 1.0
 var _current_fun = 1.0
 var _current_happiness = 1.0
 
-var _target_hunger = 0.0
-var _target_fun = 0.0
-var _target_hapiness = 0.0
+var _target_hunger = 1.0
+var _target_fun = 1.0
+var _target_hapiness = 1.0
 
 func set_target_hunger(val: float) -> void:
 	_target_hunger = val
