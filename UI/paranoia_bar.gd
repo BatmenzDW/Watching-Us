@@ -18,17 +18,17 @@ func set_target_val(val: float):
 	target_val = val
 
 func _set_size(percent: float):
-	var val = 1 - percent
+	var val : float = 1 - percent
 	val *= max_size - min_size
 	val += min_size
-	margin.add_theme_constant_override("margin_left", val)
-	margin.add_theme_constant_override("margin_right", val)
+	margin.add_theme_constant_override("margin_left", val as int)
+	margin.add_theme_constant_override("margin_right", val as int)
 
 func _process(delta: float) -> void:
 	if abs(current_val - target_val) > target_delta:
 		_set_size(current_val)
 	
-	current_val += speed * delta * (current_val - target_val)
+		current_val += speed * delta * (current_val - target_val) / abs(current_val - target_val)
 
 func _on_apply_stats(_hunger: float, _fun: float, _happiness: float, _paranoia: float) -> void:
 	set_target_val(_paranoia)
