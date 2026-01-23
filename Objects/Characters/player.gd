@@ -1,3 +1,4 @@
+@icon("res://Assets/Icons/icon_character.png")
 extends CharacterBody2D
 
 class_name Player
@@ -10,15 +11,16 @@ var target : Vector2 = position
 
 var _delta_target = 10
 
+@export_category("Stats")
 @export var hunger = 1.0
 @export var fun = 1.0
 @export var happiness = 1.0
 @export var paranoia = 0.0
 
-@export var hunger_decay = 0.1
-@export var fun_decay = 0.1
-@export var happiness_decay = 0.1
-@export var paranoia_gain = 0.1
+@export_category("Stat Decay Rates")
+@export var decay : Stats
+
+@export var thresholds : Dictionary[Stats, Stats] = {}
 
 func _ready() -> void:
 	SignalBus.apply_stats.connect(_apply_stats)
@@ -43,17 +45,20 @@ func map_transition(to: bool) -> void:
 	child_ui.visible = !to
 
 func _decay_stats(delta: float) -> void:
-	hunger -= hunger_decay * delta
-	fun -= fun_decay * delta
+	hunger -= decay.hunger * delta
+	fun -= decay.fun * delta
 	var content = (1.0 - hunger) * (1.0 - fun)
-	happiness -= content * happiness_decay * delta
+	happiness -= content * decay.happiness * delta
 
 
-func _apply_stats(_hunger: float, _fun: float, _happiness: float, _paranoia: float) -> void:
+func _apply_stats(stats : Stats) -> void:
 	print("Apply Stats")
-	hunger += _hunger
-	fun += _fun
-	happiness += _happiness
-	# paranoia is handled in paranoia bar
+	hunger += stats.hunger
+	fun += stats.fun
+	happiness += stats.happiness
+	paranoia += stats.paranoia
 	
 	_update_stats()
+
+func _check_stats():
+	pass

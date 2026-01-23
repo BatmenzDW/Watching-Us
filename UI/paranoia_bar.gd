@@ -30,5 +30,5 @@ func _process(delta: float) -> void:
 	
 		current_val += speed * delta * (current_val - target_val) / abs(current_val - target_val)
 
-func _on_apply_stats(_hunger: float, _fun: float, _happiness: float, _paranoia: float) -> void:
-	set_target_val(_paranoia)
+func _on_apply_stats(stats: Stats) -> void:
+	set_target_val(target_val + stats.paranoia)
