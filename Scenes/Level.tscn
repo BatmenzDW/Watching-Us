@@ -26,7 +26,3 @@ scale = Vector2(0.25, 0.25)
 
 [node name="Interactable" parent="." instance=ExtResource("3_8rbpu")]
 position = Vector2(110, 207)
-hunger_value = -0.5
-fun_value = -0.3
-happiness_value = -0.7
-paranoia_value = 0.5
