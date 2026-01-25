@@ -1,18 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://w5wknmm2d2dw"]
+[gd_scene load_steps=3 format=3 uid="uid://w5wknmm2d2dw"]
 
 [ext_resource type="Script" uid="uid://b4j3em1jewc02" path="res://Objects/interactable.gd" id="1_3hkng"]
 [ext_resource type="Texture2D" uid="uid://i1axc4iwx5u1" path="res://Assets/Building_Placeholder.png" id="2_x5oli"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ywwp"]
-size = Vector2(64, 64)
-
 [node name="Interactable" type="Area2D"]
 script = ExtResource("1_3hkng")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_5ywwp")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_x5oli")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

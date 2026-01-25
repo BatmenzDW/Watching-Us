@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba77hdstaid3"]
+
+[ext_resource type="Texture2D" uid="uid://cijvu5nbgw7cx" path="res://Assets/Locations/IceCream_Truck.jpg" id="1_33imm"]
+[ext_resource type="PackedScene" uid="uid://w5wknmm2d2dw" path="res://Objects/Interactable.tscn" id="2_eyxth"]
+
+[node name="Location" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1030, 539)
+scale = Vector2(0.61, 0.61)
+texture = ExtResource("1_33imm")
+
+[node name="Interactable" parent="." instance=ExtResource("2_eyxth")]
+position = Vector2(684, 632)

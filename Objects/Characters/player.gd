@@ -60,5 +60,7 @@ func _apply_stats(stats : Stats) -> void:
 	
 	_update_stats()
 
-func _check_stats():
-	pass
+func _check_thresholds():
+	for thresh in thresholds:
+		if hunger <= thresh.hunger or fun <= thresh.fun or happiness <= thresh.happiness or paranoia >= thresh.paranoia:
+			_apply_stats(thresholds[thresh])
