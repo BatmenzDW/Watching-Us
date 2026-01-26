@@ -1,13 +1,28 @@
 [gd_scene load_steps=3 format=3 uid="uid://w5wknmm2d2dw"]
 
 [ext_resource type="Script" uid="uid://b4j3em1jewc02" path="res://Objects/interactable.gd" id="1_3hkng"]
-[ext_resource type="Texture2D" uid="uid://i1axc4iwx5u1" path="res://Assets/Building_Placeholder.png" id="2_x5oli"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hkng"]
+size = Vector2(40, 40)
 
 [node name="Interactable" type="Area2D"]
 script = ExtResource("1_3hkng")
+nonhighlight_color = Color(0.82082915, 0.44371325, 1, 0.28235295)
+highlight_color = Color(0.85204417, 0.41556004, 1, 0.6745098)
+metadata/_custom_type_script = "uid://b4j3em1jewc02"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("2_x5oli")
+[node name="Highlight" type="ColorRect" parent="."]
+z_index = 2
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0.96, 0, 0.94399977, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3hkng")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

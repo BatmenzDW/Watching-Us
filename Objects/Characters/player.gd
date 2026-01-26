@@ -58,6 +58,13 @@ func _apply_stats(stats : Stats) -> void:
 	happiness += stats.happiness
 	paranoia += stats.paranoia
 	
+	# put overfill reaction here
+	
+	hunger = clampf(hunger, 0.0, 1.0)
+	fun = clampf(fun, 0.0, 1.0)
+	happiness = clampf(happiness, 0.0, 1.0)
+	paranoia = clampf(paranoia, 0.0, 1.0)
+	
 	_update_stats()
 
 func _check_thresholds():

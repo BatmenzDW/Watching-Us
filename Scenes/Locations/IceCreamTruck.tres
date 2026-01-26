@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Interactable_Data" load_steps=6 format=3 uid="uid://djumdmp2hu7ae"]
+
+[ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_8wb5a"]
+[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Objects/Stats.gd" id="2_7k7w0"]
+[ext_resource type="Texture2D" uid="uid://cijvu5nbgw7cx" path="res://Assets/Locations/IceCream_Truck.jpg" id="2_t5mse"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
+size = Vector2(987, 582)
+
+[sub_resource type="Resource" id="Resource_nbfgi"]
+script = ExtResource("2_7k7w0")
+hunger = 1.0
+paranoia = 0.1
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[resource]
+script = ExtResource("1_8wb5a")
+is_background = true
+odds = 1.0
+shape = SubResource("RectangleShape2D_8wb5a")
+position = Vector2(579, 645)
+stats = SubResource("Resource_nbfgi")
+texture = ExtResource("2_t5mse")
+texture_position = Vector2(1030, 539)
+texture_scale = Vector2(0.61, 0.61)
+nonhighlight_color = Color(0, 0.7607843, 0.41960785, 0.28235295)
+highlight_color = Color(0, 0.76, 0.41800013, 0.7058824)
+metadata/_custom_type_script = "uid://cn81403dij3yf"

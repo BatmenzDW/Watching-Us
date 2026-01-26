@@ -1,0 +1,29 @@
+[gd_scene load_steps=8 format=3 uid="uid://ba77hdstaid3"]
+
+[ext_resource type="PackedScene" uid="uid://b73o7gyasv71e" path="res://UI/ParanoiaBar.tscn" id="1_cxnxa"]
+[ext_resource type="Script" uid="uid://cgt043qnx762a" path="res://Scenes/Locations/location.gd" id="1_ntbma"]
+[ext_resource type="PackedScene" uid="uid://v7eeb3wbfggi" path="res://Objects/Characters/Player.tscn" id="2_ntbma"]
+[ext_resource type="Texture2D" uid="uid://cijvu5nbgw7cx" path="res://Assets/Locations/IceCream_Truck.jpg" id="3_8rch5"]
+[ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="3_43jrr"]
+[ext_resource type="PackedScene" uid="uid://w5wknmm2d2dw" path="res://Objects/Interactable.tscn" id="4_43jrr"]
+[ext_resource type="Resource" uid="uid://djumdmp2hu7ae" path="res://Scenes/Locations/IceCreamTruck.tres" id="4_atdhf"]
+
+[node name="Location" type="Node2D"]
+script = ExtResource("1_ntbma")
+interactables = Array[ExtResource("3_43jrr")]([ExtResource("4_atdhf")])
+
+[node name="ParanoiaBar" parent="." instance=ExtResource("1_cxnxa")]
+
+[node name="Player" parent="." instance=ExtResource("2_ntbma")]
+position = Vector2(1390, 820)
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1030, 539)
+scale = Vector2(0.61, 0.61)
+texture = ExtResource("3_8rch5")
+
+[node name="Interactable" parent="." instance=ExtResource("4_43jrr")]
+visible = false
+position = Vector2(622, 625)
+nonhighlight_color = Color(0.8226249, 0.44218683, 1, 0.28235295)
+highlight_color = Color(0.8442533, 0.4229267, 1, 0.6745098)
