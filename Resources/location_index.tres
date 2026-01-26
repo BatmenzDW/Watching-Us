@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://co2njudqsbxqw" path="res://Resources/Location_Index.gd" id="1_fmtwi"]
 [ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="1_qqq2j"]
 [ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="2_40yeg"]
-[ext_resource type="PackedScene" uid="uid://ba77hdstaid3" path="res://Scenes/Locations/Location.tscn" id="3_cm1qr"]
+[ext_resource type="PackedScene" uid="uid://ba77hdstaid3" path="res://Scenes/Location.tscn" id="3_cm1qr"]
 
 [sub_resource type="Resource" id="Resource_6v6ut"]
 script = ExtResource("1_qqq2j")

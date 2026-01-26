@@ -15,7 +15,7 @@ func _ready() -> void:
 	SignalBus.apply_stats.connect(_on_apply_stats)
 
 func set_target_val(val: float):
-	target_val = val
+	target_val = clampf(val, 0, 1)
 
 func _set_size(percent: float):
 	var val : float = 1 - percent
@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 	if abs(current_val - target_val) > target_delta:
 		_set_size(current_val)
 	
-		current_val += speed * delta * (current_val - target_val) / abs(current_val - target_val)
+		current_val += speed * delta * (current_val - target_val)
 
 func _on_apply_stats(stats: Stats) -> void:
 	set_target_val(target_val + stats.paranoia)

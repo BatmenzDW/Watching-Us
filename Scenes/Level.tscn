@@ -29,7 +29,6 @@ scale = Vector2(0.25, 0.25)
 
 [node name="Interactable" parent="." instance=ExtResource("3_8rbpu")]
 position = Vector2(110, 207)
-from_background = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Interactable"]
 shape = SubResource("RectangleShape2D_8rbpu")

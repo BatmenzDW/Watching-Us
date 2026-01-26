@@ -13,6 +13,7 @@ radius = 44.0
 height = 176.0
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 2
 script = ExtResource("1_oo13o")
 metadata/_custom_type_script = "uid://b33acafdle66b"
 

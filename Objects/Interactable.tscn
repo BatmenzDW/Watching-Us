@@ -7,8 +7,6 @@ size = Vector2(40, 40)
 
 [node name="Interactable" type="Area2D"]
 script = ExtResource("1_3hkng")
-nonhighlight_color = Color(0.82082915, 0.44371325, 1, 0.28235295)
-highlight_color = Color(0.85204417, 0.41556004, 1, 0.6745098)
 metadata/_custom_type_script = "uid://b4j3em1jewc02"
 
 [node name="Highlight" type="ColorRect" parent="."]

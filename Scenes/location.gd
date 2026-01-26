@@ -10,15 +10,15 @@ func _ready() -> void:
 	for data in interactables:
 		load_data(data)
 
-func load_data(data : Interactable_Data):
+func load_data(data : Interactable_Data, is_child : bool = false):
 	var interactable : Interactable
 	var sprite : Sprite2D
 	
 	if not data.is_background and data.odds < 1.0:
-		if randf() > data.odds: # random chance to spawn
+		if randf() <= data.odds: # random chance to spawn
 			return
 	
-	if !background and data.is_background:
+	if !background and data.is_background and not is_child:
 		background = Sprite2D.new()
 		background.name = "Background"
 		add_child(background)
@@ -27,11 +27,22 @@ func load_data(data : Interactable_Data):
 	add_child(interactable)
 	interactable.set_collision_shape(data.shape)
 	interactable.position = data.position
-	interactable.stats = data.stats
 	
-	interactable.highlight_color = data.highlight_color
-	interactable.nonhighlight_color = data.nonhighlight_color
-	interactable.highlight.color = data.nonhighlight_color
+	interactable.success_chance = (data.difficulty as int) / 100.0
+	interactable.success_stats = data.success_stats
+	interactable.fail_stats = data.fail_stats
+	
+	interactable.hover_audio_key = data.hover_audio_key
+	interactable.success_audio_key = data.success_audio_key
+	interactable.fail_audio_key = data.fail_audio_key
+	
+	interactable.highlight.color = interactable.nonhighlight_color
+	
+	for child in data.children_interactables:
+		load_data(child, true)
+	
+	if is_child:
+		return
 	
 	if not data.is_background:
 		sprite = Sprite2D.new()
