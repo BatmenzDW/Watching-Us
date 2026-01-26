@@ -1,15 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://c64go4ir7wuwi"]
+[gd_scene load_steps=19 format=3 uid="uid://c64go4ir7wuwi"]
 
-[ext_resource type="Script" uid="uid://dp0b35sgoc8h6" path="res://Scripts/map/map_controller.gd" id="1_c117o"]
+[ext_resource type="Script" uid="uid://dp0b35sgoc8h6" path="res://Scripts/Map_Controller/map_controller.gd" id="1_c117o"]
 [ext_resource type="Texture2D" uid="uid://3ebedkx6mdrm" path="res://Assets/tileset/tileset_test.png" id="2_wmia7"]
-[ext_resource type="Script" uid="uid://cf3cx6tc8by4m" path="res://Scripts/map/travel_map.gd" id="3_0nlex"]
-[ext_resource type="Script" uid="uid://c77bp4otr1p5o" path="res://Scripts/map/gen_path.gd" id="4_kisi7"]
+[ext_resource type="Script" uid="uid://cf3cx6tc8by4m" path="res://Scripts/Map_Controller/travel_map.gd" id="3_0nlex"]
+[ext_resource type="Script" uid="uid://c77bp4otr1p5o" path="res://Scripts/Map_Controller/gen_path.gd" id="4_kisi7"]
 [ext_resource type="PackedScene" uid="uid://coqxrcn4ma8tb" path="res://Scenes/Map_Controller/pathLine.tscn" id="5_ux5v1"]
-[ext_resource type="Script" uid="uid://dpu4ptk3gqx5h" path="res://Scripts/map/gen_path_2.gd" id="6_kisi7"]
-[ext_resource type="Script" uid="uid://ckssbt6i17a5" path="res://Scripts/map/map_line_2d.gd" id="6_xq01p"]
-[ext_resource type="Script" uid="uid://c7fi7qqe237te" path="res://Scripts/map/gen_path_3.gd" id="7_ux5v1"]
-[ext_resource type="Script" uid="uid://djsgouwptgecw" path="res://Scripts/map/gen_path_1.gd" id="7_wmia7"]
-[ext_resource type="Script" uid="uid://demsaqnx2cue1" path="res://Scripts/map/gen_random.gd" id="10_17h85"]
+[ext_resource type="Script" uid="uid://dpu4ptk3gqx5h" path="res://Scripts/Map_Controller/gen_path_2.gd" id="6_kisi7"]
+[ext_resource type="Script" uid="uid://ckssbt6i17a5" path="res://Scripts/Map_Controller/map_line_2d.gd" id="6_xq01p"]
+[ext_resource type="Script" uid="uid://c7fi7qqe237te" path="res://Scripts/Map_Controller/gen_path_3.gd" id="7_ux5v1"]
+[ext_resource type="Script" uid="uid://djsgouwptgecw" path="res://Scripts/Map_Controller/gen_path_1.gd" id="7_wmia7"]
+[ext_resource type="Script" uid="uid://demsaqnx2cue1" path="res://Scripts/Map_Controller/gen_random.gd" id="10_17h85"]
+[ext_resource type="Texture2D" uid="uid://cywli8u34agwt" path="res://Assets/tileset/tileset_current_position.png" id="11_p3c3f"]
+[ext_resource type="Texture2D" uid="uid://c4515vx1pw8ba" path="res://Assets/tileset/tileset_cursor_map.png" id="11_ujbnq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e0an3"]
 texture = ExtResource("2_wmia7")
@@ -21,6 +23,24 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_e0an3")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2a6wi"]
+texture = ExtResource("11_ujbnq")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6j8ea"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_2a6wi")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4ac3"]
+texture = ExtResource("11_p3c3f")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2a6wi"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_b4ac3")
+
 [node name="MapController" type="Node2D"]
 script = ExtResource("1_c117o")
 
@@ -28,9 +48,6 @@ script = ExtResource("1_c117o")
 unique_name_in_owner = true
 tile_set = SubResource("TileSet_p5pve")
 script = ExtResource("3_0nlex")
-
-[node name="CursorMap" type="TileMapLayer" parent="TravelMap"]
-unique_name_in_owner = true
 
 [node name="genPath" type="Node2D" parent="TravelMap"]
 unique_name_in_owner = true
@@ -55,3 +72,11 @@ script = ExtResource("6_xq01p")
 [node name="GenRandom" type="Node2D" parent="TravelMap"]
 unique_name_in_owner = true
 script = ExtResource("10_17h85")
+
+[node name="CursorMap" type="TileMapLayer" parent="TravelMap"]
+unique_name_in_owner = true
+tile_set = SubResource("TileSet_6j8ea")
+
+[node name="CurrentPosition" type="TileMapLayer" parent="TravelMap"]
+unique_name_in_owner = true
+tile_set = SubResource("TileSet_2a6wi")

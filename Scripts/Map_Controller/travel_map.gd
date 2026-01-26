@@ -55,7 +55,6 @@ func _gen_new_map():
 	#%Camera.set_map_limits()
 
 
-
 	
 func _gen_cell_check_node(map_coords, random_node_array):
 	#checks if it is the start or end
@@ -110,9 +109,9 @@ func _gen_cell_check_node(map_coords, random_node_array):
 
 func _gen_cell_empty_node(map_coords):
 	#set_cell(map_coords, -1)
-	set_cell(map_coords, SOURCE_ID, MAP_TILE_EMPTY)
-	#var tile_info = "empty"
-	#dict_tile.addto_tile_dictionary(map_coords,tile_info)
+	#set_cell(map_coords, SOURCE_ID, MAP_TILE_EMPTY)
+	pass
+
 
 #generates a random node
 func _gen_cell_random_node(map_coords):

@@ -11,7 +11,7 @@ func gen_random_nodes():
 	
 	#go through a random number loop 5 times
 	for i in range(5):
-		print("Previous Number: ",previous_number)
+		#print("Previous Number: ",previous_number)
 		#if last number was 1, it can't be 1, pick 2 or 3 instead
 		if(previous_number == 1):
 			random_number = randi_range(2, 3)
@@ -52,7 +52,7 @@ func gen_random_nodes():
 		if(max_trigger == 0):
 			max_in_a_row = 0
 		previous_number = next_previous_number
-		print("Current_Number: ",return_array[i])
-		print("")
+		#print("Current_Number: ",return_array[i])
+		#print("")
 	print(return_array)
 	return return_array
