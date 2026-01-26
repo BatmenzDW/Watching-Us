@@ -1,5 +1,7 @@
 extends Node2D
 
+signal location_traversal
+
 #This script will act sort of like an API from the rest of the program as everything is self contained where it can pass the active state to the Map Controller.
 var map_controller_state: int = 1
 var hovered_cell = Vector2i(0,0)
@@ -18,14 +20,18 @@ func _map_controller_active_state_view():
 func _map_controller_active_state():
 	pass
 
-func _map_controller_end_active_state():
-	pass
+func _map_controller_end_active_state(selected_location):
+	location_traversal.emit(selected_location)
+
+func _node_traversal(current_cell,selected_location):
+	SingTravelMap.current_node_position = current_cell
+	_map_controller_end_active_state(selected_location)
 
 func _process(_delta):
 	#----------------
 	# Mouse Movement
 	#----------------
-	if(map_controller_state == 1):
+	if(map_controller_state == 1 or map_controller_state == 2):
 		var current_mouse_pos = get_global_mouse_position()
 		var current_cell = %CursorMap.local_to_map(current_mouse_pos)
 		#if the currently hovered over cell is not the current hovered cell or the selected cell
@@ -38,4 +44,21 @@ func _process(_delta):
 		if (dict_tile.check_bool_tile_dictionary(current_cell) == 1):
 			hovered_cell = current_cell
 			%CursorMap.set_cell(current_cell, 0, HOVERED_CELL_IMAGE)
-		
+
+func _input(event):
+	#----------------
+	# Mouse click
+	#----------------
+	if(map_controller_state == 1 and event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT):
+		#get mouse positon and change it to map coords
+		var current_mouse_pos = get_global_mouse_position()
+		var current_cell = %CursorMap.local_to_map(current_mouse_pos)
+		#check if the current node position is in the dictionary (it should be)
+		var path_dictionary_exists = dict_path.check_path_dictionary(SingTravelMap.current_node_position)
+		var selected_location = ""
+		#loop through the results and see if the current clicked cell matches any of the legal paths from the current node
+		if(path_dictionary_exists != null):
+			for path_location in path_dictionary_exists:
+				if(current_cell == path_location):
+					_node_traversal(current_cell,selected_location)
+			

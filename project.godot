@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 SignalBus="*res://SignalBus.gd"
 dict_tile="*res://Autoload/dict/dict_tile.gd"
 SingTravelMap="*res://Autoload/singleton/sing_travel_map.gd"
+dict_path="*res://Autoload/dict/dict_path.gd"
 
 [display]
 

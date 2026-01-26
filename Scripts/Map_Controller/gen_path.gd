@@ -38,6 +38,17 @@ func _gen_node_path(random_node_array):
 func _gen_path_line(start_local_pos,node_coords):
 	var end_local_pos = Vector2i(0,0)
 	var new_line: Line2D = line_scene.instantiate()
+	var path_dictionary_exists = dict_path.check_path_dictionary(node_coords)
+	if path_dictionary_exists != null:
+		var path_dict_insert_array: Array
+		for path_location in path_dictionary_exists:
+			path_dict_insert_array.append(path_location)
+		path_dict_insert_array.append(start_local_pos)
+		dict_path._addto_path_dictionary(node_coords,path_dict_insert_array)
+		print(path_dict_insert_array)
+	if path_dictionary_exists == null:
+		dict_path._addto_path_dictionary(node_coords,[start_local_pos])
+		#print("You've got mail")
 	start_local_pos.y = ((start_local_pos.y * TILE_SIZE) + TILE_SIZE)
 	start_local_pos.x = ((start_local_pos.x * TILE_SIZE) + 32)
 	new_line.add_point(start_local_pos)

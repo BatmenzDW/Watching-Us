@@ -52,8 +52,6 @@ func _gen_new_map():
 		countY += 1
 		countX = 0
 	%genPath._gen_node_path(random_node_array)
-	#%Control_Movement.initialize_grid()
-	#%Camera.set_map_limits()
 
 
 	
@@ -130,9 +128,6 @@ func _clear_old_map():
 	%CurrentPosition.set_cell(SingTravelMap.current_node_position,0,Vector2i(0,0))
 	#remove old pathLine nodes if there.
 	var items = get_tree().get_nodes_in_group("line2d")
-	
 	for item in items:
 		if is_instance_valid(item):
 			item.queue_free()
-	
-	
