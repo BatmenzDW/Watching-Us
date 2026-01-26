@@ -52,7 +52,6 @@ func _decay_stats(delta: float) -> void:
 
 
 func _apply_stats(stats : Stats) -> void:
-	print("Apply Stats")
 	hunger += stats.hunger
 	fun += stats.fun
 	happiness += stats.happiness

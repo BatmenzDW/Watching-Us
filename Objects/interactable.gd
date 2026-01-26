@@ -4,10 +4,20 @@ class_name Interactable
 
 @onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var highlight: ColorRect = $Highlight
-@export var stats : Stats
 
-@export var nonhighlight_color : Color
-@export var highlight_color : Color
+@onready var preview: Interactable_Preview = %Preview
+
+var stat_bundle : Array[Stats]
+var result_index : int = -1
+
+var hover_audio_key : String
+var success_audio_key : String
+var fail_audio_key : String
+
+const nonhighlight_color : Color = Color(0x26ff0019)
+const highlight_color : Color = Color(0x26ff0032)
+
+const SPENT_COLOR : Color = Color(0x00000019)
 
 var temp_shape : Shape2D
 
@@ -25,9 +35,16 @@ func _ready() -> void:
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event.is_action_pressed("left_click") and not _has_used:
 		_has_used = true
-		_apply_values()
+		highlight.color = SPENT_COLOR
+		
+		#print(success_chance)
+		#if randf() <= success_chance: # random chance of success/fail
+			#_apply_values(success_stats)
+			## TODO: Play audio
+		#else:
+			#_apply_values(fail_stats)
 
-func _apply_values() -> void:
+func _apply_values(stats: Stats) -> void:
 	SignalBus.apply_stats.emit(stats)
 
 func set_collision_shape(shape : Shape2D) -> void:
@@ -41,9 +58,14 @@ func set_collision_shape(shape : Shape2D) -> void:
 		temp_shape = shape
 
 func _on_mouse_entered() -> void:
-	highlight.color = highlight_color
-	print("enter")
+	preview.inside_count += 1
+	preview.current_inside = self
+	preview.check_setup(stat_bundle)
+	if not _has_used:
+		highlight.color = highlight_color
+		# TODO: Play hover audio
 
 func _on_mouse_exited() -> void:
-	highlight.color = nonhighlight_color
-	print("exit")
+	preview.inside_count -= 1
+	if not _has_used:
+		highlight.color = nonhighlight_color
