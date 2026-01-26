@@ -24,7 +24,10 @@ func _map_controller_end_active_state(selected_location):
 	location_traversal.emit(selected_location)
 
 func _node_traversal(current_cell,selected_location):
+	%CursorMap.clear()
+	%CurrentPosition.clear()
 	SingTravelMap.current_node_position = current_cell
+	%CurrentPosition.set_cell(SingTravelMap.current_node_position,0,Vector2i(0,0))
 	_map_controller_end_active_state(selected_location)
 
 func _process(_delta):
@@ -61,4 +64,3 @@ func _input(event):
 			for path_location in path_dictionary_exists:
 				if(current_cell == path_location):
 					_node_traversal(current_cell,selected_location)
-			

@@ -124,6 +124,7 @@ func _clear_old_map():
 	dict_tile._reset_tile_dictionary()
 	%TravelMap.clear()
 	%CursorMap.clear()
+	%CurrentPosition.clear()
 	SingTravelMap.current_node_position= Vector2i(2,12)
 	%CurrentPosition.set_cell(SingTravelMap.current_node_position,0,Vector2i(0,0))
 	#remove old pathLine nodes if there.

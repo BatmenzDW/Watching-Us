@@ -54,5 +54,5 @@ func gen_random_nodes():
 		previous_number = next_previous_number
 		#print("Current_Number: ",return_array[i])
 		#print("")
-	print(return_array)
+	#print(return_array)
 	return return_array
