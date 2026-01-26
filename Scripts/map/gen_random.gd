@@ -14,15 +14,9 @@ func gen_random_nodes():
 		print("Previous Number: ",previous_number)
 		#if last number was 1, it can't be 1, pick 2 or 3 instead
 		if(previous_number == 1):
-			print("Did I trigger?")
-			random_number = randi_range(1, 2)
-			if(random_number == 1):
-				return_array[i] = 2
-				next_previous_number = 2
-			if(random_number == 2):
-				return_array[i] = 3
-				next_previous_number = 3
-			print("Current_Number_1: ",return_array[i])
+			random_number = randi_range(2, 3)
+			return_array[i] = random_number
+			next_previous_number = random_number
 			max_in_a_row = 2
 			max_trigger = 0
 			
@@ -48,13 +42,11 @@ func gen_random_nodes():
 			#if previous number was 2, 3's in a row, generate a non 3 number
 			if(previous_number == 3):
 				random_number = randi_range(1, 2)
-				if(random_number == 1):
-					return_array[i] = 1
-					next_previous_number = 1
-				if(random_number == 2):
-					return_array[i] = 2
-					next_previous_number = 2
+				return_array[i] = random_number
+				next_previous_number = random_number
 			max_trigger = 0
+		if(i == 4 and return_array[i] == 1):
+			return_array[i] = randi_range(2, 3)
 		if(max_trigger == 1):
 			max_in_a_row = 1
 		if(max_trigger == 0):

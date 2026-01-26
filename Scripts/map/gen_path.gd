@@ -38,6 +38,8 @@ func _gen_node_path(random_node_array):
 func _gen_path_line(start_local_pos,node_coords):
 	var end_local_pos = Vector2i(0,0)
 	var new_line: Line2D = line_scene.instantiate()
+	start_local_pos.y = ((start_local_pos.y * TILE_SIZE) + TILE_SIZE)
+	start_local_pos.x = ((start_local_pos.x * TILE_SIZE) + 32)
 	new_line.add_point(start_local_pos)
 	end_local_pos.y = ((node_coords.y * TILE_SIZE))
 	end_local_pos.x = ((node_coords.x * TILE_SIZE) + HALF_TILE_SIZE)
