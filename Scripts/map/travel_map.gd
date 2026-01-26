@@ -25,7 +25,7 @@ func _gen_new_map():
 	var map_coords = Vector2i(0,0)
 	
 	#generates 5 random nodes, one for each tier of progression
-	var random_node_array = gen_random_nodes()
+	var random_node_array = %GenRandom.gen_random_nodes()
 	
 	#loops through the Y values in the grid
 	# at the end of each X row, it will reset X to 0 and increase Y by 1.
@@ -55,9 +55,7 @@ func _gen_new_map():
 	#%Camera.set_map_limits()
 
 
-func gen_random_nodes():
-	var return_array = [randi_range(1, 3),randi_range(1, 3),randi_range(1, 3),randi_range(1, 3),randi_range(1, 3)]
-	return return_array
+
 	
 func _gen_cell_check_node(map_coords, random_node_array):
 	#checks if it is the start or end

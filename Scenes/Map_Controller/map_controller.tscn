@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c64go4ir7wuwi"]
+[gd_scene load_steps=13 format=3 uid="uid://c64go4ir7wuwi"]
 
 [ext_resource type="Script" uid="uid://dp0b35sgoc8h6" path="res://Scripts/map/map_controller.gd" id="1_c117o"]
 [ext_resource type="Texture2D" uid="uid://3ebedkx6mdrm" path="res://Assets/tileset/tileset_test.png" id="2_wmia7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://ckssbt6i17a5" path="res://Scripts/map/map_line_2d.gd" id="6_xq01p"]
 [ext_resource type="Script" uid="uid://c7fi7qqe237te" path="res://Scripts/map/gen_path_3.gd" id="7_ux5v1"]
 [ext_resource type="Script" uid="uid://djsgouwptgecw" path="res://Scripts/map/gen_path_1.gd" id="7_wmia7"]
+[ext_resource type="Script" uid="uid://demsaqnx2cue1" path="res://Scripts/map/gen_random.gd" id="10_17h85"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e0an3"]
 texture = ExtResource("2_wmia7")
@@ -50,3 +51,7 @@ script = ExtResource("7_ux5v1")
 [node name="pathLine" parent="TravelMap/genPath" instance=ExtResource("5_ux5v1")]
 unique_name_in_owner = true
 script = ExtResource("6_xq01p")
+
+[node name="GenRandom" type="Node2D" parent="TravelMap"]
+unique_name_in_owner = true
+script = ExtResource("10_17h85")

@@ -105,4 +105,8 @@ func _gen_path_3_to(node_number,node_y_coord):
 			start_local_pos.y = ((from_node_coord_array[1].y * TILE_SIZE) + TILE_SIZE)
 			start_local_pos.x = ((from_node_coord_array[1].x * TILE_SIZE) + HALF_TILE_SIZE)
 			%genPath._gen_path_line(start_local_pos,to_node_coord_array[1])
-			
+		
+		con_middle = 0
+		middle_connection = 0
+		left_cross = 0
+		right_cross = 0
