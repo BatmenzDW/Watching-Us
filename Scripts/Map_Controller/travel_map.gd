@@ -10,6 +10,7 @@ func _ready():
 
 #generates the new map when called.
 func _gen_new_map():
+	_clear_old_map()
 	#adds the start and ending tile to the tile dictionary for later use
 	dict_tile.addto_tile_dictionary(Vector2i(2,0),[])
 	dict_tile.addto_tile_dictionary(Vector2i(2,12),[])
@@ -109,7 +110,7 @@ func _gen_cell_check_node(map_coords, random_node_array):
 
 func _gen_cell_empty_node(map_coords):
 	#set_cell(map_coords, -1)
-	#set_cell(map_coords, SOURCE_ID, MAP_TILE_EMPTY)
+	set_cell(map_coords, SOURCE_ID, MAP_TILE_EMPTY)
 	pass
 
 
@@ -119,3 +120,19 @@ func _gen_cell_random_node(map_coords):
 	set_cell(map_coords, SOURCE_ID, MAP_TILE_LOCATION)
 	var tile_info = []
 	dict_tile.addto_tile_dictionary(map_coords,tile_info)
+
+#clears the old map
+func _clear_old_map():
+	dict_tile._reset_tile_dictionary()
+	%TravelMap.clear()
+	%CursorMap.clear()
+	SingTravelMap.current_node_position= Vector2i(2,12)
+	%CurrentPosition.set_cell(SingTravelMap.current_node_position,0,Vector2i(0,0))
+	#remove old pathLine nodes if there.
+	var items = get_tree().get_nodes_in_group("line2d")
+	
+	for item in items:
+		if is_instance_valid(item):
+			item.queue_free()
+	
+	

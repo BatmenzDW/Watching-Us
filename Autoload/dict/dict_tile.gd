@@ -44,3 +44,6 @@ func check_ycoord_tile_dictionary(ycoord):
 #updates a key's input
 func updatevalue_tile_dictionary(key,value):
 	pass
+
+func _reset_tile_dictionary():
+	tile_dictionary.clear()
