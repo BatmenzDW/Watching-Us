@@ -11,6 +11,7 @@ z_index = 5
 custom_minimum_size = Vector2(200, 200)
 offset_right = 325.0
 offset_bottom = 276.0
+mouse_filter = 2
 script = ExtResource("1_vdvmp")
 metadata/_custom_type_script = "uid://bbnp0j76y4j3v"
 
@@ -18,17 +19,21 @@ metadata/_custom_type_script = "uid://bbnp0j76y4j3v"
 z_index = 2
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Common" type="HBoxContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(125, 25)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Common"]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -37,12 +42,14 @@ theme_override_constants/margin_bottom = 5
 [node name="Paranoia" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("2_7xiqh")
 expand_mode = 4
 stretch_mode = 5
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -51,12 +58,14 @@ theme_override_constants/margin_bottom = 5
 [node name="Hunger" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer2"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("3_stg3w")
 expand_mode = 4
 stretch_mode = 5
 
 [node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -65,12 +74,14 @@ theme_override_constants/margin_bottom = 5
 [node name="Fun" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer3"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("4_mp1ae")
 expand_mode = 4
 stretch_mode = 5
 
 [node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -79,12 +90,14 @@ theme_override_constants/margin_bottom = 5
 [node name="Happiness" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer4"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("5_il1x8")
 expand_mode = 4
 stretch_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Common"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_right = 5
 
 [node name="Label" type="Label" parent="VBoxContainer/Common/MarginContainer"]
@@ -95,6 +108,7 @@ horizontal_alignment = 2
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Uncommon" type="HBoxContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(125, 25)
@@ -114,6 +128,7 @@ theme_override_constants/margin_bottom = 5
 [node name="Paranoia" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("2_7xiqh")
 expand_mode = 4
 stretch_mode = 5
@@ -128,6 +143,7 @@ theme_override_constants/margin_bottom = 5
 [node name="Hunger" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer2"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("3_stg3w")
 expand_mode = 4
 stretch_mode = 5
@@ -142,6 +158,7 @@ theme_override_constants/margin_bottom = 5
 [node name="Fun" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer3"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("4_mp1ae")
 expand_mode = 4
 stretch_mode = 5
@@ -156,6 +173,7 @@ theme_override_constants/margin_bottom = 5
 [node name="Happiness" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer4"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("5_il1x8")
 expand_mode = 4
 stretch_mode = 5
@@ -172,6 +190,7 @@ horizontal_alignment = 2
 
 [node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Rare" type="HBoxContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(125, 25)
@@ -191,6 +210,7 @@ theme_override_constants/margin_bottom = 5
 [node name="Paranoia" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("2_7xiqh")
 expand_mode = 4
 stretch_mode = 5
@@ -205,6 +225,7 @@ theme_override_constants/margin_bottom = 5
 [node name="Hunger" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer2"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("3_stg3w")
 expand_mode = 4
 stretch_mode = 5
@@ -219,6 +240,7 @@ theme_override_constants/margin_bottom = 5
 [node name="Fun" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer3"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("4_mp1ae")
 expand_mode = 4
 stretch_mode = 5
@@ -233,6 +255,7 @@ theme_override_constants/margin_bottom = 5
 [node name="Happiness" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer4"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("5_il1x8")
 expand_mode = 4
 stretch_mode = 5
@@ -249,6 +272,7 @@ horizontal_alignment = 2
 
 [node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Epic" type="HBoxContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(125, 25)
@@ -268,6 +292,7 @@ theme_override_constants/margin_bottom = 5
 [node name="Paranoia" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("2_7xiqh")
 expand_mode = 4
 stretch_mode = 5
@@ -282,6 +307,7 @@ theme_override_constants/margin_bottom = 5
 [node name="Hunger" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer2"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("3_stg3w")
 expand_mode = 4
 stretch_mode = 5
@@ -296,6 +322,7 @@ theme_override_constants/margin_bottom = 5
 [node name="Fun" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer3"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("4_mp1ae")
 expand_mode = 4
 stretch_mode = 5
@@ -310,6 +337,7 @@ theme_override_constants/margin_bottom = 5
 [node name="Happiness" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer4"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("5_il1x8")
 expand_mode = 4
 stretch_mode = 5
@@ -328,4 +356,5 @@ horizontal_alignment = 2
 z_index = 1
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+mouse_filter = 2
 color = Color(0.31431624, 0.3143161, 0.31431603, 1)

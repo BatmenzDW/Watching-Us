@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://ba77hdstaid3"]
+[gd_scene load_steps=10 format=3 uid="uid://ba77hdstaid3"]
 
 [ext_resource type="Script" uid="uid://cgt043qnx762a" path="res://Scenes/location.gd" id="1_tx5l4"]
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="2_643fp"]
-[ext_resource type="Resource" uid="uid://dq3j8leioaftf" path="res://Scenes/Locations/Park/Park.tres" id="3_tx5l4"]
 [ext_resource type="Resource" uid="uid://djumdmp2hu7ae" path="res://Scenes/Locations/IceCreamTruck.tres" id="4_643fp"]
 [ext_resource type="PackedScene" uid="uid://b73o7gyasv71e" path="res://UI/ParanoiaBar.tscn" id="4_a48fp"]
 [ext_resource type="PackedScene" uid="uid://v7eeb3wbfggi" path="res://Objects/Characters/Player.tscn" id="5_mbtcl"]
@@ -15,10 +14,11 @@ size = Vector2(1141.875, 515)
 
 [node name="Location" type="Node2D"]
 script = ExtResource("1_tx5l4")
-interactables = Array[ExtResource("2_643fp")]([ExtResource("3_tx5l4"), ExtResource("4_643fp")])
+interactables = Array[ExtResource("2_643fp")]([ExtResource("4_643fp")])
 
 [node name="Preview" parent="." instance=ExtResource("8_cv846")]
 unique_name_in_owner = true
+visible = false
 
 [node name="ParanoiaBar" parent="." instance=ExtResource("4_a48fp")]
 
@@ -30,9 +30,10 @@ position = Vector2(1030, 539)
 scale = Vector2(0.61, 0.61)
 texture = ExtResource("6_tx5l4")
 
-[node name="Interactable" parent="." instance=ExtResource("7_kusw6")]
+[node name="Interactable" parent="." node_paths=PackedStringArray("preview") instance=ExtResource("7_kusw6")]
 visible = false
 position = Vector2(622, 625)
+preview = NodePath("../Preview")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Interactable"]
 position = Vector2(264, 6)

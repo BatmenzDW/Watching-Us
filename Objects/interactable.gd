@@ -5,7 +5,7 @@ class_name Interactable
 @onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var highlight: ColorRect = $Highlight
 
-@onready var preview: Interactable_Preview = %Preview
+@export var preview: Interactable_Preview
 
 var stat_bundle : Array[Stats]
 var result_index : int = -1
@@ -32,17 +32,26 @@ func _ready() -> void:
 	
 	highlight.color = nonhighlight_color
 
+enum Rarity
+{
+	COMMON = 90,
+	UNCOMMON = 30,
+	RARE = 15,
+	EPIC = 05
+}
+
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event.is_action_pressed("left_click") and not _has_used:
 		_has_used = true
 		highlight.color = SPENT_COLOR
-		
-		#print(success_chance)
-		#if randf() <= success_chance: # random chance of success/fail
-			#_apply_values(success_stats)
-			## TODO: Play audio
-		#else:
-			#_apply_values(fail_stats)
+		var rarities = Rarity.values()
+		for i in range(4):
+			var rare : int = rarities[i]
+			if randi_range(0, 100) <= rare:
+				_apply_values(stat_bundle[i])
+				return
+		# fallback value
+		_apply_values(stat_bundle[0])
 
 func _apply_values(stats: Stats) -> void:
 	SignalBus.apply_stats.emit(stats)
@@ -67,5 +76,6 @@ func _on_mouse_entered() -> void:
 
 func _on_mouse_exited() -> void:
 	preview.inside_count -= 1
+	preview.check_setup()
 	if not _has_used:
 		highlight.color = nonhighlight_color

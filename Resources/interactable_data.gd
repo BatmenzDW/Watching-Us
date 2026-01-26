@@ -10,8 +10,7 @@ const INTERACTABLE = preload("uid://w5wknmm2d2dw")
 @export var odds : float = 0.0
 @export var shape : RectangleShape2D
 @export var position : Vector2
-@export var success_stats : Stats
-@export var fail_stats : Stats
+@export var stat_bundle : Array[Stats]
 
 @export var texture : CompressedTexture2D
 @export var texture_position : Vector2
@@ -20,13 +19,3 @@ const INTERACTABLE = preload("uid://w5wknmm2d2dw")
 @export var hover_audio_key : String
 @export var success_audio_key : String
 @export var fail_audio_key : String
-
-@export var difficulty : Difficulty = Difficulty.EASY
-
-enum Difficulty
-{
-	EASY = 90,
-	MEDIUM = 55,
-	HARD = 35,
-	EXTREME = 10
-}

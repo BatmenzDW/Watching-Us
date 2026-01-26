@@ -31,6 +31,12 @@ const UNCOMMON_COLOR : Color = Color(0x0be600ff)
 const RARE_COLOR : Color = Color(0x00b4e0ff)
 const EPIC_COLOR : Color = Color(0xbb00e0ff)
 
+const POS_COLOR : Color = Color.CHARTREUSE
+const NEUT_COLOR : Color = Color.DARK_GRAY
+const WEAK_NEG_COLOR : Color = Color.YELLOW
+const MID_NEG_COLOR : Color = Color.ORANGE
+const STRONG_NEG_COLOR : Color = Color.RED
+
 enum Rarity
 {
 	COMMON = 90,
@@ -42,24 +48,43 @@ enum Rarity
 var inside_count : int = 0
 var current_inside : Interactable
 
-var stats_1 : Stats
-var stats_2 : Stats
-var stats_3 : Stats
-var stats_4 : Stats
-
 func _process(_delta: float) -> void:
 	if visible:
-		position = get_local_mouse_position()
+		global_position = get_global_mouse_position()
 
-func check_setup(stat_bundle: Array[Stats]) -> void:
+func check_setup(stat_bundle: Array[Stats] = []) -> void:
 	if inside_count <= 0:
 		visible = false
 		return
 	visible = true
 	_setup(stat_bundle)
 
+func _get_color(val:float, inv:bool=false) -> Color:
+	if inv:
+		val = -val
+	
+	if val > 0:
+		return POS_COLOR
+	
+	if val == 0:
+		return NEUT_COLOR
+	
+	if val >= -0.1:
+		return WEAK_NEG_COLOR
+	
+	if val >= -0.2:
+		return MID_NEG_COLOR
+	
+	return STRONG_NEG_COLOR
+
 func _setup(stat_bundle: Array[Stats]) -> void:
-	pass
+	var stats_1 : Stats = stat_bundle[0]
+	paranoia_1.modulate = _get_color(stats_1.paranoia, true)
+	hunger_1.modulate = _get_color(stats_1.hunger)
+	fun_1.modulate = _get_color(stats_1.fun)
+	happiness_1.modulate = _get_color(stats_1.happiness)
+	
+	
 
 func _ready() -> void:
 	_init_setup()

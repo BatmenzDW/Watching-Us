@@ -5,6 +5,7 @@ class_name Location
 @export var interactables : Array[Interactable_Data]
 
 @onready var background: Sprite2D = $Background
+@onready var preview: Interactable_Preview = %Preview
 
 func _ready() -> void:
 	for data in interactables:
@@ -28,13 +29,13 @@ func load_data(data : Interactable_Data, is_child : bool = false):
 	interactable.set_collision_shape(data.shape)
 	interactable.position = data.position
 	
-	interactable.success_chance = (data.difficulty as int) / 100.0
-	interactable.success_stats = data.success_stats
-	interactable.fail_stats = data.fail_stats
+	interactable.stat_bundle = data.stat_bundle
 	
 	interactable.hover_audio_key = data.hover_audio_key
 	interactable.success_audio_key = data.success_audio_key
 	interactable.fail_audio_key = data.fail_audio_key
+	
+	interactable.preview = preview
 	
 	interactable.highlight.color = interactable.nonhighlight_color
 	

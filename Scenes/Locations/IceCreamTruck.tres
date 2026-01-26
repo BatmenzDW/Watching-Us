@@ -1,26 +1,28 @@
-[gd_resource type="Resource" script_class="Interactable_Data" load_steps=7 format=3 uid="uid://djumdmp2hu7ae"]
+[gd_resource type="Resource" script_class="Interactable_Data" load_steps=9 format=3 uid="uid://djumdmp2hu7ae"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_8wb5a"]
 [ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Objects/Stats.gd" id="2_7k7w0"]
 [ext_resource type="Texture2D" uid="uid://cijvu5nbgw7cx" path="res://Assets/Locations/IceCream_Truck.jpg" id="2_t5mse"]
 
-[sub_resource type="Resource" id="Resource_t5mse"]
-script = ExtResource("2_7k7w0")
-hunger = 1.0
-fun = -0.1
-happiness = -0.3
-paranoia = 0.3
-metadata/_custom_type_script = "uid://cbpqxd0g56685"
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
 size = Vector2(987, 582)
 
-[sub_resource type="Resource" id="Resource_7k7w0"]
+[sub_resource type="Resource" id="Resource_t5mse"]
 script = ExtResource("2_7k7w0")
 hunger = 1.0
-fun = 0.1
-happiness = 0.1
-paranoia = 0.1
+paranoia = 0.2
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_7k7w0"]
+script = ExtResource("2_7k7w0")
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_nbfgi"]
+script = ExtResource("2_7k7w0")
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_5odjp"]
+script = ExtResource("2_7k7w0")
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [resource]
@@ -29,8 +31,7 @@ is_background = true
 odds = 1.0
 shape = SubResource("RectangleShape2D_8wb5a")
 position = Vector2(579, 645)
-success_stats = SubResource("Resource_7k7w0")
-fail_stats = SubResource("Resource_t5mse")
+stat_bundle = Array[ExtResource("2_7k7w0")]([SubResource("Resource_t5mse"), SubResource("Resource_7k7w0"), SubResource("Resource_nbfgi"), SubResource("Resource_5odjp")])
 texture = ExtResource("2_t5mse")
 texture_position = Vector2(1030, 539)
 texture_scale = Vector2(0.61, 0.61)
