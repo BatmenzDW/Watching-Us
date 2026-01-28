@@ -5,9 +5,13 @@ class_name NextButton
 signal go_next
 
 const ICON_HAPPINESS = preload("uid://dy3humxav1cu0")
+const COLOR_HAPPINESS = Color.YELLOW
 const ICON_HUNGER = preload("uid://bc5ejm3n8hd17")
+const COLOR_HUNGER = Color.SADDLE_BROWN
 const ICON_FUN = preload("uid://5c386rwed2jm")
+const COLOR_FUN = Color.CHARTREUSE
 const ICON_PARANOIA = preload("uid://buqm8llj1pqrm")
+const COLOR_PARANOIA = Color.RED
 
 @onready var next_button: TextureButton = $TextureButton
 @onready var progress_label: Label = $TextureButton/Label
@@ -23,12 +27,16 @@ func setup(mult_val : float, type : Stats.Stat) -> void:
 	match type:
 		Stats.Stat.HAPPINESS:
 			mult_icon.texture = ICON_HAPPINESS
+			mult_icon.modulate = COLOR_HAPPINESS
 		Stats.Stat.HUNGER:
 			mult_icon.texture = ICON_HUNGER
+			mult_icon.modulate = COLOR_HUNGER
 		Stats.Stat.FUN:
 			mult_icon.texture = ICON_FUN
+			mult_icon.modulate = COLOR_FUN
 		Stats.Stat.PARANOIA:
 			mult_icon.texture = ICON_PARANOIA
+			mult_icon.modulate = COLOR_PARANOIA
 	_type = type
 	
 	reset()
@@ -39,6 +47,7 @@ func reset() -> void:
 	mult_label.text = "1.0x - "
 
 func on_interactable_interact(new_count : int) -> void:
+	#print(new_count)
 	var times : float = mult * new_count
 	mult_label.text = "%.1fx - " % times
 	

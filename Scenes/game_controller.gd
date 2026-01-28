@@ -33,6 +33,7 @@ func _on_map_controller_location_traversal(selected_location: String) -> void:
 
 func _on_interact() -> void:
 	interacts_count += 1
+	#print(interacts_count)
 	next_button.on_interactable_interact(interacts_count + 1)
 
 func _leave_location() -> void:

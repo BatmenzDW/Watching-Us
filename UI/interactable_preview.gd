@@ -32,7 +32,7 @@ const RARE_COLOR : Color = Color(0x00b4e0ff)
 const EPIC_COLOR : Color = Color(0xbb00e0ff)
 
 const POS_COLOR : Color = Color.CHARTREUSE
-const NEUT_COLOR : Color = Color.BLACK
+const NEUT_COLOR : Color = Color.DARK_GRAY
 const WEAK_NEG_COLOR : Color = Color.YELLOW
 const MID_NEG_COLOR : Color = Color.ORANGE
 const STRONG_NEG_COLOR : Color = Color.RED
@@ -79,11 +79,29 @@ func _get_color(val:float, inv:bool=false) -> Color:
 	return STRONG_NEG_COLOR
 
 func _setup(stat_bundle: Array[Stats]) -> void:
-	var stats_1 : Stats = stat_bundle[0]
-	paranoia_1.modulate = _get_color(stats_1.paranoia, true)
-	hunger_1.modulate = _get_color(stats_1.hunger)
-	fun_1.modulate = _get_color(stats_1.fun)
-	happiness_1.modulate = _get_color(stats_1.happiness)
+	var stats : Stats = stat_bundle[0]
+	paranoia_1.modulate = _get_color(stats.paranoia, true)
+	hunger_1.modulate = _get_color(stats.hunger)
+	fun_1.modulate = _get_color(stats.fun)
+	happiness_1.modulate = _get_color(stats.happiness)
+	
+	stats = stat_bundle[1]
+	paranoia_2.modulate = _get_color(stats.paranoia, true)
+	hunger_2.modulate = _get_color(stats.hunger)
+	fun_2.modulate = _get_color(stats.fun)
+	happiness_2.modulate = _get_color(stats.happiness)
+	
+	stats = stat_bundle[2]
+	paranoia_3.modulate = _get_color(stats.paranoia, true)
+	hunger_3.modulate = _get_color(stats.hunger)
+	fun_3.modulate = _get_color(stats.fun)
+	happiness_3.modulate = _get_color(stats.happiness)
+	
+	stats = stat_bundle[3]
+	paranoia_4.modulate = _get_color(stats.paranoia, true)
+	hunger_4.modulate = _get_color(stats.hunger)
+	fun_4.modulate = _get_color(stats.fun)
+	happiness_4.modulate = _get_color(stats.happiness)
 
 func _ready() -> void:
 	_init_setup()

@@ -1,31 +1,14 @@
-[gd_resource type="Resource" script_class="Interactable_Data" load_steps=6 format=3 uid="uid://brrh2edscax8k"]
+[gd_resource type="Resource" script_class="Interactable_Data" load_steps=4 format=3 uid="uid://brrh2edscax8k"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_aojcv"]
 [ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_66tvg"]
 
-[sub_resource type="Resource" id="Resource_t5mse"]
-script = ExtResource("2_66tvg")
-fun = -0.3
-happiness = -0.3
-paranoia = 0.3
-metadata/_custom_type_script = "uid://cbpqxd0g56685"
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
 size = Vector2(237.75, 161.5)
-
-[sub_resource type="Resource" id="Resource_7k7w0"]
-script = ExtResource("2_66tvg")
-fun = 0.3
-happiness = 0.4
-paranoia = -0.1
-metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [resource]
 script = ExtResource("1_aojcv")
 odds = 0.5
 shape = SubResource("RectangleShape2D_8wb5a")
 position = Vector2(1793.125, 695.75)
-success_stats = SubResource("Resource_7k7w0")
-fail_stats = SubResource("Resource_t5mse")
-difficulty = 55
 metadata/_custom_type_script = "uid://cn81403dij3yf"

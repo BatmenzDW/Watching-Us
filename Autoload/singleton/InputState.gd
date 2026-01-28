@@ -1,7 +1,5 @@
 extends Node
 
-class_name InputState
-
 enum State
 {
 	MAP,
@@ -9,14 +7,14 @@ enum State
 	WAIT
 }
 
-static var Instance : InputState
+static var Instance
 
 static var current_state : State = State.MAP
 
-static func allow_input(state : State) -> bool:
+func allow_input(state : State) -> bool:
 	return state == current_state
 
-static func set_state(state: State, delay : float = 0.5) -> void:
+func set_state(state: State, delay : float = 0.5) -> void:
 	current_state = State.WAIT
 	if Instance:
 		await Instance.get_tree().create_timer(delay).timeout

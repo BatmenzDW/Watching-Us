@@ -1,38 +1,14 @@
-[gd_resource type="Resource" script_class="Interactable_Data" load_steps=8 format=3 uid="uid://dq3j8leioaftf"]
+[gd_resource type="Resource" script_class="Location_Data" load_steps=5 format=3 uid="uid://cl5cgq82fowkk"]
 
-[ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_rn273"]
-[ext_resource type="Resource" uid="uid://brrh2edscax8k" path="res://Scenes/Locations/Park/Dog.tres" id="2_64npw"]
-[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="3_5sco3"]
-[ext_resource type="Texture2D" uid="uid://bydldpex1kv72" path="res://Assets/Locations/Park.jpg" id="4_wewbv"]
-
-[sub_resource type="Resource" id="Resource_t5mse"]
-script = ExtResource("3_5sco3")
-hunger = -0.3
-happiness = -0.2
-paranoia = 0.2
-metadata/_custom_type_script = "uid://cbpqxd0g56685"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
-size = Vector2(773.5, 443)
-
-[sub_resource type="Resource" id="Resource_7k7w0"]
-script = ExtResource("3_5sco3")
-hunger = -0.3
-fun = 0.3
-happiness = 0.2
-paranoia = -0.1
-metadata/_custom_type_script = "uid://cbpqxd0g56685"
+[ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="1_prbmp"]
+[ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="2_fn02t"]
+[ext_resource type="Resource" uid="uid://dq3j8leioaftf" path="res://Scenes/Locations/Park/Playground.tres" id="3_rn273"]
+[ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="4_88o1j"]
 
 [resource]
-script = ExtResource("1_rn273")
-is_background = true
-children_interactables = Array[ExtResource("1_rn273")]([ExtResource("2_64npw")])
-odds = 1.0
-shape = SubResource("RectangleShape2D_8wb5a")
-position = Vector2(464.25, 510.5)
-success_stats = SubResource("Resource_7k7w0")
-fail_stats = SubResource("Resource_t5mse")
-texture = ExtResource("4_wewbv")
-texture_position = Vector2(1030, 539)
-texture_scale = Vector2(0.63, 0.63)
-metadata/_custom_type_script = "uid://cn81403dij3yf"
+script = ExtResource("4_88o1j")
+interactables = Array[ExtResource("2_fn02t")]([ExtResource("3_rn273")])
+icons = Array[CompressedTexture2D]([ExtResource("1_prbmp")])
+mult_factor = 0.25
+mult_type = 2
+metadata/_custom_type_script = "uid://cw4x4txcmedtn"

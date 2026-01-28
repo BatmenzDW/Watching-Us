@@ -1,14 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ba77hdstaid3"]
+[gd_scene load_steps=6 format=3 uid="uid://ba77hdstaid3"]
 
 [ext_resource type="Script" uid="uid://cgt043qnx762a" path="res://Scenes/location.gd" id="1_tx5l4"]
 [ext_resource type="PackedScene" uid="uid://b73o7gyasv71e" path="res://UI/ParanoiaBar.tscn" id="4_a48fp"]
 [ext_resource type="PackedScene" uid="uid://v7eeb3wbfggi" path="res://Objects/Characters/Player.tscn" id="5_mbtcl"]
 [ext_resource type="Texture2D" uid="uid://cjoi58qlx7bqb" path="res://Assets/Locations/Pharmacy.jpg" id="6_tx5l4"]
-[ext_resource type="PackedScene" uid="uid://w5wknmm2d2dw" path="res://Objects/Interactable.tscn" id="7_kusw6"]
 [ext_resource type="PackedScene" uid="uid://bpi2lamadyggp" path="res://UI/InteractablePreview.tscn" id="8_cv846"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_atdhf"]
-size = Vector2(1141.875, 515)
 
 [node name="Location" type="Node2D"]
 script = ExtResource("1_tx5l4")
@@ -26,12 +22,3 @@ position = Vector2(1276, 814)
 position = Vector2(1030, 539)
 scale = Vector2(0.61, 0.61)
 texture = ExtResource("6_tx5l4")
-
-[node name="Interactable" parent="." node_paths=PackedStringArray("preview") instance=ExtResource("7_kusw6")]
-visible = false
-position = Vector2(622, 625)
-preview = NodePath("../Preview")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Interactable"]
-position = Vector2(264, 6)
-shape = SubResource("RectangleShape2D_atdhf")

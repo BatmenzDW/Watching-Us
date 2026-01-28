@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Location_Data" load_steps=5 format=3 uid="uid://dko0shsbmtmc0"]
+
+[ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="1_8jb1o"]
+[ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="2_v74hk"]
+[ext_resource type="Resource" uid="uid://dq3j8leioaftf" path="res://Scenes/Locations/Park/Playground.tres" id="3_csf83"]
+[ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="4_b8i71"]
+
+[resource]
+script = ExtResource("4_b8i71")
+interactables = Array[ExtResource("2_v74hk")]([ExtResource("3_csf83")])
+icons = Array[CompressedTexture2D]([ExtResource("1_8jb1o")])
+mult_factor = 0.25
+mult_type = 2
+metadata/_custom_type_script = "uid://cw4x4txcmedtn"
