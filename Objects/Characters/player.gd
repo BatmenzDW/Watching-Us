@@ -51,7 +51,7 @@ func _decay_stats(delta: float) -> void:
 	happiness -= content * decay.happiness * delta
 
 
-func _apply_stats(stats : Stats) -> void:
+func _apply_stats(stats : Stats, _is_mult : bool = false) -> void:
 	hunger += stats.hunger
 	fun += stats.fun
 	happiness += stats.happiness

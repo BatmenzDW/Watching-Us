@@ -2,14 +2,8 @@ extends Node2D
 
 class_name Location
 
-@export var interactables : Array[Interactable_Data]
-
 @onready var background: Sprite2D = $Background
 @onready var preview: Interactable_Preview = %Preview
-
-func _ready() -> void:
-	for data in interactables:
-		load_data(data)
 
 func load_data(data : Interactable_Data, is_child : bool = false):
 	var interactable : Interactable
@@ -57,3 +51,9 @@ func load_data(data : Interactable_Data, is_child : bool = false):
 		sprite.texture = data.texture
 		sprite.position = data.texture_position
 		sprite.scale = data.texture_scale
+
+func unload() -> void:
+	var nodes_to_remove = get_tree().get_nodes_in_group("location_elements")
+	
+	for node in nodes_to_remove:
+		node.queue_free()

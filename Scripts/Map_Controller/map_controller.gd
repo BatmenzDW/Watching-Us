@@ -1,6 +1,8 @@
 extends Node2D
 
-signal location_traversal
+class_name MapController
+
+signal location_traversal(selected_location: String)
 
 #This script will act sort of like an API from the rest of the program as everything is self contained where it can pass the active state to the Map Controller.
 var map_controller_state: int = 1
@@ -13,21 +15,21 @@ func _map_controller_gen_new_map():
 	%TravelMap._gen_new_map()
 
 #This will be in case we want the user to be able to view the upcoming map but not traverse it, if they are at a location
-func _map_controller_active_state_view():
+func map_controller_active_state_view():
 	map_controller_state = 2
 	self.visible = true
 
 #This will be to traverse the map to a new location.
-func _map_controller_active_state():
+func map_controller_active_state():
 	map_controller_state = 1
 	self.visible = true
 
-func _map_controller_end_active_state(selected_location):
+func _map_controller_end_active_state(selected_location : String):
 	location_traversal.emit(selected_location)
 	map_controller_state = 0
 	self.visible = false
 
-func _node_traversal(current_cell,selected_location):
+func _node_traversal(current_cell, selected_location : String):
 	%CursorMap.clear()
 	%CurrentPosition.clear()
 	SingTravelMap.current_node_position = current_cell
@@ -58,7 +60,7 @@ func _input(event):
 	#----------------
 	# Mouse click
 	#----------------
-	if(map_controller_state == 1 and event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT):
+	if(map_controller_state == 1 and event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT and InputState.allow_input(InputState.State.MAP)):
 		#get mouse positon and change it to map coords
 		var current_mouse_pos = get_global_mouse_position()
 		var current_cell = %CursorMap.local_to_map(current_mouse_pos)

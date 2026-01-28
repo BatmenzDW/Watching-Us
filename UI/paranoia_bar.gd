@@ -30,5 +30,5 @@ func _process(delta: float) -> void:
 	
 		current_val += speed * delta * (current_val - target_val)
 
-func _on_apply_stats(stats: Stats) -> void:
+func _on_apply_stats(stats: Stats, _is_mult : bool = false) -> void:
 	set_target_val(target_val + stats.paranoia)

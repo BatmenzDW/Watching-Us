@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Interactable_Data" load_steps=7 format=3 uid="uid://yoru3agxq403"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_ljdyh"]
-[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Objects/Stats.gd" id="2_xvmgv"]
+[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_xvmgv"]
 [ext_resource type="Texture2D" uid="uid://cjoi58qlx7bqb" path="res://Assets/Locations/Pharmacy.jpg" id="3_ljdyh"]
 
 [sub_resource type="Resource" id="Resource_t5mse"]

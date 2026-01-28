@@ -41,7 +41,7 @@ enum Rarity
 }
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if event.is_action_pressed("left_click") and not _has_used:
+	if event.is_action_pressed("left_click") and not _has_used and InputState.allow_input(InputState.State.LEVEL):
 		_has_used = true
 		highlight.color = SPENT_COLOR
 		var rarities = Rarity.values()
@@ -54,7 +54,8 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 		_apply_values(stat_bundle[0])
 
 func _apply_values(stats: Stats) -> void:
-	SignalBus.apply_stats.emit(stats)
+	SignalBus.interact.emit()
+	SignalBus.apply_stats.emit(stats, false)
 
 func set_collision_shape(shape : Shape2D) -> void:
 	if collision:

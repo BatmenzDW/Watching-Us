@@ -1,4 +1,6 @@
 extends Node
 
-@warning_ignore("unused_signal")
-signal apply_stats(hunger: float, fun: float, happiness: float, paranoia: float)
+@warning_ignore_start("unused_signal")
+signal apply_stats(stats : Stats, is_mult : bool)
+
+signal interact
