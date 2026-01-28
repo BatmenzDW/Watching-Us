@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hkng"]
 size = Vector2(40, 40)
 
-[node name="Interactable" type="Area2D"]
+[node name="Interactable" type="Area2D" groups=["location_elements"]]
 script = ExtResource("1_3hkng")
 metadata/_custom_type_script = "uid://b4j3em1jewc02"
 

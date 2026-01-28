@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dy3humxav1cu0" path="res://Assets/Icons/icon_face.png" id="5_il1x8"]
 
 [node name="Control" type="MarginContainer"]
-z_index = 5
+z_index = 11
 custom_minimum_size = Vector2(200, 200)
 offset_right = 325.0
 offset_bottom = 276.0
