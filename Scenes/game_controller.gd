@@ -17,6 +17,7 @@ func _ready() -> void:
 # move to new location
 func _on_map_controller_location_traversal(selected_location: String) -> void:
 	if not location_index.contains(selected_location):
+		print("Could not find location: ", selected_location)
 		selected_location = location_index.keys()[0]
 	
 	var data : Location_Data = location_index.get_(selected_location)
@@ -34,7 +35,7 @@ func _on_map_controller_location_traversal(selected_location: String) -> void:
 func _on_interact() -> void:
 	interacts_count += 1
 	#print(interacts_count)
-	next_button.on_interactable_interact(interacts_count + 1)
+	next_button.on_interactable_interact(interacts_count)
 
 func _leave_location() -> void:
 	if interacts_count < 1: 

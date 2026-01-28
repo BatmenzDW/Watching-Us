@@ -11,13 +11,9 @@ func check_tile_dictionary(searchterm):
 		return null
 
 #check for key
-func check_bool_tile_dictionary(searchterm):
-	if tile_dictionary.has(searchterm):
-		#print(tile_dictionary[searchterm])
-		return 1
-	else:
-		return 0
-	
+func check_bool_tile_dictionary(searchterm) -> bool:
+	return tile_dictionary.has(searchterm)
+
 #add key
 func addto_tile_dictionary(key,value):
 	if key != null && value != null && check_tile_dictionary(key) == null:

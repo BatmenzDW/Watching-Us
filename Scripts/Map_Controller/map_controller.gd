@@ -71,5 +71,6 @@ func _input(event):
 		if(path_dictionary_exists != null):
 			for path_location in path_dictionary_exists:
 				if(current_cell == path_location):
+					selected_location = dict_tile.check_tile_dictionary(path_location)
 					_node_traversal(current_cell, selected_location)
 					#_map_controller_end_active_state(selected_location)

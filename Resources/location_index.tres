@@ -1,12 +1,18 @@
-[gd_resource type="Resource" script_class="Location_Index" load_steps=4 format=3 uid="uid://btpkadm7mskr"]
+[gd_resource type="Resource" script_class="Location_Index" load_steps=7 format=3 uid="uid://btpkadm7mskr"]
 
 [ext_resource type="Script" uid="uid://co2njudqsbxqw" path="res://Resources/Location_Index.gd" id="1_fmtwi"]
 [ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="1_qqq2j"]
-[ext_resource type="Resource" uid="uid://c20sbhtift7r" path="res://Scenes/Locations/IceCreamTruck/IceCreamTruck.tres" id="4_6v6ut"]
+[ext_resource type="Resource" uid="uid://c20sbhtift7r" path="res://Scenes/Locations/IceCreamTruck/IceCreamTruck.tres" id="2_40yeg"]
+[ext_resource type="Resource" uid="uid://dko0shsbmtmc0" path="res://Scenes/Locations/Library/Library.tres" id="3_cm1qr"]
+[ext_resource type="Resource" uid="uid://cl5cgq82fowkk" path="res://Scenes/Locations/Park/Park.tres" id="4_cm1qr"]
+[ext_resource type="Resource" uid="uid://b6sw05kraqovb" path="res://Scenes/Locations/Pharmacy/Pharmacy.tres" id="5_6v6ut"]
 
 [resource]
 script = ExtResource("1_fmtwi")
 location_lookup = Dictionary[String, ExtResource("1_qqq2j")]({
-"Ice Cream Truck": ExtResource("4_6v6ut")
+"Ice Cream Truck": ExtResource("2_40yeg"),
+"Library": ExtResource("3_cm1qr"),
+"Park": ExtResource("4_cm1qr"),
+"Pharmacy": ExtResource("5_6v6ut")
 })
 metadata/_custom_type_script = "uid://co2njudqsbxqw"

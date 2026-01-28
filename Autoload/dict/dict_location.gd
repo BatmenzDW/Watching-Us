@@ -10,19 +10,7 @@ var location_main_dictionary = {
 									"Ice Cream Truck": 1,
 									"Library": 2,
 									"Park": 3,
-									"Phamacy": 4,
-								}
-var location_travel_random_key = {
-									1:"Sidewalk",
-									2:"Police Station",
-									3:"Fire Station",
-									4:"Crossing Busy Street"
-								}
-var location_main_random_key = {
-									1:"Ice Cream Truck",
-									2:"Library",
-									3:"Park",
-									4:"Phamacy",
+									"Pharmacy": 4,
 								}
 var location_start_end_dictionary = {
 									"start": 9,
@@ -45,14 +33,11 @@ func check_source_id(searchterm,current_cell):
 func gen_random_location(location_type):
 	var location_name: String
 	var location_source: int
-	var location_size: int
 	if(location_type == "main"):
-		location_size = location_main_random_key.size()
-		location_name = location_main_random_key[randi_range(1,location_size)]
+		location_name = location_main_dictionary.keys().pick_random()
 		location_source = location_main_dictionary[location_name]
 	if(location_type == "travel"):
-		location_size = location_travel_random_key.size()
-		location_name = location_travel_random_key[randi_range(1,location_size)]
+		location_name = location_travel_dictionary.keys().pick_random()
 		location_source = location_travel_dictionary[location_name]
 	print("Location Name: ", location_name)
 	print("Location source: ", location_source)

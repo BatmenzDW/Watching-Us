@@ -17,9 +17,9 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="NextButton" parent="." instance=ExtResource("5_b2bpf")]
-offset_left = 1637.0
+offset_left = 1601.0
 offset_top = 825.0
-offset_right = 1904.0
+offset_right = 1905.0
 offset_bottom = 1067.0
 
 [connection signal="location_traversal" from="MapController" to="." method="_on_map_controller_location_traversal"]

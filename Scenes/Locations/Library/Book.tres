@@ -1,35 +1,19 @@
-[gd_resource type="Resource" script_class="Interactable_Data" load_steps=7 format=3 uid="uid://dg67l7xi226ve"]
+[gd_resource type="Resource" script_class="Interactable_Data" load_steps=5 format=3 uid="uid://dg67l7xi226ve"]
 
-[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="1_0nkhi"]
-[ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="2_n37ur"]
-[ext_resource type="Texture2D" uid="uid://t1j2scvkd5cm" path="res://Assets/Locations/Library.jpg" id="3_0nkhi"]
-
-[sub_resource type="Resource" id="Resource_t5mse"]
-script = ExtResource("1_0nkhi")
-fun = -0.3
-happiness = -0.1
-paranoia = 0.1
-metadata/_custom_type_script = "uid://cbpqxd0g56685"
+[ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_x0tgx"]
+[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_4xl1v"]
+[ext_resource type="Texture2D" uid="uid://t1j2scvkd5cm" path="res://Assets/Locations/Library.jpg" id="3_mpv1k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
 size = Vector2(1771, 554)
 
-[sub_resource type="Resource" id="Resource_7k7w0"]
-script = ExtResource("1_0nkhi")
-fun = -0.1
-happiness = 0.3
-paranoia = -0.3
-metadata/_custom_type_script = "uid://cbpqxd0g56685"
-
 [resource]
-script = ExtResource("2_n37ur")
+script = ExtResource("1_x0tgx")
 is_background = true
 odds = 1.0
 shape = SubResource("RectangleShape2D_8wb5a")
 position = Vector2(1118.5, 580)
-success_stats = SubResource("Resource_7k7w0")
-fail_stats = SubResource("Resource_t5mse")
-texture = ExtResource("3_0nkhi")
+texture = ExtResource("3_mpv1k")
 texture_position = Vector2(1030, 539)
 texture_scale = Vector2(0.63, 0.63)
 metadata/_custom_type_script = "uid://cn81403dij3yf"

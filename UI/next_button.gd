@@ -44,12 +44,12 @@ func setup(mult_val : float, type : Stats.Stat) -> void:
 func reset() -> void:
 	next_button.disabled = true
 	progress_label.visible = true
-	mult_label.text = "1.0x - "
+	mult_label.text = "%.2fx - " % 1.0
 
 func on_interactable_interact(new_count : int) -> void:
 	#print(new_count)
-	var times : float = mult * new_count
-	mult_label.text = "%.1fx - " % times
+	var times : float = mult * new_count + 1.0
+	mult_label.text = "%.2fx - " % times
 	
 	if new_count >= 1:
 		next_button.disabled = false
@@ -67,16 +67,15 @@ func _on_apply_stats(stats: Stats, is_mult : bool = false) -> void:
 	if is_mult:
 		return
 	
-	var times = mult - 1.0
 	var new_stats : Stats = Stats.new()
 	match _type:
 		Stats.Stat.HAPPINESS:
-			new_stats.happiness = stats.happiness * times
+			new_stats.happiness = stats.happiness * mult
 		Stats.Stat.HUNGER:
-			new_stats.hunger = stats.hunger * times
+			new_stats.hunger = stats.hunger * mult
 		Stats.Stat.FUN:
-			new_stats.fun = stats.fun * times
+			new_stats.fun = stats.fun * mult
 		Stats.Stat.PARANOIA:
-			new_stats.paranoia = stats.paranoia * times
+			new_stats.paranoia = stats.paranoia * mult
 
 	SignalBus.apply_stats.emit(new_stats, true)

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Location_Data" load_steps=5 format=3 uid="uid://b6sw05kraqovb"]
+
+[ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="1_u84ln"]
+[ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="2_syc7d"]
+[ext_resource type="Resource" uid="uid://yoru3agxq403" path="res://Scenes/Locations/Pharmacy/Drugs.tres" id="3_o6mbh"]
+[ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="4_rncff"]
+
+[resource]
+script = ExtResource("4_rncff")
+interactables = Array[ExtResource("2_syc7d")]([ExtResource("3_o6mbh")])
+icons = Array[CompressedTexture2D]([ExtResource("1_u84ln")])
+mult_factor = 0.25
+metadata/_custom_type_script = "uid://cw4x4txcmedtn"

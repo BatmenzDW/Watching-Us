@@ -2,13 +2,10 @@ extends Node2D
 
 #generates random locations
 func gen_location(map_coords):
-	match map_coords.y:
-		2, 6, 10:
-			#print("main location: ", map_coords.y)
-			return gen_location_type(map_coords,"main")
-		4, 8:
-			#print("travel location: ", map_coords.y)
-			return gen_location_type(map_coords, "travel")
+	if map_coords.y % 4 == 0:
+		return gen_location_type(map_coords, "travel")
+	else:
+		return gen_location_type(map_coords,"main")	
 
 func gen_location_type(map_coords,location_category):
 	#removes any tile if present
