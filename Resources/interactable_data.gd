@@ -10,7 +10,7 @@ const INTERACTABLE = preload("uid://w5wknmm2d2dw")
 @export var odds : float = 0.0
 @export var shape : RectangleShape2D
 @export var position : Vector2
-@export var stat_bundle : Array[Stats]
+@export var stat_bundle : Array[Stats] = [Stats.new(), Stats.new(), Stats.new(), Stats.new()]
 
 @export var texture : CompressedTexture2D
 @export var texture_position : Vector2

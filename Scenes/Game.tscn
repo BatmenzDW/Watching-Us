@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdisbxckds82v"]
+[gd_scene load_steps=8 format=3 uid="uid://cdisbxckds82v"]
 
 [ext_resource type="Script" uid="uid://clrkrk0wkn2xh" path="res://Scenes/game_controller.gd" id="1_gl6un"]
 [ext_resource type="PackedScene" uid="uid://c64go4ir7wuwi" path="res://Scenes/Map_Controller/map_controller.tscn" id="2_j5yw3"]
 [ext_resource type="Resource" uid="uid://btpkadm7mskr" path="res://Resources/location_index.tres" id="2_kldst"]
 [ext_resource type="PackedScene" uid="uid://ba77hdstaid3" path="res://Scenes/Location.tscn" id="4_kldst"]
 [ext_resource type="PackedScene" uid="uid://b7eqbp3blodqq" path="res://UI/next_button.tscn" id="5_b2bpf"]
+[ext_resource type="Script" uid="uid://4nqd7saq0eqv" path="res://Scripts/Audio_Controller/audio_controller.gd" id="6_7lihs"]
+[ext_resource type="AudioStream" uid="uid://cjhu8ci5fbsrl" path="res://Assets/music/Parent Game Song#1.mp3" id="7_fgofq"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_gl6un")
@@ -21,6 +23,15 @@ offset_left = 1601.0
 offset_top = 825.0
 offset_right = 1905.0
 offset_bottom = 1067.0
+
+[node name="SFXPlayer" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+script = ExtResource("6_7lihs")
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_fgofq")
+autoplay = true
+bus = &"Music"
 
 [connection signal="location_traversal" from="MapController" to="." method="_on_map_controller_location_traversal"]
 [connection signal="go_next" from="NextButton" to="." method="_leave_location"]

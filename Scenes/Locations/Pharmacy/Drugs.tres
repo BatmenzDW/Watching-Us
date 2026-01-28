@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Interactable_Data" load_steps=5 format=3 uid="uid://yoru3agxq403"]
+[gd_resource type="Resource" script_class="Interactable_Data" load_steps=9 format=3 uid="uid://yoru3agxq403"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_ljdyh"]
 [ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_xvmgv"]
@@ -7,12 +7,29 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
 size = Vector2(1141.875, 515)
 
+[sub_resource type="Resource" id="Resource_dwne8"]
+script = ExtResource("2_xvmgv")
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_u60a2"]
+script = ExtResource("2_xvmgv")
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_7hrpr"]
+script = ExtResource("2_xvmgv")
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_8r3fy"]
+script = ExtResource("2_xvmgv")
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
 [resource]
 script = ExtResource("1_ljdyh")
 is_background = true
 odds = 1.0
 shape = SubResource("RectangleShape2D_8wb5a")
 position = Vector2(888.063, 633.5)
+stat_bundle = Array[ExtResource("2_xvmgv")]([SubResource("Resource_dwne8"), SubResource("Resource_u60a2"), SubResource("Resource_7hrpr"), SubResource("Resource_8r3fy")])
 texture = ExtResource("3_ljdyh")
 texture_position = Vector2(1030, 539)
 texture_scale = Vector2(0.61, 0.61)
