@@ -1,6 +1,6 @@
 extends Node2D
 
-class_name MapController
+#class_name MapController
 
 signal location_traversal(selected_location: String)
 
@@ -8,7 +8,6 @@ signal location_traversal(selected_location: String)
 var map_controller_state: int = 1
 var hovered_cell = Vector2i(0,0)
 var hovered_initial = Vector2i(0,0)
-#var HOVERED_CELL_IMAGE = SingTravelMap.HOVERED_CELL_IMAGE
 
 #this will 
 func _map_controller_gen_new_map():
@@ -29,7 +28,7 @@ func _map_controller_end_active_state(selected_location : String):
 	map_controller_state = 0
 	self.visible = false
 
-func _node_traversal(current_cell, selected_location : String):
+func _node_traversal(current_cell: Vector2i, selected_location : String):
 	%CursorMap.clear()
 	%CurrentPosition.clear()
 	SingTravelMap.current_node_position = current_cell

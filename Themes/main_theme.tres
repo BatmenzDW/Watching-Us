@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b0ljbivp3477y"]
+
+[ext_resource type="FontFile" uid="uid://c3tic58u1wh8g" path="res://Themes/Font/Eater/Eater-Regular.ttf" id="1_8cjo3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ybks7"]
+bg_color = Color(0.46666667, 0.46666667, 0.46666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2ta1"]
+bg_color = Color(0.46666667, 0.46666667, 0.46666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg5j1"]
+bg_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2f3ak"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_8cjo3")
+Button/styles/focus = SubResource("StyleBoxFlat_ybks7")
+Button/styles/hover = SubResource("StyleBoxFlat_o2ta1")
+Button/styles/normal = SubResource("StyleBoxFlat_jg5j1")
+Button/styles/pressed = SubResource("StyleBoxFlat_2f3ak")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/fonts/bold_font = ExtResource("1_8cjo3")
+RichTextLabel/fonts/bold_italics_font = ExtResource("1_8cjo3")
+RichTextLabel/fonts/italics_font = ExtResource("1_8cjo3")
+RichTextLabel/fonts/mono_font = ExtResource("1_8cjo3")
+RichTextLabel/fonts/normal_font = ExtResource("1_8cjo3")
