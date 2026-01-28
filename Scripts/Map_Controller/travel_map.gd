@@ -12,9 +12,10 @@ func _ready():
 func _gen_new_map():
 	_clear_old_map()
 	#adds the start and ending tile to the tile dictionary for later use
-	dict_tile.addto_tile_dictionary(Vector2i(2,0),[])
-	dict_tile.addto_tile_dictionary(Vector2i(2,12),[])
-	
+	dict_tile.addto_tile_dictionary(Vector2i(2,0),"end")
+	dict_tile.addto_tile_dictionary(Vector2i(2,12),"start")
+	set_cell(Vector2i(2,0),10,Vector2i(0,0))
+	set_cell(Vector2i(2,12),9,Vector2i(0,0))
 	#number of squares on the map
 	var map_sizeX = 5
 	var map_sizeY = 13
@@ -40,9 +41,7 @@ func _gen_new_map():
 			map_coords.x = countX
 			
 			match countY:
-				1, 3, 5, 7, 9, 11:
-					_gen_cell_empty_node(map_coords)
-				0, 2, 4, 6, 8, 10, 12:
+				2, 4, 6, 8, 10:
 					_gen_cell_check_node(map_coords,random_node_array)
 			
 			#end of the iteration of inner while loop, increase CountX by 1
@@ -61,13 +60,11 @@ func _gen_cell_check_node(map_coords, random_node_array):
 		if(map_coords.x == 2):
 			#print("start/end triggered")
 			_gen_cell_random_node(map_coords)
-		if(map_coords.x != 2):
-			_gen_cell_empty_node(map_coords)
 	
 	#checks the middle valid location values
 	var array_tier_locations = [2, 4, 6, 8, 10]
 	if(array_tier_locations.has(map_coords.y)):
-		var node_array_index: int = 200
+		var node_array_index: int
 		match map_coords.y:
 			2:
 				node_array_index = 0
@@ -85,38 +82,27 @@ func _gen_cell_check_node(map_coords, random_node_array):
 				#if the value is 3, it means this should be a random node.
 				if(random_node_array[node_array_index] == 3):
 					_gen_cell_random_node(map_coords)
-				if(!(random_node_array[node_array_index] == 3)):
-					_gen_cell_empty_node(map_coords)
 			1,3:
 				#if the value is 2, it means this should be a random node.
 				if(random_node_array[node_array_index] == 2):
 					_gen_cell_random_node(map_coords)
-				if(!(random_node_array[node_array_index] == 2)):
-					_gen_cell_empty_node(map_coords)
 			2:
 				#if the value is 1 or 3, it means this should be a random node.
 				if(random_node_array[node_array_index] == 3 or random_node_array[node_array_index] == 1):
 					_gen_cell_random_node(map_coords)
-				if(!(random_node_array[node_array_index] == 3 or random_node_array[node_array_index] == 1)):
-					_gen_cell_empty_node(map_coords)
 	
 	#if it isn't valid start, end, or middle where the locations could be, then generate and empty.
 	#this shouldn't be used but is here as a catch all.
 	if(!(array_tier_locations.has(map_coords.y) or map_coords.y == 0 or map_coords.y == 12 )):
 		print("BUG ALERT: This shouldn't be used: map_coords= ", map_coords, " source_id= ")
-		_gen_cell_empty_node(map_coords)
-
-func _gen_cell_empty_node(map_coords):
-	#set_cell(map_coords, -1)
-	set_cell(map_coords, SOURCE_ID, MAP_TILE_EMPTY)
-	pass
 
 
 #generates a random node
 func _gen_cell_random_node(map_coords):
 	#set_cell(map_coords, -1)
 	set_cell(map_coords, SOURCE_ID, MAP_TILE_LOCATION)
-	var tile_info = []
+	var tile_info = %GenLocation.gen_location(map_coords)
+	#print(tile_info)
 	dict_tile.addto_tile_dictionary(map_coords,tile_info)
 
 #clears the old map

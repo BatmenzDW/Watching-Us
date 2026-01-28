@@ -4,6 +4,7 @@ const TILE_SIZE = SingTravelMap.TILE_SIZE
 const HALF_TILE_SIZE = SingTravelMap.HALF_TILE_SIZE
 
 var line_scene: PackedScene = preload("res://Scenes/Map_Controller/pathLine.tscn")
+var line_texture: Texture2D = load("res://Assets/tileset/path.png")
 
 #generates the node pathing between nodes
 func _gen_node_path(random_node_array):
@@ -45,7 +46,7 @@ func _gen_path_line(start_local_pos,node_coords):
 			path_dict_insert_array.append(path_location)
 		path_dict_insert_array.append(start_local_pos)
 		dict_path._addto_path_dictionary(node_coords,path_dict_insert_array)
-		print(path_dict_insert_array)
+		#print(path_dict_insert_array)
 	if path_dictionary_exists == null:
 		dict_path._addto_path_dictionary(node_coords,[start_local_pos])
 		#print("You've got mail")
@@ -61,5 +62,9 @@ func _gen_path_line(start_local_pos,node_coords):
 	#print("end_local_pos: ", end_local_pos)
 	#print("------")
 	new_line.add_point(end_local_pos)
-	new_line.default_color = Color(1, 0, 0, 1)
+	#new_line.default_color = Color(1, 0, 0, 1)
+	new_line.texture = line_texture
+	new_line.texture_mode = Line2D.LINE_TEXTURE_TILE
+	new_line.begin_cap_mode = Line2D.LINE_CAP_ROUND
+	new_line.end_cap_mode = Line2D.LINE_CAP_ROUND
 	add_child(new_line)
