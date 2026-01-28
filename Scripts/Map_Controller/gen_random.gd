@@ -8,6 +8,7 @@ func gen_random_nodes():
 	var random_number: int
 	var max_trigger: int = 0
 	var next_previous_number = 0
+	var max1 = 0
 	
 	#go through a random number loop 5 times
 	for i in range(5):
@@ -32,25 +33,35 @@ func gen_random_nodes():
 		if(max_in_a_row == 1):
 			#if previous number was 2, 2's in a row, generate a non 2 number
 			if(previous_number == 2):
-				random_number = randi_range(1, 2)
-				if(random_number == 1):
-					return_array[i] = 1
-					next_previous_number = 1
-				if(random_number == 2):
+				if(max1 == 1):
 					return_array[i] = 3
 					next_previous_number = 3
+				if(max1 != 1):
+					random_number = randi_range(1, 2)
+					if(random_number == 1):
+						return_array[i] = 1
+						next_previous_number = 1
+					if(random_number == 2):
+						return_array[i] = 3
+						next_previous_number = 3
 			#if previous number was 2, 3's in a row, generate a non 3 number
 			if(previous_number == 3):
-				random_number = randi_range(1, 2)
-				return_array[i] = random_number
+				if(max1 == 1):
+					return_array[i] = 2
+					next_previous_number = 2
+				if(max1 != 1):
+					random_number = randi_range(1, 2)
+					return_array[i] = random_number
 				next_previous_number = random_number
 			max_trigger = 0
-		if(i == 4 and return_array[i] == 1):
+		if((i == 4) and return_array[i] == 1):
 			return_array[i] = randi_range(2, 3)
 		if(max_trigger == 1):
 			max_in_a_row = 1
 		if(max_trigger == 0):
 			max_in_a_row = 0
+		if(return_array[i] == 1):
+			max1 = 1
 		previous_number = next_previous_number
 		#print("Current_Number: ",return_array[i])
 		#print("")
