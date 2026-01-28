@@ -24,6 +24,7 @@ func _map_controller_active_state():
 
 func _map_controller_end_active_state(selected_location):
 	location_traversal.emit(selected_location)
+	map_controller_state = 0
 	self.visible = false
 
 func _node_traversal(current_cell,selected_location):
