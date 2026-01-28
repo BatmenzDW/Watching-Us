@@ -18,7 +18,7 @@ func check_bool_tile_dictionary(searchterm):
 		return 1
 	else:
 		return 0
-	
+
 #add key
 func _addto_path_dictionary(key,value):
 	if key != null and value != null:
