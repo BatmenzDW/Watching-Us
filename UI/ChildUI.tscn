@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://q06nf60uajs1"]
+[gd_scene load_steps=7 format=3 uid="uid://q06nf60uajs1"]
 
+[ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="1_2ybbf"]
 [ext_resource type="Script" uid="uid://d3rdd7ay10lld" path="res://UI/child_ui.gd" id="1_eyl31"]
 [ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="2_nltll"]
 [ext_resource type="Texture2D" uid="uid://5c386rwed2jm" path="res://Assets/Icons/icon_puzzle.png" id="3_2ybbf"]
@@ -13,6 +14,7 @@ z_index = 1
 custom_minimum_size = Vector2(100, 100)
 offset_right = 286.0
 offset_bottom = 197.0
+theme = ExtResource("1_2ybbf")
 theme_override_font_sizes/font_size = 48
 title = "Child Stats"
 title_position = 1

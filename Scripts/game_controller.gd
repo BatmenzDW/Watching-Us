@@ -27,6 +27,8 @@ func _on_map_controller_location_traversal(selected_location: String) -> void:
 	
 	next_button.setup(data.mult_factor, data.mult_type)
 	
+	SignalBus.set_music.emit(data.music_key)
+	
 	interacts_count = 0
 	location.visible = true
 	next_button.visible = true
@@ -34,7 +36,6 @@ func _on_map_controller_location_traversal(selected_location: String) -> void:
 
 func _on_interact() -> void:
 	interacts_count += 1
-	#print(interacts_count)
 	next_button.on_interactable_interact(interacts_count)
 
 func _leave_location() -> void:

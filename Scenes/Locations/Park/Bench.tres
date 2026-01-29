@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Interactable_Data" load_steps=2 format=3 uid="uid://bwa63gxfl221d"]
+
+[ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_kyv47"]
+
+[resource]
+script = ExtResource("1_kyv47")
+stat_bundle = Array[Object]([])
+metadata/_custom_type_script = "uid://cn81403dij3yf"

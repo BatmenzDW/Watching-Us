@@ -1,10 +1,9 @@
 # UI:
-	- Paranoi Icon (Eye)
 	- Hunger Icon
 	- Fun Icon
 	- Happiness Icon
 
-# Location Info:
+# Location Info (If time alllows):
 	- Medical Icon
 	- Foot Traffic Icons (Low/Med/High)
 	- Food Icon
@@ -12,14 +11,8 @@
 	- Play Space Icon
 	- Noisy Icon (Queit/Normal/Loud)
 
-# Textures:
-	- Parent & Child
 
 # Locations:
-	- Pharmacy
-	- Park
-	- Ice Cream Truck
-	- Library
 	- Supermarket
 	- Zoo
 	- Children's Museum
@@ -33,5 +26,4 @@
 # Transportation:
 	- Sidewalk
 	- Passing Police Station
-	- Passing Fire Station
 	- Crossing Busy Street

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_8wb5a"]
 [ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_7k7w0"]
-[ext_resource type="Texture2D" uid="uid://cijvu5nbgw7cx" path="res://Assets/Locations/IceCream_Truck.jpg" id="2_t5mse"]
+[ext_resource type="Texture2D" uid="uid://cijvu5nbgw7cx" path="res://Assets/art/Locations/IceCream_Truck.jpg" id="2_t5mse"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
 size = Vector2(987, 582)

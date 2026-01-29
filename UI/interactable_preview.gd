@@ -2,6 +2,12 @@ extends MarginContainer
 
 class_name Interactable_Preview
 
+@onready var rows : Array[HBoxContainer] = [$VBoxContainer/Common, $VBoxContainer/Uncommon, $VBoxContainer/Rare, $VBoxContainer/Epic]
+
+@onready var seps : Array[HSeparator] = [$VBoxContainer/HSeparator, $VBoxContainer/HSeparator2, $VBoxContainer/HSeparator3]
+
+@onready var label: Label = $VBoxContainer/Label
+
 @onready var paranoia_1: TextureRect = $VBoxContainer/Common/HBoxContainer/MarginContainer/Paranoia
 @onready var hunger_1: TextureRect = $VBoxContainer/Common/HBoxContainer/MarginContainer2/Hunger
 @onready var fun_1: TextureRect = $VBoxContainer/Common/HBoxContainer/MarginContainer3/Fun
@@ -50,15 +56,25 @@ var current_inside : Interactable
 
 func _process(_delta: float) -> void:
 	if visible:
-		global_position = get_global_mouse_position()
+		var screen_dim = Vector2(1920, 1080)
+		#global_position = get_global_mouse_position()
+		var target_pos = get_global_mouse_position()
+		
+		if target_pos.x + size.x >= screen_dim.x:
+			target_pos.x -= size.x
+		
+		if target_pos.y + size.y >= screen_dim.y:
+			target_pos.y -= size.y
+		
+		global_position = target_pos
 
-func check_setup(stat_bundle: Array[Stats] = []) -> void:
+func check_setup(stat_bundle: Array[Stats] = [], result_index : int = -1, used_string : String = "") -> void:
 	if inside_count <= 0:
 		visible = false
 		return
 	visible = true
 	if len(stat_bundle) == 4:
-		_setup(stat_bundle)
+		_setup(stat_bundle, result_index, used_string)
 
 func _get_color(val:float, inv:bool=false) -> Color:
 	if inv:
@@ -78,7 +94,7 @@ func _get_color(val:float, inv:bool=false) -> Color:
 	
 	return STRONG_NEG_COLOR
 
-func _setup(stat_bundle: Array[Stats]) -> void:
+func _setup(stat_bundle: Array[Stats], result_index : int = -1, used_string : String = "") -> void:
 	var stats : Stats = stat_bundle[0]
 	paranoia_1.modulate = _get_color(stats.paranoia, true)
 	hunger_1.modulate = _get_color(stats.hunger)
@@ -102,6 +118,23 @@ func _setup(stat_bundle: Array[Stats]) -> void:
 	hunger_4.modulate = _get_color(stats.hunger)
 	fun_4.modulate = _get_color(stats.fun)
 	happiness_4.modulate = _get_color(stats.happiness)
+	
+	if result_index != -1:
+		print(result_index)
+		for i in range(4):
+			if i == result_index:
+				continue
+			rows[i].visible = false
+		
+		for sep in seps:
+			sep.visible = false
+		if used_string != "":
+			label.text = used_string
+			label.visible = true
+	else:
+		for row in rows:
+			row.visible = true
+		label.visible = false
 
 func _ready() -> void:
 	_init_setup()

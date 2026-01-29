@@ -24,10 +24,10 @@ func load_data(data : Interactable_Data, is_child : bool = false):
 	interactable.position = data.position
 	
 	interactable.stat_bundle = data.stat_bundle
+	interactable.result_texts = data.result_texts
 	
 	interactable.hover_audio_key = data.hover_audio_key
-	interactable.success_audio_key = data.success_audio_key
-	interactable.fail_audio_key = data.fail_audio_key
+	interactable.use_audio_key = data.use_audio_key
 	
 	interactable.preview = preview
 	
