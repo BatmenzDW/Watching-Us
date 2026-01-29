@@ -54,12 +54,16 @@ func gen_random_nodes():
 					return_array[i] = random_number
 				next_previous_number = random_number
 			max_trigger = 0
-		if((i == 4) and return_array[i] == 1):
+		if((i == 5) and return_array[i] == 1):
 			return_array[i] = randi_range(2, 3)
 		if(max_trigger == 1):
 			max_in_a_row = 1
 		if(max_trigger == 0):
 			max_in_a_row = 0
+		if(return_array[i] == 1 and max1 == 1):
+			random_number = randi_range(2, 3)
+			return_array[i] = random_number
+			next_previous_number = random_number
 		if(return_array[i] == 1):
 			max1 = 1
 		previous_number = next_previous_number

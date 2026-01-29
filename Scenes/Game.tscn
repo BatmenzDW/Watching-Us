@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://cdisbxckds82v"]
 
-[ext_resource type="Script" path="res://Scripts/game_controller.gd" id="1_2irst"]
+[ext_resource type="Script" uid="uid://clrkrk0wkn2xh" path="res://Scripts/game_controller.gd" id="1_2irst"]
 [ext_resource type="PackedScene" uid="uid://c64go4ir7wuwi" path="res://Scenes/Map_Controller/map_controller.tscn" id="2_j5yw3"]
 [ext_resource type="Resource" uid="uid://btpkadm7mskr" path="res://Resources/location_index.tres" id="2_kldst"]
-[ext_resource type="PackedScene" uid="uid://ba77hdstaid3" path="res://Scenes/Location.tscn" id="4_kldst"]
-[ext_resource type="PackedScene" uid="uid://b7eqbp3blodqq" path="res://UI/next_button.tscn" id="5_b2bpf"]
+[ext_resource type="PackedScene" path="res://Scenes/Location.tscn" id="4_kldst"]
+[ext_resource type="PackedScene" path="res://UI/next_button.tscn" id="5_b2bpf"]
 [ext_resource type="Script" uid="uid://4nqd7saq0eqv" path="res://Scripts/Audio_Controller/audio_controller.gd" id="6_7lihs"]
 
 [node name="Game" type="Node2D"]
