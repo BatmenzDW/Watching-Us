@@ -2,6 +2,9 @@ extends MarginContainer
 
 class_name Interactable_Preview
 
+@onready var vbox: VBoxContainer = $VBoxContainer
+@onready var background: ColorRect = $ColorRect
+
 @onready var rows : Array[HBoxContainer] = [$VBoxContainer/Common, $VBoxContainer/Uncommon, $VBoxContainer/Rare, $VBoxContainer/Epic]
 
 @onready var seps : Array[HSeparator] = [$VBoxContainer/HSeparator, $VBoxContainer/HSeparator2, $VBoxContainer/HSeparator3]
@@ -120,21 +123,24 @@ func _setup(stat_bundle: Array[Stats], result_index : int = -1, used_string : St
 	happiness_4.modulate = _get_color(stats.happiness)
 	
 	if result_index != -1:
-		print(result_index)
+		#print(result_index)
 		for i in range(4):
 			if i == result_index:
 				continue
-			rows[i].visible = false
+			rows[i].hide()
 		
 		for sep in seps:
-			sep.visible = false
+			sep.hide()
 		if used_string != "":
 			label.text = used_string
-			label.visible = true
+			label.show()
 	else:
 		for row in rows:
-			row.visible = true
-		label.visible = false
+			row.show()
+		for sep in seps:
+			sep.show()
+		label.hide()
+	size = get_minimum_size()
 
 func _ready() -> void:
 	_init_setup()

@@ -9,16 +9,12 @@
 
 [node name="Control" type="MarginContainer"]
 z_index = 11
-custom_minimum_size = Vector2(200, 200)
-offset_right = 325.0
-offset_bottom = 276.0
 mouse_filter = 2
 script = ExtResource("1_vdvmp")
 metadata/_custom_type_script = "uid://bbnp0j76y4j3v"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 z_index = 2
-custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 mouse_filter = 2
 
@@ -31,12 +27,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Common" type="HBoxContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(125, 25)
+visible = false
+custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
 mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Common"]
-custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_filter = 2
 
@@ -117,15 +113,16 @@ text = "90%"
 horizontal_alignment = 2
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 mouse_filter = 2
 
 [node name="Uncommon" type="HBoxContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(125, 25)
+visible = false
+custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Uncommon"]
-custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Uncommon/HBoxContainer"]
@@ -200,15 +197,16 @@ text = "90%"
 horizontal_alignment = 2
 
 [node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 mouse_filter = 2
 
 [node name="Rare" type="HBoxContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(125, 25)
+visible = false
+custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Rare"]
-custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Rare/HBoxContainer"]
@@ -283,15 +281,16 @@ text = "90%"
 horizontal_alignment = 2
 
 [node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 mouse_filter = 2
 
 [node name="Epic" type="HBoxContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(125, 25)
+visible = false
+custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Epic"]
-custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Epic/HBoxContainer"]
@@ -367,7 +366,6 @@ horizontal_alignment = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 1
-custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 mouse_filter = 2
-color = Color(0.31431624, 0.3143161, 0.31431603, 1)
+color = Color(0.4289094, 0.2630768, 0.24499345, 1)

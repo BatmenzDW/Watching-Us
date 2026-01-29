@@ -13,7 +13,7 @@ config_version=5
 config/name="WatchingUs"
 run/main_scene="uid://y7pfhrqq2jjk"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://br7g20lvrm4ph"
 
 [autoload]
 
