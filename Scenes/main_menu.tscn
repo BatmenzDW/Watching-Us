@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5b38i4ynten8"]
+[gd_scene load_steps=5 format=3 uid="uid://b5b38i4ynten8"]
 
 [ext_resource type="Texture2D" uid="uid://c7rp8yn7ec6yl" path="res://Assets/art/player_child.png" id="1_28flt"]
+[ext_resource type="Script" uid="uid://bjl4lepc7oa2q" path="res://Scripts/main_menu.gd" id="1_ce3w2"]
 [ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="2_48xlc"]
 [ext_resource type="AudioStream" uid="uid://cjhu8ci5fbsrl" path="res://Assets/music/Parent Game Song#1.mp3" id="3_1ehe0"]
 
 [node name="Main Menu" type="Node2D"]
+script = ExtResource("1_ce3w2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -127,3 +129,8 @@ size_flags_stretch_ratio = 5.0
 stream = ExtResource("3_1ehe0")
 volume_db = -15.0
 autoplay = true
+
+[connection signal="pressed" from="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Options Button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Credits Button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]

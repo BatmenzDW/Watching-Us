@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdisbxckds82v"]
+
+[ext_resource type="PackedScene" uid="uid://b73o7gyasv71e" path="res://UI/ParanoiaBar.tscn" id="1_0ba56"]
+[ext_resource type="PackedScene" uid="uid://v7eeb3wbfggi" path="res://Objects/Characters/Player.tscn" id="2_vsvp5"]
+[ext_resource type="PackedScene" uid="uid://w5wknmm2d2dw" path="res://Objects/Interactable.tscn" id="3_8rbpu"]
+
+[sub_resource type="Gradient" id="Gradient_sfrck"]
+offsets = PackedFloat32Array(0.42, 1)
+colors = PackedColorArray(0.49803922, 0.63529414, 0.50980395, 1, 0.21960784, 1, 0.4862745, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0ba56"]
+gradient = SubResource("Gradient_sfrck")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8rbpu"]
+size = Vector2(50, 50)
+
+[node name="Level" type="Node2D"]
+
+[node name="ParanoiaBar" parent="." instance=ExtResource("1_0ba56")]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(319, 179.5)
+scale = Vector2(10.03125, 5.609375)
+texture = SubResource("GradientTexture2D_0ba56")
+
+[node name="Player" parent="." instance=ExtResource("2_vsvp5")]
+position = Vector2(323, 209)
+scale = Vector2(0.25, 0.25)
+
+[node name="Interactable" parent="." instance=ExtResource("3_8rbpu")]
+position = Vector2(110, 207)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("RectangleShape2D_8rbpu")
