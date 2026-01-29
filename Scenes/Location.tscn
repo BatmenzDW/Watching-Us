@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://ba77hdstaid3"]
+[gd_scene load_steps=9 format=3 uid="uid://ba77hdstaid3"]
 
-[ext_resource type="Script" uid="uid://cgt043qnx762a" path="res://Scenes/location.gd" id="1_tx5l4"]
+[ext_resource type="Script" path="res://Scripts/location.gd" id="1_tx5l4"]
 [ext_resource type="PackedScene" uid="uid://b73o7gyasv71e" path="res://UI/ParanoiaBar.tscn" id="4_a48fp"]
+[ext_resource type="Texture2D" uid="uid://bydldpex1kv72" path="res://Assets/art/Locations/Park.jpg" id="5_1cqvq"]
 [ext_resource type="PackedScene" uid="uid://v7eeb3wbfggi" path="res://Objects/Characters/Player.tscn" id="5_mbtcl"]
-[ext_resource type="Texture2D" uid="uid://cjoi58qlx7bqb" path="res://Assets/Locations/Pharmacy.jpg" id="6_tx5l4"]
+[ext_resource type="Texture2D" uid="uid://7sc6ycw260nl" path="res://Assets/art/interactables/Park/Dog.png" id="6_7gg0f"]
+[ext_resource type="Script" uid="uid://b4j3em1jewc02" path="res://Objects/interactable.gd" id="6_tx5l4"]
 [ext_resource type="PackedScene" uid="uid://bpi2lamadyggp" path="res://UI/InteractablePreview.tscn" id="8_cv846"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_643fp"]
+size = Vector2(220, 163)
 
 [node name="Location" type="Node2D"]
 script = ExtResource("1_tx5l4")
@@ -12,13 +17,35 @@ script = ExtResource("1_tx5l4")
 [node name="Preview" parent="." instance=ExtResource("8_cv846")]
 unique_name_in_owner = true
 visible = false
+metadata/_edit_lock_ = true
 
 [node name="ParanoiaBar" parent="." instance=ExtResource("4_a48fp")]
 
 [node name="Player" parent="." instance=ExtResource("5_mbtcl")]
-position = Vector2(1276, 814)
+position = Vector2(1135, 814)
+metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(1030, 539)
-scale = Vector2(0.61, 0.61)
-texture = ExtResource("6_tx5l4")
+scale = Vector2(0.63, 0.63)
+texture = ExtResource("5_1cqvq")
+metadata/_edit_lock_ = true
+
+[node name="Interactable" type="Area2D" parent="." node_paths=PackedStringArray("preview")]
+visible = false
+position = Vector2(1800, 700)
+script = ExtResource("6_tx5l4")
+preview = NodePath("../Preview")
+metadata/_custom_type_script = "uid://b4j3em1jewc02"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactable"]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("6_7gg0f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_643fp")
+
+[node name="Highlight" type="ColorRect" parent="Interactable"]
+offset_right = 40.0
+offset_bottom = 40.0

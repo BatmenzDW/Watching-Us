@@ -8,11 +8,11 @@ class_name Interactable
 @export var preview: Interactable_Preview
 
 var stat_bundle : Array[Stats]
+var result_texts : Array[String]
 var result_index : int = -1
 
 var hover_audio_key : String
-var success_audio_key : String
-var fail_audio_key : String
+var use_audio_key : String
 
 const nonhighlight_color : Color = Color(0x26ff0019)
 const highlight_color : Color = Color(0x26ff0032)
@@ -50,13 +50,13 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 		for i in range(4):
 			var rare : int = rarities[i]
 			if randi_range(0, 100) <= rare:
+				result_index = i
 				_apply_values(stat_bundle[i])
 				return
-		# fallback value
-		#_apply_values(stat_bundle[0])
 
 func _apply_values(stats: Stats) -> void:
 	SignalBus.apply_stats.emit(stats, false)
+	preview.check_setup(stat_bundle, result_index, result_texts[result_index])
 
 func set_collision_shape(shape : Shape2D) -> void:
 	if collision:
@@ -71,10 +71,10 @@ func set_collision_shape(shape : Shape2D) -> void:
 func _on_mouse_entered() -> void:
 	preview.inside_count += 1
 	preview.current_inside = self
-	preview.check_setup(stat_bundle)
+	preview.check_setup(stat_bundle, result_index, "" if result_index == -1 else result_texts[result_index])
 	if not _has_used:
 		highlight.color = highlight_color
-		# TODO: Play hover audio
+		SignalBus.play_audio.emit(hover_audio_key)
 
 func _on_mouse_exited() -> void:
 	preview.inside_count -= 1

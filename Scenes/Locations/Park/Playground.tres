@@ -1,9 +1,7 @@
-[gd_resource type="Resource" script_class="Interactable_Data" load_steps=6 format=3 uid="uid://dq3j8leioaftf"]
+[gd_resource type="Resource" script_class="Interactable_Data" load_steps=4 format=3 uid="uid://dq3j8leioaftf"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_jgy8e"]
-[ext_resource type="Resource" uid="uid://brrh2edscax8k" path="res://Scenes/Locations/Park/Dog.tres" id="2_uwpep"]
-[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="3_ifx5p"]
-[ext_resource type="Texture2D" uid="uid://bydldpex1kv72" path="res://Assets/Locations/Park.jpg" id="4_3pka5"]
+[ext_resource type="Texture2D" uid="uid://bydldpex1kv72" path="res://Assets/art/Locations/Park.jpg" id="2_2ocrq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
 size = Vector2(773.5, 443)
@@ -11,11 +9,11 @@ size = Vector2(773.5, 443)
 [resource]
 script = ExtResource("1_jgy8e")
 is_background = true
-children_interactables = Array[ExtResource("1_jgy8e")]([ExtResource("2_uwpep")])
 odds = 1.0
 shape = SubResource("RectangleShape2D_8wb5a")
 position = Vector2(464.25, 510.5)
-texture = ExtResource("4_3pka5")
+stat_bundle = null
+texture = ExtResource("2_2ocrq")
 texture_position = Vector2(1030, 539)
 texture_scale = Vector2(0.63, 0.63)
 metadata/_custom_type_script = "uid://cn81403dij3yf"

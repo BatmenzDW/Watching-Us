@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name MapController
+
 #class_name MapController
 const TILEMAP_X_OFFSET = SingTravelMap.TILEMAP_X_OFFSET
 const TILEMAP_Y_OFFSET = SingTravelMap.TILEMAP_Y_OFFSET

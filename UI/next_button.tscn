@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b7eqbp3blodqq"]
+[gd_scene load_steps=9 format=3 uid="uid://b7eqbp3blodqq"]
 
 [ext_resource type="Script" uid="uid://cfm7shs2firem" path="res://UI/next_button.gd" id="1_8h5vb"]
 [ext_resource type="Texture2D" uid="uid://b7pe4ij7m2i1a" path="res://Assets/Icons/green_icon_play.png" id="1_dyaqy"]
 [ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="1_y73sj"]
+[ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="2_iq6o6"]
 [ext_resource type="Texture2D" uid="uid://bhga0gp66c578" path="res://Assets/Icons/blue_icon_play.png" id="2_y73sj"]
 [ext_resource type="Texture2D" uid="uid://vvivkxqrq787" path="res://Assets/Icons/red_icon_play.png" id="3_8h5vb"]
 
@@ -28,6 +29,7 @@ alignment = 1
 [node name="Label" type="Label" parent="HBoxContainer"]
 custom_minimum_size = Vector2(175, 0)
 layout_mode = 2
+theme = ExtResource("2_iq6o6")
 theme_override_font_sizes/font_size = 64
 text = "1.00x - "
 horizontal_alignment = 1
@@ -60,6 +62,7 @@ offset_right = -77.0
 offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_iq6o6")
 theme_override_font_sizes/font_size = 48
 text = "0 / 1"
 horizontal_alignment = 1

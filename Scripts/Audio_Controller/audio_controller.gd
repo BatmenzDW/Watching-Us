@@ -1,7 +1,7 @@
 extends AudioStreamPlayer2D
 
-var lookup : Dictionary[String, AudioStreamMP3] = {
-	"Dog_Bark": preload("uid://cic5xtxgtoel5"),
+const lookup : Dictionary[String, AudioStreamMP3] = {
+	"DogBark": preload("uid://cic5xtxgtoel5"),
 	"IceCream": preload("uid://buj8akwj4egde"),
 	"Menu_1" : preload("uid://bjei7mkkygoh3"),
 	"Menu_2" : preload("uid://o37u7vko1rcf"),
