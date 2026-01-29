@@ -8,6 +8,7 @@ var lookup : Dictionary[String, AudioStreamMP3] = {
 
 func _ready() -> void:
 	SignalBus.set_music.connect(_play_audio)
+	_play_audio("MainTheme")
 
 func _play_audio(key : String) -> void:
 	if lookup.has(key) and not self.is_playing():

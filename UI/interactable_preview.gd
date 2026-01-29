@@ -120,6 +120,7 @@ func _setup(stat_bundle: Array[Stats], result_index : int = -1, used_string : St
 	happiness_4.modulate = _get_color(stats.happiness)
 	
 	if result_index != -1:
+		print(result_index)
 		for i in range(4):
 			if i == result_index:
 				continue
@@ -131,6 +132,8 @@ func _setup(stat_bundle: Array[Stats], result_index : int = -1, used_string : St
 			label.text = used_string
 			label.visible = true
 	else:
+		for row in rows:
+			row.visible = true
 		label.visible = false
 
 func _ready() -> void:
