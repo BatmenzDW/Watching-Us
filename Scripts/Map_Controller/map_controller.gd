@@ -1,6 +1,8 @@
 extends Node2D
 
 #class_name MapController
+const TILEMAP_X_OFFSET = SingTravelMap.TILEMAP_X_OFFSET
+const TILEMAP_Y_OFFSET = SingTravelMap.TILEMAP_Y_OFFSET
 
 signal location_traversal(selected_location: String)
 
@@ -41,7 +43,10 @@ func _process(_delta):
 	#----------------
 	if(map_controller_state == 1 or map_controller_state == 2):
 		var current_mouse_pos = get_global_mouse_position()
-		var current_cell = %CursorMap.local_to_map(current_mouse_pos)
+		current_mouse_pos.x -= TILEMAP_X_OFFSET
+		current_mouse_pos.y -= TILEMAP_Y_OFFSET
+		var current_cell = %TravelMap.local_to_map(current_mouse_pos)
+		#print(current_cell)
 		#if the currently hovered over cell is not the current hovered cell or the selected cell
 		#then remove the highlighting over the previous highlighted cell
 		
@@ -62,7 +67,9 @@ func _input(event):
 	if(map_controller_state == 1 and event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT and InputState.allow_input(InputState.State.MAP)):
 		#get mouse positon and change it to map coords
 		var current_mouse_pos = get_global_mouse_position()
-		var current_cell = %CursorMap.local_to_map(current_mouse_pos)
+		current_mouse_pos.x -= TILEMAP_X_OFFSET
+		current_mouse_pos.y -= TILEMAP_Y_OFFSET
+		var current_cell = %TravelMap.local_to_map(current_mouse_pos)
 		#check if the current node position is in the dictionary (it should be)
 		var path_dictionary_exists = dict_path.check_path_dictionary(SingTravelMap.current_node_position)
 		var selected_location = ""

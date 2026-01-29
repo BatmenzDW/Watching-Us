@@ -39,9 +39,5 @@ func check_ycoord_path_dictionary(ycoord):
 			return_dictionary_array.append(key)
 	return return_dictionary_array
 
-#updates a key's input
-func updatevalue_path_dictionary(key,value):
-	pass
-
 func _reset_path_dictionary():
 	path_dictionary.clear()

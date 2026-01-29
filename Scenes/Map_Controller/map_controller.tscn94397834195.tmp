@@ -241,6 +241,7 @@ script = ExtResource("10_17h85")
 
 [node name="CurrentPosition" type="TileMapLayer" parent="TravelMap"]
 unique_name_in_owner = true
+position = Vector2(800, 124)
 tile_set = SubResource("TileSet_2a6wi")
 
 [node name="GenLocation" type="Node2D" parent="TravelMap"]
@@ -249,4 +250,5 @@ script = ExtResource("13_ujbnq")
 
 [node name="CursorMap" type="TileMapLayer" parent="TravelMap"]
 unique_name_in_owner = true
+position = Vector2(800, 124)
 tile_set = SubResource("TileSet_6j8ea")
