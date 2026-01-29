@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name GameController
+
 @export var location_index : Location_Index
 
 @onready var map: MapController = $MapController
@@ -7,6 +9,22 @@ extends Node2D
 @onready var next_button: NextButton = $NextButton
 
 var interacts_count : int = 0
+
+enum GameEndState {
+	WIN,
+	TANTRUM,
+	BREAKDOWN
+}
+
+# TODO
+static func game_end(state: GameEndState) -> void:
+	match state:
+		GameEndState.WIN:
+			pass
+		GameEndState.TANTRUM:
+			pass
+		GameEndState.BREAKDOWN:
+			pass
 
 func _ready() -> void:
 	location.visible = false

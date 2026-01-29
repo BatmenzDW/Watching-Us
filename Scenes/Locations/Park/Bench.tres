@@ -1,8 +1,34 @@
-[gd_resource type="Resource" script_class="Interactable_Data" load_steps=2 format=3 uid="uid://bwa63gxfl221d"]
+[gd_resource type="Resource" script_class="Interactable_Data" load_steps=9 format=3 uid="uid://bwa63gxfl221d"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_kyv47"]
+[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_gbj4g"]
+[ext_resource type="Texture2D" uid="uid://8u2cnxhpxwqt" path="res://Assets/art/interactables/Park/Bench.png" id="3_kgs83"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbj4g"]
+size = Vector2(516, 268.5)
+
+[sub_resource type="Resource" id="Resource_kvh7w"]
+script = ExtResource("2_gbj4g")
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_xh8j3"]
+script = ExtResource("2_gbj4g")
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_0nd1l"]
+script = ExtResource("2_gbj4g")
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_5lcjh"]
+script = ExtResource("2_gbj4g")
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [resource]
 script = ExtResource("1_kyv47")
-stat_bundle = Array[Object]([])
+odds = 1.0
+shape = SubResource("RectangleShape2D_gbj4g")
+position = Vector2(49, 568)
+stat_bundle = Array[Object]([SubResource("Resource_kvh7w"), SubResource("Resource_xh8j3"), SubResource("Resource_0nd1l"), SubResource("Resource_5lcjh")])
+texture = ExtResource("3_kgs83")
+texture_scale = Vector2(0.6, 0.6)
 metadata/_custom_type_script = "uid://cn81403dij3yf"

@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_8wb5a"]
 [ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_7k7w0"]
-[ext_resource type="Texture2D" uid="uid://cijvu5nbgw7cx" path="res://Assets/art/Locations/IceCream_Truck.jpg" id="2_t5mse"]
+[ext_resource type="Texture2D" uid="uid://bu2c8b5w6arau" path="res://Assets/art/interactables/Ice_Cream_Truck/Ice_Cream_Cone_Pirate_Jam_Prop.png" id="3_ki6q3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
-size = Vector2(987, 582)
+size = Vector2(61, 143.25)
 
 [sub_resource type="Resource" id="Resource_t5mse"]
 script = ExtResource("2_7k7w0")
@@ -27,12 +27,12 @@ metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [resource]
 script = ExtResource("1_8wb5a")
-is_background = true
 odds = 1.0
 shape = SubResource("RectangleShape2D_8wb5a")
-position = Vector2(579, 645)
+position = Vector2(745, 547)
 stat_bundle = Array[ExtResource("2_7k7w0")]([SubResource("Resource_t5mse"), SubResource("Resource_7k7w0"), SubResource("Resource_nbfgi"), SubResource("Resource_5odjp")])
-texture = ExtResource("2_t5mse")
-texture_position = Vector2(1030, 539)
-texture_scale = Vector2(0.61, 0.61)
+texture = ExtResource("3_ki6q3")
+texture_scale = Vector2(0.03, 0.03)
+hover_audio_key = "IceCream"
+use_audio_key = "IceCreamEat"
 metadata/_custom_type_script = "uid://cn81403dij3yf"

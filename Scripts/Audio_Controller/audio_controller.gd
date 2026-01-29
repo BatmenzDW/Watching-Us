@@ -3,9 +3,17 @@ extends AudioStreamPlayer2D
 const lookup : Dictionary[String, AudioStreamMP3] = {
 	"DogBark": preload("uid://cic5xtxgtoel5"),
 	"IceCream": preload("uid://buj8akwj4egde"),
+	"IceCreamEat": preload("uid://c8iygwjq5jvtg"),
+	"Menu": preload("uid://dhphvwk4lgrnu"),
 	"Menu_1" : preload("uid://bjei7mkkygoh3"),
 	"Menu_2" : preload("uid://o37u7vko1rcf"),
-	"Menu_Select": preload("uid://vaa2hynsgfg3")
+	"MenuSelect": preload("uid://vaa2hynsgfg3"),
+	"MapSelect": preload("uid://cfo4ch284fl7g"),
+	"DadEnter": preload("uid://7fbqodpb4clv"),
+	"PillBottle": preload("uid://5vo4n6fq2avl"),
+	"Swallow": preload("uid://cvmpf683gl6k5"),
+	"Walk": preload("uid://clie8c6jn2vlj"),
+	"WhichOne": preload("uid://hp2qj3i01d7c")
 }
 
 @export var min_interval : float = 1.0

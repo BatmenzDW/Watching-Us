@@ -1,10 +1,10 @@
 # Park
-- Playground
-- Bench
+- Playground (Stats/Desc)
+- Bench (Stats/Desc)
 
 # Ice Cream Truck
-- Ice Cream
-- Trash Can
+- Ice Cream (Stats/Desc)
+- Trash Can (Stats/Desc)
 - ?
 
 # Library

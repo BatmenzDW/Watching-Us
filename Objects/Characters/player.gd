@@ -64,6 +64,11 @@ func _apply_stats(stats : Stats, _is_mult : bool = false) -> void:
 	happiness = clampf(happiness, 0.0, 1.0)
 	paranoia = clampf(paranoia, 0.0, 1.0)
 	
+	if hunger <= 0 or fun <= 0 or happiness <= 0:
+		GameController.game_end(GameController.GameEndState.TANTRUM)
+	elif paranoia >= 1:
+		GameController.game_end(GameController.GameEndState.BREAKDOWN)
+	
 	_update_stats()
 
 func _check_thresholds():
