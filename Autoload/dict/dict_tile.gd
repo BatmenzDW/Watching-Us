@@ -37,9 +37,5 @@ func check_ycoord_tile_dictionary(ycoord):
 			return_dictionary_array.append(key)
 	return return_dictionary_array
 
-#updates a key's input
-func updatevalue_tile_dictionary(key,value):
-	pass
-
 func _reset_tile_dictionary():
 	tile_dictionary.clear()

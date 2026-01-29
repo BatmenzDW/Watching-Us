@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://c64go4ir7wuwi"]
+[gd_scene load_steps=60 format=3 uid="uid://c64go4ir7wuwi"]
 
 [ext_resource type="Script" uid="uid://dp0b35sgoc8h6" path="res://Scripts/Map_Controller/map_controller.gd" id="1_c117o"]
 [ext_resource type="Script" uid="uid://cf3cx6tc8by4m" path="res://Scripts/Map_Controller/travel_map.gd" id="3_0nlex"]
@@ -18,10 +18,20 @@
 [ext_resource type="Script" uid="uid://demsaqnx2cue1" path="res://Scripts/Map_Controller/gen_random.gd" id="10_17h85"]
 [ext_resource type="Texture2D" uid="uid://cluw5yn6k4qpg" path="res://Assets/tileset/firestation_tileset.png" id="10_at6f4"]
 [ext_resource type="Texture2D" uid="uid://bs54d3k553l2y" path="res://Assets/tileset/path.png" id="11_6j8ea"]
-[ext_resource type="Texture2D" uid="uid://cywli8u34agwt" path="res://Assets/tileset/tileset_current_position.png" id="11_p3c3f"]
+[ext_resource type="Texture2D" uid="uid://cywli8u34agwt" path="res://Assets/tileset/tileset_current_position_v2.png" id="11_p3c3f"]
 [ext_resource type="Texture2D" uid="uid://1ycvibit15jd" path="res://Assets/tileset/busy_crosswalk_tileset.png" id="11_vwqk0"]
 [ext_resource type="Texture2D" uid="uid://bq0dylcp77tdg" path="res://Assets/tileset/school_tileset.png" id="12_1wy3x"]
 [ext_resource type="Script" uid="uid://yk3b3b1atnnv" path="res://Scenes/Map_Controller/gen_location.gd" id="13_ujbnq"]
+[ext_resource type="Texture2D" uid="uid://te11mrsl0co1" path="res://Assets/tileset/map_key/beech.png" id="23_0cg75"]
+[ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="24_sexfr"]
+[ext_resource type="Texture2D" uid="uid://cvpahydh1fxbl" path="res://Assets/tileset/map_key/bookshelf.png" id="25_ad05m"]
+[ext_resource type="Texture2D" uid="uid://gc2v1r2k4ttc" path="res://Assets/tileset/map_key/ice-cream-cone.png" id="26_lhmc5"]
+[ext_resource type="Texture2D" uid="uid://lw0ukkki5whw" path="res://Assets/tileset/map_key/medicines.png" id="27_cn7kv"]
+[ext_resource type="Texture2D" uid="uid://xtb8330udw54" path="res://Assets/tileset/map_key/fire-shield.png" id="28_h1hx5"]
+[ext_resource type="Texture2D" uid="uid://kr1o6hapnc74" path="res://Assets/tileset/map_key/house.png" id="29_2y7gk"]
+[ext_resource type="Texture2D" uid="uid://byu3no3taiw81" path="res://Assets/tileset/map_key/police-badge.png" id="30_x1odq"]
+[ext_resource type="Texture2D" uid="uid://dg5xuebxe3i3j" path="res://Assets/tileset/map_key/traffic-lights-red.png" id="31_1joie"]
+[ext_resource type="Texture2D" uid="uid://bcwfrrb0jjxp4" path="res://Assets/tileset/map_key/graduate-cap.png" id="32_is7gp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jm20a"]
 texture = ExtResource("11_p3c3f")
@@ -205,7 +215,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="TravelMap" type="TileMapLayer" parent="."]
 unique_name_in_owner = true
-position = Vector2(800, 124)
+position = Vector2(500, 124)
 tile_set = SubResource("TileSet_p5pve")
 script = ExtResource("3_0nlex")
 
@@ -250,3 +260,234 @@ script = ExtResource("13_ujbnq")
 [node name="CursorMap" type="TileMapLayer" parent="TravelMap"]
 unique_name_in_owner = true
 tile_set = SubResource("TileSet_6j8ea")
+
+[node name="MapHud" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MapHud"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Space_H2" type="Control" parent="MapHud/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 12.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MapHud/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+
+[node name="Spacer_V1" type="Control" parent="MapHud/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Park HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Park TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Park HBox"]
+layout_mode = 2
+texture = ExtResource("23_0cg75")
+stretch_mode = 4
+
+[node name="Park Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Park HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Park Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Park HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("24_sexfr")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 32
+text = "Park"
+
+[node name="Library HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Library TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Library HBox"]
+layout_mode = 2
+texture = ExtResource("25_ad05m")
+stretch_mode = 4
+
+[node name="Library Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Library HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Library Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Library HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("24_sexfr")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 32
+text = "Library"
+
+[node name="Ice Cream Truck HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Ice Cream Truck TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Ice Cream Truck HBox"]
+layout_mode = 2
+texture = ExtResource("26_lhmc5")
+stretch_mode = 4
+
+[node name="Ice Cream Truck Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Ice Cream Truck HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Ice Cream Truck Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Ice Cream Truck HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("24_sexfr")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 32
+text = "Ice Cream Truck"
+
+[node name="Pharmacy HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Phramacy TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Pharmacy HBox"]
+layout_mode = 2
+texture = ExtResource("27_cn7kv")
+stretch_mode = 4
+
+[node name="Pharmacy  Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Pharmacy HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Pharmacy Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Pharmacy HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("24_sexfr")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 32
+text = "Pharmacy"
+
+[node name="Firestation HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Firestation TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Firestation HBox"]
+layout_mode = 2
+texture = ExtResource("28_h1hx5")
+stretch_mode = 4
+
+[node name="Firestation Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Firestation HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Firestation Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Firestation HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("24_sexfr")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 32
+text = "Firestation"
+
+[node name="Police Presinct HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Police Presinct TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Police Presinct HBox"]
+layout_mode = 2
+texture = ExtResource("30_x1odq")
+stretch_mode = 4
+
+[node name="Police Presinct Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Police Presinct HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Police Presinct Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Police Presinct HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("24_sexfr")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 32
+text = "Police Presinct"
+
+[node name="Crosswalk HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Crosswalk TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Crosswalk HBox"]
+layout_mode = 2
+texture = ExtResource("31_1joie")
+stretch_mode = 4
+
+[node name="Crosswalk Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Crosswalk HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Crosswalk Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Crosswalk HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("24_sexfr")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 32
+text = "Crosswalk"
+
+[node name="Home HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Home TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Home HBox"]
+layout_mode = 2
+texture = ExtResource("29_2y7gk")
+stretch_mode = 4
+
+[node name="Home Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Home HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Home Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Home HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("24_sexfr")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 32
+text = "Home"
+
+[node name="School HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="School TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/School HBox"]
+layout_mode = 2
+theme = ExtResource("24_sexfr")
+texture = ExtResource("32_is7gp")
+stretch_mode = 4
+
+[node name="School Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/School HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="School Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/School HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("24_sexfr")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 32
+text = "School"
+
+[node name="Spacer_V2" type="Control" parent="MapHud/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Spacer_H1" type="Control" parent="MapHud/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5

@@ -19,16 +19,19 @@ func _map_controller_gen_new_map():
 func map_controller_active_state_view():
 	map_controller_state = 2
 	self.visible = true
+	%MapHud.visible = true
 
 #This will be to traverse the map to a new location.
 func map_controller_active_state():
 	map_controller_state = 1
 	self.visible = true
+	%MapHud.visible = true
 
 func _map_controller_end_active_state(selected_location : String):
 	location_traversal.emit(selected_location)
 	map_controller_state = 0
 	self.visible = false
+	%MapHud.visible = false
 
 func _node_traversal(current_cell: Vector2i, selected_location : String):
 	%CursorMap.clear()
@@ -46,14 +49,14 @@ func _process(_delta):
 		current_mouse_pos.x -= TILEMAP_X_OFFSET
 		current_mouse_pos.y -= TILEMAP_Y_OFFSET
 		var current_cell = %TravelMap.local_to_map(current_mouse_pos)
-		#print(current_cell)
+		
 		#if the currently hovered over cell is not the current hovered cell or the selected cell
 		#then remove the highlighting over the previous highlighted cell
-		
 		if (hovered_cell != current_cell):
 			# Mouse moved to a different cell or entered/exited the grid
 			# Reset previous hovered cell's appearance (if any)
 			%CursorMap.set_cell(hovered_cell, -1)
+		#if the hovered_cell is not the current cell and we do a dictianry lookup and it is a location, then do a hover over effect.
 		if (hovered_cell != current_cell and dict_tile.check_tile_dictionary(current_cell) != null):
 			var location_source_id = dict_location.check_source_id(dict_tile.check_tile_dictionary(current_cell),current_cell)
 			#print("location source id: ", location_source_id)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cywli8u34agwt"
-path="res://.godot/imported/tileset_current_position.png-f0fa29817b9098c015e64caa5278470c.ctex"
+uid="uid://lw0ukkki5whw"
+path="res://.godot/imported/medicines.png-98cfee83cb0a467f921fd4b6f34193f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tileset/tileset_current_position.png"
-dest_files=["res://.godot/imported/tileset_current_position.png-f0fa29817b9098c015e64caa5278470c.ctex"]
+source_file="res://Assets/tileset/map_key/medicines.png"
+dest_files=["res://.godot/imported/medicines.png-98cfee83cb0a467f921fd4b6f34193f3.ctex"]
 
 [params]
 
