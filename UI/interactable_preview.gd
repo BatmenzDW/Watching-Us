@@ -134,7 +134,6 @@ func _setup(stat_bundle: Array[Stats], result_index : int = -1, used_string : St
 		%Happiness3Arrow.texture = load("res://Assets/Icons/arrow_down.png")
 	
 	stats = stat_bundle[3]
-	print("paranoia 4",stats.paranoia)
 	if(stats.paranoia > 0):
 		%Paranoia4Arrow.texture = load("res://Assets/Icons/arrow_red_up.png")
 	if(stats.paranoia <= 0):

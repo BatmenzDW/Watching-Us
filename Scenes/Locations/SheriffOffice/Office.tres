@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dhsib5100qmov" path="res://Assets/art/Locations/Sheriff_s_Office_Backround.jpg" id="3_nyia4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
-size = Vector2(987, 582)
+size = Vector2(1539, 574)
 
 [sub_resource type="Resource" id="Resource_t5mse"]
 script = ExtResource("2_2ifpv")
@@ -32,6 +32,6 @@ odds = 1.0
 shape = SubResource("RectangleShape2D_8wb5a")
 stat_bundle = Array[ExtResource("2_2ifpv")]([SubResource("Resource_t5mse"), SubResource("Resource_7k7w0"), SubResource("Resource_nbfgi"), SubResource("Resource_5odjp")])
 texture = ExtResource("3_nyia4")
-texture_position = Vector2(1030, 539)
+texture_position = Vector2(957, 539)
 texture_scale = Vector2(1, 1)
 metadata/_custom_type_script = "uid://cn81403dij3yf"

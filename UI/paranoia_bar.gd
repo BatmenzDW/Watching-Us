@@ -13,6 +13,7 @@ var target_delta = 0.05
 
 func _ready() -> void:
 	SignalBus.apply_stats.connect(_on_apply_stats)
+	SignalBus.set_paranoia.connect(set_target_val)
 
 func set_target_val(val: float):
 	target_val = clampf(val, 0, 1)

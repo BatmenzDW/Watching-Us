@@ -11,6 +11,7 @@ func _ready() -> void:
 	_play_audio("MainTheme")
 
 func _play_audio(key : String) -> void:
+	print("music signal with key: " + key)
 	if lookup.has(key) and not self.is_playing():
 		stream = lookup[key]
 		self.play()

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://v7eeb3wbfggi"]
 
 [ext_resource type="Script" uid="uid://b33acafdle66b" path="res://Objects/Characters/player.gd" id="1_oo13o"]
-[ext_resource type="Texture2D" uid="uid://c7rp8yn7ec6yl" path="res://Assets/art/player_child.png" id="2_ddc0b"]
+[ext_resource type="Texture2D" uid="uid://v686mfpv8mck" path="res://Assets/art/player_child_v3.png" id="2_ddc0b"]
 [ext_resource type="PackedScene" uid="uid://q06nf60uajs1" path="res://UI/ChildUI.tscn" id="3_ddc0b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ju47"]
@@ -37,7 +37,7 @@ shape = SubResource("CapsuleShape2D_oo13o")
 
 [node name="ChildUI" parent="." unique_id=1815291796 instance=ExtResource("3_ddc0b")]
 z_index = 2
-offset_left = 10.0
-offset_top = -344.0
-offset_right = 354.0
-offset_bottom = -80.0
+offset_left = 116.0
+offset_top = -347.0
+offset_right = 460.0
+offset_bottom = -83.0

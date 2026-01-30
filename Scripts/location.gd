@@ -6,8 +6,6 @@ class_name Location
 @onready var background: Sprite2D = $Background
 @onready var preview: Interactable_Preview = %Preview
 
-@export var test_interactable : Interactable
-
 func load_data(data : Interactable_Data, is_child : bool = false):
 	var interactable : Interactable
 	var sprite : Sprite2D

@@ -2,15 +2,20 @@
 
 [ext_resource type="Script" uid="uid://cgt043qnx762a" path="res://Scripts/location.gd" id="1_tx5l4"]
 [ext_resource type="PackedScene" uid="uid://b73o7gyasv71e" path="res://UI/ParanoiaBar.tscn" id="4_a48fp"]
-[ext_resource type="Texture2D" uid="uid://dhsib5100qmov" path="res://Assets/art/Locations/Sheriff_s_Office_Backround.jpg" id="5_1cqvq"]
+[ext_resource type="Texture2D" uid="uid://6wogcyrilacd" path="res://Assets/art/Locations/Firehouse_Background.jpg" id="5_7gg0f"]
 [ext_resource type="PackedScene" uid="uid://v7eeb3wbfggi" path="res://Objects/Characters/Player.tscn" id="5_mbtcl"]
+[ext_resource type="Script" uid="uid://b4j3em1jewc02" path="res://Objects/interactable.gd" id="6_tx5l4"]
 [ext_resource type="PackedScene" uid="uid://bpi2lamadyggp" path="res://UI/InteractablePreview.tscn" id="8_cv846"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_643fp"]
+size = Vector2(1074, 454)
 
 [node name="Location" type="Node2D" unique_id=1758127206]
 script = ExtResource("1_tx5l4")
 
 [node name="Preview" parent="." unique_id=1029563350 instance=ExtResource("8_cv846")]
 unique_name_in_owner = true
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="ParanoiaBar" parent="." unique_id=1414614713 instance=ExtResource("4_a48fp")]
@@ -23,5 +28,30 @@ metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="." unique_id=500700340]
 position = Vector2(957, 539)
-texture = ExtResource("5_1cqvq")
+texture = ExtResource("5_7gg0f")
 metadata/_edit_lock_ = true
+
+[node name="Interactable" type="Area2D" parent="." unique_id=1021579816 groups=["location_elements"]]
+position = Vector2(916, 546)
+script = ExtResource("6_tx5l4")
+metadata/_custom_type_script = "uid://b4j3em1jewc02"
+
+[node name="Highlight" type="ColorRect" parent="Interactable" unique_id=235209829]
+z_index = 2
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0.96, 0, 0.94399977, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1182485735]
+position = Vector2(-116, 127)
+shape = SubResource("RectangleShape2D_643fp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactable" unique_id=135915466]
+visible = false
+
+[connection signal="input_event" from="Interactable" to="Interactable" method="_on_input_event"]
+[connection signal="mouse_entered" from="Interactable" to="Interactable" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable" to="Interactable" method="_on_mouse_exited"]

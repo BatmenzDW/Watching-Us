@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Location_Data" load_steps=5 format=3 uid="uid://db6buuebak1d4"]
+[gd_resource type="Resource" script_class="Location_Data" format=3 uid="uid://db6buuebak1d4"]
 
 [ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="1_73uf4"]
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="2_f8qex"]

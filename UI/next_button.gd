@@ -4,13 +4,13 @@ class_name NextButton
 
 signal go_next
 
-const ICON_HAPPINESS = preload("uid://dy3humxav1cu0")
+const ICON_HAPPINESS = preload("uid://3lmprdb7cixs")
 const COLOR_HAPPINESS = Color.YELLOW
-const ICON_HUNGER = preload("uid://bc5ejm3n8hd17")
+const ICON_HUNGER = preload("uid://o4f0s68ak40w")
 const COLOR_HUNGER = Color.SADDLE_BROWN
-const ICON_FUN = preload("uid://5c386rwed2jm")
+const ICON_FUN = preload("uid://jggrfqy3p63l")
 const COLOR_FUN = Color.CHARTREUSE
-const ICON_PARANOIA = preload("uid://buqm8llj1pqrm")
+const ICON_PARANOIA = preload("uid://ct77veo1p5ae")
 const COLOR_PARANOIA = Color.RED
 
 @onready var next_button: TextureButton = $TextureButton
@@ -36,7 +36,7 @@ func setup(mult_val : float, type : Stats.Stat) -> void:
 			mult_icon.modulate = COLOR_FUN
 		Stats.Stat.PARANOIA:
 			mult_icon.texture = ICON_PARANOIA
-			mult_icon.modulate = COLOR_PARANOIA
+			#mult_icon.modulate = COLOR_PARANOIA
 	_type = type
 	
 	reset()
