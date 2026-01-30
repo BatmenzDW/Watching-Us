@@ -65,9 +65,9 @@ func _apply_stats(stats : Stats, _is_mult : bool = false) -> void:
 	paranoia = clampf(paranoia, 0.0, 1.0)
 	
 	if hunger <= 0 or fun <= 0 or happiness <= 0:
-		%GameController.transition_state("tantrum","")
+		GameController.transition_to_state("tantrum","")
 	elif paranoia >= 1:
-		%GameController.transition_state("breakdown","")
+		GameController.transition_to_state("breakdown","")
 	
 	_update_stats()
 

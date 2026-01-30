@@ -55,9 +55,9 @@ func set_collision_shape(shape : Shape2D) -> void:
 		temp_shape = shape
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	print("click ", InputState.allow_input(InputState.State.LEVEL))
+	#print("click ", InputState.allow_input(InputState.State.LEVEL))
 	if event.is_action_pressed("left_click") and not _has_used and InputState.allow_input(InputState.State.LEVEL):
-		print("clicked")
+		#print("clicked")
 		_has_used = true
 		#print(self)
 		SignalBus.interact.emit()
@@ -71,7 +71,7 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 				return
 
 func _on_mouse_entered() -> void:
-	print("in")
+	#print("in")
 	preview.inside_count += 1
 	preview.current_inside = self
 	preview.check_setup(stat_bundle, result_index, "" if result_index == -1 else result_texts[result_index])
@@ -80,7 +80,7 @@ func _on_mouse_entered() -> void:
 		SignalBus.play_audio.emit(hover_audio_key)
 
 func _on_mouse_exited() -> void:
-	print("out")
+	#print("out")
 	preview.inside_count -= 1
 	preview.check_setup()
 	if not _has_used:

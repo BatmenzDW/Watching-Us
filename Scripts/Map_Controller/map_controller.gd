@@ -22,9 +22,9 @@ func map_controller_active_state_view():
 	%MapBackground.visible = true
 
 #This will be to traverse the map to a new location.
-func _map_controller_active_state():
+func map_controller_active_state():
 	map_controller_state = 1
-	#self.visible = true
+	self.visible = true
 	%TravelMap.visible = true
 	%MapHud.visible = true
 	%MapBackground.visible = true

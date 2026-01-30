@@ -30,7 +30,7 @@ scale = Vector2(0.63, 0.63)
 texture = ExtResource("5_tx5l4")
 metadata/_edit_lock_ = true
 
-[node name="Interactable" type="Area2D" parent="." node_paths=PackedStringArray("preview")]
+[node name="Interactable" type="Area2D" parent="." node_paths=PackedStringArray("preview") groups=["location_elements"]]
 position = Vector2(317, 791)
 script = ExtResource("6_tx5l4")
 preview = NodePath("../Preview")

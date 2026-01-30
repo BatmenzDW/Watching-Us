@@ -53,7 +53,8 @@ func load_data(data : Interactable_Data, is_child : bool = false):
 		sprite.scale = data.texture_scale
 
 func unload() -> void:
+	print("Unload")
 	var nodes_to_remove = get_tree().get_nodes_in_group("location_elements")
-	
+	print("Unloading ", nodes_to_remove.size(), " nodes")
 	for node in nodes_to_remove:
 		node.queue_free()

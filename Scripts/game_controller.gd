@@ -10,17 +10,17 @@ class_name GameController
 
 var interacts_count : int = 0
 
-enum GameEndState {
-	WIN,
-	TANTRUM,
-	BREAKDOWN
-}
+static var Instance : GameController
 
 func _ready() -> void:
+	Instance = self
 	location.visible = false
 	next_button.visible = false
 	InputState.set_state(InputState.State.MAP)
 	SignalBus.interact.connect(_on_interact)
+
+static func transition_to_state(new_state,variable: String):
+	Instance.transition_state(new_state, variable)
 
 func transition_state(new_state,variable: String):
 	if(new_state == "location"):
@@ -61,7 +61,7 @@ func transition_to_location(selected_location: String) -> void:
 	InputState.set_state(InputState.State.LEVEL)
 
 func transition_to_map():
-	%MapController._map_controller_active_state()
+	%MapController.map_controller_active_state()
 
 func transition_to_credits():
 	%CreditsController.roll_credits()
@@ -86,8 +86,9 @@ func _leave_location() -> void:
 	if interacts_count < 1: 
 		return
 	
+	print("Leaving Location")
 	location.unload()
 	next_button.visible = false
 	location.visible = false
-	map.map_controller_active_state()
+	transition_to_map()
 	InputState.set_state(InputState.State.MAP)
