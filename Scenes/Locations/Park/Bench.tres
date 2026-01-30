@@ -25,10 +25,11 @@ metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [resource]
 script = ExtResource("1_kyv47")
-odds = 1.0
+odds = 0.75
 shape = SubResource("RectangleShape2D_gbj4g")
-position = Vector2(49, 568)
+position = Vector2(51, 788)
 stat_bundle = Array[Object]([SubResource("Resource_kvh7w"), SubResource("Resource_xh8j3"), SubResource("Resource_0nd1l"), SubResource("Resource_5lcjh")])
 texture = ExtResource("3_kgs83")
+texture_position = Vector2(28, -170)
 texture_scale = Vector2(0.6, 0.6)
 metadata/_custom_type_script = "uid://cn81403dij3yf"
