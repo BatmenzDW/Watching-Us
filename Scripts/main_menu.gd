@@ -6,10 +6,6 @@ func _on_play_button_pressed() -> void:
 	%MenuBackground.visible = false
 	%MainMenuLayer.visible = false
 
-#options button pressed
-func _on_options_button_pressed() -> void:
-	pass # Replace with function body.
-
 #credits button pressed
 func _on_credits_button_pressed() -> void:
 	%GameController.transition_state("credits", "")

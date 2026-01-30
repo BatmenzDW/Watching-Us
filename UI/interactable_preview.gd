@@ -99,28 +99,77 @@ func _get_color(val:float, inv:bool=false) -> Color:
 
 func _setup(stat_bundle: Array[Stats], result_index : int = -1, used_string : String = "") -> void:
 	var stats : Stats = stat_bundle[0]
-	paranoia_1.modulate = _get_color(stats.paranoia, true)
-	hunger_1.modulate = _get_color(stats.hunger)
-	fun_1.modulate = _get_color(stats.fun)
-	happiness_1.modulate = _get_color(stats.happiness)
+	if(stats.paranoia > 0):
+		%Paranoia1Arrow.texture = load("res://Assets/Icons/arrow_red_up.png")
+	if(stats.paranoia <= 0):
+		%Paranoia1Arrow.texture = load("res://Assets/Icons/arrow_green_down.png")
+	if(stats.hunger > 0):
+		%Hunger1Arrow.texture = load("res://Assets/Icons/arrow_up.png")
+	if(stats.hunger <= 0):
+		%Hunger1Arrow.texture = load("res://Assets/Icons/arrow_down.png")
+	if(stats.fun > 0):
+		%Fun1Arrow.texture = load("res://Assets/Icons/arrow_up.png")
+	if(stats.fun <= 0):
+		%Fun1Arrow.texture = load("res://Assets/Icons/arrow_down.png")
+	if(stats.fun > 0):
+		%Happiness1Arrow.texture = load("res://Assets/Icons/arrow_up.png")
+	if(stats.fun <= 0):
+		%Happiness1Arrow.texture = load("res://Assets/Icons/arrow_down.png")
 	
 	stats = stat_bundle[1]
-	paranoia_2.modulate = _get_color(stats.paranoia, true)
-	hunger_2.modulate = _get_color(stats.hunger)
-	fun_2.modulate = _get_color(stats.fun)
-	happiness_2.modulate = _get_color(stats.happiness)
+	if(stats.paranoia > 0):
+		%Paranoia2Arrow.texture = load("res://Assets/Icons/arrow_red_up.png")
+	if(stats.paranoia <= 0):
+		%Paranoia2Arrow.texture = load("res://Assets/Icons/arrow_green_down.png")
+	if(stats.hunger > 0):
+		%Hunger2Arrow.texture = load("res://Assets/Icons/arrow_up.png")
+	if(stats.hunger <= 0):
+		%Hunger2Arrow.texture = load("res://Assets/Icons/arrow_down.png")
+	if(stats.fun > 0):
+		%Fun2Arrow.texture = load("res://Assets/Icons/arrow_up.png")
+	if(stats.fun <= 0):
+		%Fun2Arrow.texture = load("res://Assets/Icons/arrow_down.png")
+	if(stats.fun > 0):
+		%Happiness2Arrow.texture = load("res://Assets/Icons/arrow_up.png")
+	if(stats.fun <= 0):
+		%Happiness2Arrow.texture = load("res://Assets/Icons/arrow_down.png")
 	
 	stats = stat_bundle[2]
-	paranoia_3.modulate = _get_color(stats.paranoia, true)
-	hunger_3.modulate = _get_color(stats.hunger)
-	fun_3.modulate = _get_color(stats.fun)
-	happiness_3.modulate = _get_color(stats.happiness)
+	if(stats.paranoia > 0):
+		%Paranoia3Arrow.texture = load("res://Assets/Icons/arrow_red_up.png")
+	if(stats.paranoia <= 0):
+		%Paranoia3Arrow.texture = load("res://Assets/Icons/arrow_green_down.png")
+	if(stats.hunger > 0):
+		%Hunger3Arrow.texture = load("res://Assets/Icons/arrow_up.png")
+	if(stats.hunger <= 0):
+		%Hunger3Arrow.texture = load("res://Assets/Icons/arrow_down.png")
+	if(stats.fun > 0):
+		%Fun3Arrow.texture = load("res://Assets/Icons/arrow_up.png")
+	if(stats.fun <= 0):
+		%Fun3Arrow.texture = load("res://Assets/Icons/arrow_down.png")
+	if(stats.fun > 0):
+		%Happiness3Arrow.texture = load("res://Assets/Icons/arrow_up.png")
+	if(stats.fun <= 0):
+		%Happiness3Arrow.texture = load("res://Assets/Icons/arrow_down.png")
 	
 	stats = stat_bundle[3]
-	paranoia_4.modulate = _get_color(stats.paranoia, true)
-	hunger_4.modulate = _get_color(stats.hunger)
-	fun_4.modulate = _get_color(stats.fun)
-	happiness_4.modulate = _get_color(stats.happiness)
+	print("paranoia 4",stats.paranoia)
+	if(stats.paranoia > 0):
+		%Paranoia4Arrow.texture = load("res://Assets/Icons/arrow_red_up.png")
+	if(stats.paranoia <= 0):
+		%Paranoia4Arrow.texture = load("res://Assets/Icons/arrow_green_down.png")
+	if(stats.hunger > 0):
+		%Hunger4Arrow.texture = load("res://Assets/Icons/arrow_up.png")
+	if(stats.hunger <= 0):
+		%Hunger4Arrow.texture = load("res://Assets/Icons/arrow_down.png")
+	if(stats.fun > 0):
+		%Fun4Arrow.texture = load("res://Assets/Icons/arrow_up.png")
+	if(stats.fun <= 0):
+		%Fun4Arrow.texture = load("res://Assets/Icons/arrow_down.png")
+	if(stats.fun > 0):
+		%Happiness4Arrow.texture = load("res://Assets/Icons/arrow_up.png")
+	if(stats.fun <= 0):
+		%Happiness4Arrow.texture = load("res://Assets/Icons/arrow_down.png")
 	
 	if result_index != -1:
 		#print(result_index)
@@ -146,10 +195,10 @@ func _ready() -> void:
 	_init_setup()
 
 func _init_setup() -> void:
-	label_1.text = "%d%%" % Rarity.COMMON
-	label_2.text = "%d%%" % Rarity.UNCOMMON
-	label_3.text = "%d%%" % Rarity.RARE
-	label_4.text = "%d%%" % Rarity.EPIC
+	label_1.text = "%d%% Chance" % Rarity.COMMON
+	label_2.text = "%d%% Chance" % Rarity.UNCOMMON
+	label_3.text = "%d%% Chance" % Rarity.RARE
+	label_4.text = "%d%% Chance" % Rarity.EPIC
 	
 	label_1.add_theme_color_override("font_color", COMMON_COLOR)
 	label_2.add_theme_color_override("font_color", UNCOMMON_COLOR)

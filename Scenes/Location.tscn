@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ba77hdstaid3"]
+[gd_scene format=3 uid="uid://ba77hdstaid3"]
 
 [ext_resource type="Script" uid="uid://cgt043qnx762a" path="res://Scripts/location.gd" id="1_tx5l4"]
 [ext_resource type="PackedScene" uid="uid://b73o7gyasv71e" path="res://UI/ParanoiaBar.tscn" id="4_a48fp"]
@@ -6,22 +6,22 @@
 [ext_resource type="PackedScene" uid="uid://v7eeb3wbfggi" path="res://Objects/Characters/Player.tscn" id="5_mbtcl"]
 [ext_resource type="PackedScene" uid="uid://bpi2lamadyggp" path="res://UI/InteractablePreview.tscn" id="8_cv846"]
 
-[node name="Location" type="Node2D"]
+[node name="Location" type="Node2D" unique_id=1758127206]
 script = ExtResource("1_tx5l4")
 
-[node name="Preview" parent="." instance=ExtResource("8_cv846")]
+[node name="Preview" parent="." unique_id=1029563350 instance=ExtResource("8_cv846")]
 unique_name_in_owner = true
 metadata/_edit_lock_ = true
 
-[node name="ParanoiaBar" parent="." instance=ExtResource("4_a48fp")]
+[node name="ParanoiaBar" parent="." unique_id=1414614713 instance=ExtResource("4_a48fp")]
 unique_name_in_owner = true
 visible = false
 
-[node name="Player" parent="." instance=ExtResource("5_mbtcl")]
+[node name="Player" parent="." unique_id=589527031 instance=ExtResource("5_mbtcl")]
 position = Vector2(1135, 814)
 metadata/_edit_lock_ = true
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=500700340]
 position = Vector2(957, 539)
 texture = ExtResource("5_1cqvq")
 metadata/_edit_lock_ = true

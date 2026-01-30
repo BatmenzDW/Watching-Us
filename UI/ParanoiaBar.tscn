@@ -1,27 +1,31 @@
-[gd_scene load_steps=7 format=3 uid="uid://b73o7gyasv71e"]
+[gd_scene format=3 uid="uid://b73o7gyasv71e"]
 
 [ext_resource type="Script" uid="uid://fy3nywnom7n" path="res://UI/paranoia_bar.gd" id="1_jpbju"]
 [ext_resource type="Texture2D" uid="uid://ct77veo1p5ae" path="res://Assets/Icons/paranoia.png" id="2_g2t2x"]
 [ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="3_1guik"]
+[ext_resource type="Script" uid="uid://cv842oj577ce7" path="res://UI/paranoia_meter.gd" id="4_vykqg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1guik"]
-bg_color = Color(0.6, 0.6, 0.6, 0.3529412)
+bg_color = Color(0.6, 0.6, 0.6, 0.7882353)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vykqg"]
-bg_color = Color(0.33333334, 0.33333334, 0.33333334, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
+bg_color = Color(0.8, 0.8, 0.8, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_18gah"]
 bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
-[node name="ParanoiaBar" type="CanvasLayer"]
+[node name="ParanoiaBar" type="CanvasLayer" unique_id=201930458]
 script = ExtResource("1_jpbju")
-max_size = 900
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=635661286]
 visible = false
 offset_right = 1920.0
 offset_bottom = 84.0
@@ -30,14 +34,14 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 900
 theme_override_constants/margin_bottom = 10
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=2138832099]
 layout_mode = 2
 color = Color(1, 0, 0, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/ColorRect"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/ColorRect" unique_id=1747257791]
 texture = ExtResource("2_g2t2x")
 
-[node name="ParanoiaContainer" type="PanelContainer" parent="."]
+[node name="ParanoiaContainer" type="PanelContainer" parent="." unique_id=592187176]
 unique_name_in_owner = true
 offset_left = 660.0
 offset_top = 15.0
@@ -45,17 +49,17 @@ offset_right = 1290.0
 offset_bottom = 109.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1guik")
 
-[node name="MarginContainer" type="MarginContainer" parent="ParanoiaContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="ParanoiaContainer" unique_id=2015866924]
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ParanoiaContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ParanoiaContainer/MarginContainer" unique_id=961322237]
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ParanoiaContainer/MarginContainer/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="ParanoiaContainer/MarginContainer/HBoxContainer" unique_id=2078534295]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.45
@@ -63,15 +67,17 @@ theme = ExtResource("3_1guik")
 theme_override_font_sizes/normal_font_size = 32
 text = "Paranoia"
 
-[node name="TextureRect" type="TextureRect" parent="ParanoiaContainer/MarginContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="ParanoiaContainer/MarginContainer/HBoxContainer" unique_id=1941591144]
 layout_mode = 2
 texture = ExtResource("2_g2t2x")
 
-[node name="ParanoiaMeter" type="ProgressBar" parent="ParanoiaContainer/MarginContainer/HBoxContainer"]
+[node name="ParanoiaMeter" type="ProgressBar" parent="ParanoiaContainer/MarginContainer/HBoxContainer" unique_id=1925362991]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/background = SubResource("StyleBoxFlat_vykqg")
 theme_override_styles/fill = SubResource("StyleBoxFlat_18gah")
+rounded = true
 show_percentage = false
+script = ExtResource("4_vykqg")

@@ -1,21 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://y7pfhrqq2jjk"]
+[gd_scene format=3 uid="uid://y7pfhrqq2jjk"]
 
 [ext_resource type="Script" uid="uid://bjl4lepc7oa2q" path="res://Scripts/main_menu.gd" id="1_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://hl13m84wrwxi" path="res://Assets/art/player_child_v2.png" id="2_1ehe0"]
 [ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="2_48xlc"]
 
-[node name="Main Menu" type="Node2D"]
+[node name="Main Menu" type="Node2D" unique_id=222768533]
 script = ExtResource("1_ce3w2")
 
-[node name="MenuBackground" type="CanvasLayer" parent="."]
+[node name="MenuBackground" type="CanvasLayer" parent="." unique_id=1901054894]
 unique_name_in_owner = true
 
-[node name="ColorRect" type="ColorRect" parent="MenuBackground"]
+[node name="ColorRect" type="ColorRect" parent="MenuBackground" unique_id=111644081]
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.8, 0.8, 0.8, 1)
 
-[node name="TextureRect" type="TextureRect" parent="MenuBackground"]
+[node name="TextureRect" type="TextureRect" parent="MenuBackground" unique_id=182727748]
 offset_left = 1030.0
 offset_top = 291.0
 offset_right = 1590.0
@@ -23,30 +23,30 @@ offset_bottom = 1016.0
 texture = ExtResource("2_1ehe0")
 stretch_mode = 4
 
-[node name="MainMenuLayer" type="CanvasLayer" parent="."]
+[node name="MainMenuLayer" type="CanvasLayer" parent="." unique_id=81351849]
 unique_name_in_owner = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMenuLayer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenuLayer" unique_id=1197030445]
 offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Spacer-HBOX" type="Control" parent="MainMenuLayer/HBoxContainer"]
+[node name="Spacer-HBOX" type="Control" parent="MainMenuLayer/HBoxContainer" unique_id=1244567896]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.75
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuLayer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuLayer/HBoxContainer" unique_id=1074080058]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
 
-[node name="Spacer-Before Title" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer"]
+[node name="Spacer-Before Title" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer" unique_id=418945466]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Title-RichTextLabel" type="RichTextLabel" parent="MainMenuLayer/HBoxContainer/VBoxContainer"]
+[node name="Title-RichTextLabel" type="RichTextLabel" parent="MainMenuLayer/HBoxContainer/VBoxContainer" unique_id=1917527458]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
@@ -54,79 +54,70 @@ theme = ExtResource("2_48xlc")
 theme_override_font_sizes/normal_font_size = 100
 text = "Watching Us"
 
-[node name="Spacer-After Title" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer"]
+[node name="Spacer-After Title" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer" unique_id=80695073]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMenuLayer/HBoxContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenuLayer/HBoxContainer/VBoxContainer" unique_id=21972174]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1323813386]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 
-[node name="Play Button" type="Button" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Play Button" type="Button" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1950640349]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 45
 text = "Play"
 
-[node name="Spacer - Menu Buttons 1" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Spacer - Menu Buttons 1" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1510445010]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 
-[node name="Options Button" type="Button" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Credits Button" type="Button" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=131931765]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_48xlc")
-text = "Options"
-
-[node name="Spacer - Menu Buttons 2" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
-
-[node name="Credits Button" type="Button" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 45
 text = "Credits"
 
-[node name="Spacer - Menu Buttons 3" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Spacer - Menu Buttons 3" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=758788963]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 
-[node name="Quit Button" type="Button" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Quit Button" type="Button" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=128091571]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 45
 text = "Quit"
 
-[node name="Spacer - Menu Buttons 4" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Spacer - Menu Buttons 4" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=876796793]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Spacer - After Menu Buttons" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="Spacer - After Menu Buttons" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1703193425]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 
-[node name="Spacer-After Menu" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer"]
+[node name="Spacer-After Menu" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer" unique_id=1972723003]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Spacer-HBOX2" type="Control" parent="MainMenuLayer/HBoxContainer"]
+[node name="Spacer-HBOX2" type="Control" parent="MainMenuLayer/HBoxContainer" unique_id=763628218]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
 
 [connection signal="pressed" from="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Options Button" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Credits Button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]

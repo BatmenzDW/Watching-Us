@@ -1,24 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://bpi2lamadyggp"]
+[gd_scene format=3 uid="uid://bpi2lamadyggp"]
 
 [ext_resource type="Script" uid="uid://bbnp0j76y4j3v" path="res://UI/interactable_preview.gd" id="1_vdvmp"]
-[ext_resource type="Texture2D" uid="uid://buqm8llj1pqrm" path="res://Assets/Icons/icon_visibility.png" id="2_7xiqh"]
-[ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="3_stg3w"]
-[ext_resource type="Texture2D" uid="uid://5c386rwed2jm" path="res://Assets/Icons/icon_puzzle.png" id="4_mp1ae"]
-[ext_resource type="Texture2D" uid="uid://dy3humxav1cu0" path="res://Assets/Icons/icon_face.png" id="5_il1x8"]
+[ext_resource type="Texture2D" uid="uid://bsq14q1mpurvg" path="res://Assets/Icons/arrow_up.png" id="4_e6tnc"]
+[ext_resource type="Texture2D" uid="uid://o4f0s68ak40w" path="res://Assets/Icons/hunger.png" id="5_e6tnc"]
+[ext_resource type="Texture2D" uid="uid://jggrfqy3p63l" path="res://Assets/Icons/fun.png" id="6_e6tnc"]
 [ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="6_il1x8"]
+[ext_resource type="Texture2D" uid="uid://ct77veo1p5ae" path="res://Assets/Icons/paranoia.png" id="7_e6tnc"]
+[ext_resource type="Texture2D" uid="uid://3lmprdb7cixs" path="res://Assets/Icons/happiness.png" id="7_gqxd0"]
 
-[node name="Control" type="MarginContainer"]
+[node name="Control" type="MarginContainer" unique_id=175743555]
 z_index = 11
 mouse_filter = 2
 script = ExtResource("1_vdvmp")
 metadata/_custom_type_script = "uid://bbnp0j76y4j3v"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=491352039]
 z_index = 2
+custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=321427241]
 visible = false
 layout_mode = 2
 theme = ExtResource("6_il1x8")
@@ -26,345 +28,486 @@ text = "Placeholder Event Result"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Common" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Common" type="HBoxContainer" parent="VBoxContainer" unique_id=25301724]
 visible = false
 custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Common"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Common" unique_id=1006845607]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer" unique_id=193133689]
 layout_mode = 2
-mouse_filter = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="Paranoia" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer"]
-custom_minimum_size = Vector2(50, 0)
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("2_7xiqh")
-expand_mode = 4
-stretch_mode = 5
-
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer"]
-layout_mode = 2
+size_flags_horizontal = 3
 mouse_filter = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Hunger" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer2"]
-custom_minimum_size = Vector2(50, 0)
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer/MarginContainer" unique_id=2029635988]
 layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("3_stg3w")
-expand_mode = 4
-stretch_mode = 5
-
-[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer"]
-layout_mode = 2
+size_flags_horizontal = 3
 mouse_filter = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Fun" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Common/HBoxContainer/MarginContainer/MarginContainer2" unique_id=1118698968]
+layout_mode = 2
+
+[node name="Paranoia" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer/MarginContainer2/HBoxContainer" unique_id=391395956]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("4_mp1ae")
+texture = ExtResource("7_e6tnc")
 expand_mode = 4
 stretch_mode = 5
 
-[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer"]
+[node name="Paranoia1Arrow" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer/MarginContainer2/HBoxContainer" unique_id=360769851]
+unique_name_in_owner = true
 layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer" unique_id=1467587563]
+layout_mode = 2
+size_flags_horizontal = 3
 mouse_filter = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Happiness" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Common/HBoxContainer/MarginContainer2" unique_id=2070445787]
+layout_mode = 2
+
+[node name="Hunger" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=71854805]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("5_il1x8")
+texture = ExtResource("5_e6tnc")
 expand_mode = 4
 stretch_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Common"]
+[node name="Hunger1Arrow" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=438239051]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer" unique_id=2021293840]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Common/HBoxContainer/MarginContainer3" unique_id=1054133613]
+layout_mode = 2
+
+[node name="Fun" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer3/HBoxContainer" unique_id=162925776]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("6_e6tnc")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Fun1Arrow" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer3/HBoxContainer" unique_id=339371651]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer" unique_id=1532087865]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Common/HBoxContainer/MarginContainer4" unique_id=1477995824]
+layout_mode = 2
+
+[node name="Happiness" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer4/HBoxContainer" unique_id=627730886]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("7_gqxd0")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Happiness1Arrow" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer4/HBoxContainer" unique_id=404237335]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Common" unique_id=1204165465]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_right = 5
 
-[node name="Label" type="Label" parent="VBoxContainer/Common/MarginContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/Common/MarginContainer" unique_id=1448364643]
 layout_mode = 2
 theme = ExtResource("6_il1x8")
 theme_override_font_sizes/font_size = 32
-text = "90%"
+text = "90% Chance"
 horizontal_alignment = 2
 
-[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=330616668]
 visible = false
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Uncommon" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Uncommon" type="HBoxContainer" parent="VBoxContainer" unique_id=1720544956]
 visible = false
 custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Uncommon"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Uncommon" unique_id=1410604159]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Uncommon/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="Paranoia" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer"]
-custom_minimum_size = Vector2(50, 0)
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("2_7xiqh")
-expand_mode = 4
-stretch_mode = 5
-
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Uncommon/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Uncommon/HBoxContainer" unique_id=579112038]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Hunger" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer" unique_id=1274522284]
+layout_mode = 2
+
+[node name="Paranoia" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer/HBoxContainer" unique_id=29615966]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("3_stg3w")
+texture = ExtResource("7_e6tnc")
 expand_mode = 4
 stretch_mode = 5
 
-[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/Uncommon/HBoxContainer"]
+[node name="Paranoia2Arrow" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer/HBoxContainer" unique_id=1601904587]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Uncommon/HBoxContainer" unique_id=1114563089]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Fun" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer2" unique_id=852796467]
+layout_mode = 2
+
+[node name="Hunger" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=1375801338]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("4_mp1ae")
+texture = ExtResource("5_e6tnc")
 expand_mode = 4
 stretch_mode = 5
 
-[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/Uncommon/HBoxContainer"]
+[node name="Hunger2Arrow" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=1100669946]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/Uncommon/HBoxContainer" unique_id=2088485831]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Happiness" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer3" unique_id=196747766]
+layout_mode = 2
+
+[node name="Fun" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer3/HBoxContainer" unique_id=1788614681]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("5_il1x8")
+texture = ExtResource("6_e6tnc")
 expand_mode = 4
 stretch_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Uncommon"]
+[node name="Fun2Arrow" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer3/HBoxContainer" unique_id=1026575948]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/Uncommon/HBoxContainer" unique_id=2077933582]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer4" unique_id=1803057827]
+layout_mode = 2
+
+[node name="Happiness" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer4/HBoxContainer" unique_id=2047881273]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("7_gqxd0")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Happiness2Arrow" type="TextureRect" parent="VBoxContainer/Uncommon/HBoxContainer/MarginContainer4/HBoxContainer" unique_id=1993779568]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Uncommon" unique_id=1524885258]
 layout_mode = 2
 theme_override_constants/margin_right = 5
 
-[node name="Label" type="Label" parent="VBoxContainer/Uncommon/MarginContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/Uncommon/MarginContainer" unique_id=1942846149]
 layout_mode = 2
 theme = ExtResource("6_il1x8")
 theme_override_font_sizes/font_size = 32
-text = "90%"
+text = "90% Chance"
 horizontal_alignment = 2
 
-[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer" unique_id=1241548657]
 visible = false
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Rare" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Rare" type="HBoxContainer" parent="VBoxContainer" unique_id=1931448069]
 visible = false
 custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Rare"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Rare" unique_id=1704314957]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Rare/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="Paranoia" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer"]
-custom_minimum_size = Vector2(50, 0)
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("2_7xiqh")
-expand_mode = 4
-stretch_mode = 5
-
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Rare/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Rare/HBoxContainer" unique_id=699435234]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Hunger" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer" unique_id=1127781177]
+layout_mode = 2
+
+[node name="Paranoia" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer/HBoxContainer" unique_id=2096381389]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("3_stg3w")
+texture = ExtResource("7_e6tnc")
 expand_mode = 4
 stretch_mode = 5
 
-[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/Rare/HBoxContainer"]
+[node name="Paranoia3Arrow" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer/HBoxContainer" unique_id=1412527893]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Rare/HBoxContainer" unique_id=1692501617]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Fun" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer2" unique_id=948945253]
+layout_mode = 2
+
+[node name="Hunger" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=2084876423]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("4_mp1ae")
+texture = ExtResource("5_e6tnc")
 expand_mode = 4
 stretch_mode = 5
 
-[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/Rare/HBoxContainer"]
+[node name="Hunger3Arrow" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=1476569259]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/Rare/HBoxContainer" unique_id=102233470]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Happiness" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer3" unique_id=543014096]
+layout_mode = 2
+
+[node name="Fun" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer3/HBoxContainer" unique_id=1453803385]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("5_il1x8")
+texture = ExtResource("6_e6tnc")
 expand_mode = 4
 stretch_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Rare"]
+[node name="Fun3Arrow" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer3/HBoxContainer" unique_id=1297792215]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/Rare/HBoxContainer" unique_id=833714129]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer4" unique_id=1600831859]
+layout_mode = 2
+
+[node name="Happiness" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer4/HBoxContainer" unique_id=544938511]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("7_gqxd0")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Happiness3Arrow" type="TextureRect" parent="VBoxContainer/Rare/HBoxContainer/MarginContainer4/HBoxContainer" unique_id=1120358951]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Rare" unique_id=236482484]
 layout_mode = 2
 theme_override_constants/margin_right = 5
 
-[node name="Label" type="Label" parent="VBoxContainer/Rare/MarginContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/Rare/MarginContainer" unique_id=678801198]
 layout_mode = 2
 theme = ExtResource("6_il1x8")
 theme_override_font_sizes/font_size = 32
-text = "90%"
+text = "90% Chance"
 horizontal_alignment = 2
 
-[node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer" unique_id=1858067537]
 visible = false
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Epic" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Epic" type="HBoxContainer" parent="VBoxContainer" unique_id=1571139532]
 visible = false
 custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Epic"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Epic" unique_id=1637319194]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Epic/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="Paranoia" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer"]
-custom_minimum_size = Vector2(50, 0)
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("2_7xiqh")
-expand_mode = 4
-stretch_mode = 5
-
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Epic/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Epic/HBoxContainer" unique_id=628489026]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Hunger" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer" unique_id=285196888]
+layout_mode = 2
+
+[node name="Paranoia" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer/HBoxContainer" unique_id=792550544]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("3_stg3w")
+texture = ExtResource("7_e6tnc")
 expand_mode = 4
 stretch_mode = 5
 
-[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/Epic/HBoxContainer"]
+[node name="Paranoia4Arrow" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer/HBoxContainer" unique_id=236291341]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Epic/HBoxContainer" unique_id=8421991]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Fun" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer2" unique_id=258739695]
+layout_mode = 2
+
+[node name="Hunger" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=1837474020]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("4_mp1ae")
+texture = ExtResource("5_e6tnc")
 expand_mode = 4
 stretch_mode = 5
 
-[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/Epic/HBoxContainer"]
+[node name="Hunger4Arrow" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer2/HBoxContainer" unique_id=1520877434]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/Epic/HBoxContainer" unique_id=508035072]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Happiness" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer3" unique_id=831051297]
+layout_mode = 2
+
+[node name="Fun" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer3/HBoxContainer" unique_id=1933783165]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("5_il1x8")
+texture = ExtResource("6_e6tnc")
 expand_mode = 4
 stretch_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Epic"]
+[node name="Fun4Arrow" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer3/HBoxContainer" unique_id=2098656902]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/Epic/HBoxContainer" unique_id=1037852554]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer4" unique_id=1002782753]
+layout_mode = 2
+
+[node name="Happiness" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer4/HBoxContainer" unique_id=1648873284]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("7_gqxd0")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Happiness4Arrow" type="TextureRect" parent="VBoxContainer/Epic/HBoxContainer/MarginContainer4/HBoxContainer" unique_id=1951577958]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_e6tnc")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Epic" unique_id=1639525199]
 layout_mode = 2
 theme_override_constants/margin_right = 5
 
-[node name="Label" type="Label" parent="VBoxContainer/Epic/MarginContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/Epic/MarginContainer" unique_id=336286655]
 layout_mode = 2
 theme = ExtResource("6_il1x8")
 theme_override_font_sizes/font_size = 32
-text = "90%"
+text = "90% Chance"
 horizontal_alignment = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1791262459]
 z_index = 1
 layout_mode = 2
 mouse_filter = 2
