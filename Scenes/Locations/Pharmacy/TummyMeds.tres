@@ -9,18 +9,22 @@ size = Vector2(96, 181)
 
 [sub_resource type="Resource" id="Resource_dwne8"]
 script = ExtResource("2_u4pua")
+happiness = 1.0
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [sub_resource type="Resource" id="Resource_u60a2"]
 script = ExtResource("2_u4pua")
+happiness = 1.0
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [sub_resource type="Resource" id="Resource_7hrpr"]
 script = ExtResource("2_u4pua")
+happiness = 1.0
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [sub_resource type="Resource" id="Resource_8r3fy"]
 script = ExtResource("2_u4pua")
+happiness = 1.0
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [resource]

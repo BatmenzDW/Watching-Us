@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://wl6irs144hi6" path="res://Assets/tileset/park_tileset.png" id="5_w1vll"]
 [ext_resource type="Script" uid="uid://dpu4ptk3gqx5h" path="res://Scripts/Map_Controller/gen_path_2.gd" id="6_kisi7"]
 [ext_resource type="Texture2D" uid="uid://bbs75f73btq0x" path="res://Assets/tileset/pharmacy_tileset.png" id="6_t0mi1"]
-[ext_resource type="Script" path="res://Scripts/Map_Controller/map_line_2d.gd" id="6_xq01p"]
+[ext_resource type="Script" uid="uid://ckssbt6i17a5" path="res://Scripts/Map_Controller/map_line_2d.gd" id="6_xq01p"]
 [ext_resource type="Script" uid="uid://c7fi7qqe237te" path="res://Scripts/Map_Controller/gen_path_3.gd" id="7_ux5v1"]
 [ext_resource type="Script" uid="uid://djsgouwptgecw" path="res://Scripts/Map_Controller/gen_path_1.gd" id="7_wmia7"]
 [ext_resource type="Texture2D" uid="uid://c1llgbujmlvd0" path="res://Assets/tileset/sidewalk_tileset.png" id="8_fdpmf"]
@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cywli8u34agwt" path="res://Assets/tileset/tileset_current_position_v2.png" id="11_p3c3f"]
 [ext_resource type="Texture2D" uid="uid://1ycvibit15jd" path="res://Assets/tileset/busy_crosswalk_tileset.png" id="11_vwqk0"]
 [ext_resource type="Texture2D" uid="uid://bq0dylcp77tdg" path="res://Assets/tileset/school_tileset.png" id="12_1wy3x"]
-[ext_resource type="Script" uid="uid://yk3b3b1atnnv" path="res://Scripts/Map_Controller/gen_location.gd" id="22_0cg75"]
+[ext_resource type="Script" path="res://Scripts/Map_Controller/gen_location.gd" id="22_0cg75"]
 [ext_resource type="Texture2D" uid="uid://te11mrsl0co1" path="res://Assets/tileset/map_key/beech.png" id="23_0cg75"]
 [ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="24_sexfr"]
 [ext_resource type="Texture2D" uid="uid://cvpahydh1fxbl" path="res://Assets/tileset/map_key/bookshelf.png" id="25_ad05m"]
@@ -217,7 +217,6 @@ color = Color(0, 0, 0, 1)
 
 [node name="TravelMap" type="TileMapLayer" parent="."]
 unique_name_in_owner = true
-visible = false
 position = Vector2(500, 124)
 tile_set = SubResource("TileSet_p5pve")
 script = ExtResource("3_0nlex")

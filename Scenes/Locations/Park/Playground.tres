@@ -9,18 +9,28 @@ size = Vector2(773.5, 443)
 
 [sub_resource type="Resource" id="Resource_jgy8e"]
 script = ExtResource("2_hgd07")
+hunger = -0.1
+fun = 0.3
+paranoia = 0.2
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [sub_resource type="Resource" id="Resource_uwpep"]
 script = ExtResource("2_hgd07")
+hunger = -0.2
+fun = 0.2
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [sub_resource type="Resource" id="Resource_ifx5p"]
 script = ExtResource("2_hgd07")
+happiness = -0.1
+paranoia = 0.2
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [sub_resource type="Resource" id="Resource_3pka5"]
 script = ExtResource("2_hgd07")
+hunger = 0.2
+happiness = -0.2
+paranoia = 0.2
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [resource]
@@ -30,6 +40,7 @@ odds = 1.0
 shape = SubResource("RectangleShape2D_8wb5a")
 position = Vector2(464.25, 510.5)
 stat_bundle = Array[Object]([SubResource("Resource_jgy8e"), SubResource("Resource_uwpep"), SubResource("Resource_ifx5p"), SubResource("Resource_3pka5")])
+result_texts = Array[String](["Jungle Gym", "Slide", "Scraped Knee", "Eat Dirt"])
 texture = ExtResource("2_2ocrq")
 texture_position = Vector2(1030, 539)
 texture_scale = Vector2(0.63, 0.63)
