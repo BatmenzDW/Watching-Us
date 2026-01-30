@@ -2,7 +2,7 @@ extends Node2D
 
 class_name GameController
 
-@export var location_index: Location_Index
+@export var location_index: Dictionary[String, Location_Data]
 
 @onready var map: MapController = $MapController
 @onready var location: Location = $Location
@@ -41,12 +41,12 @@ func transition_state(new_state,variable: String):
 # move to new location
 func transition_to_location(selected_location: String) -> void:
 	dict_location.check_location_exists(selected_location)
-	if not location_index.contains(selected_location):
+	if not location_index.has(selected_location):
 		print("Could not find location: ", selected_location)
 		selected_location = location_index.keys()[0]
 	
 	%MapController.hide()
-	var data : Location_Data = location_index.get_(selected_location)
+	var data : Location_Data = location_index[selected_location]
 	var inters : Array[Interactable_Data] = data.interactables
 	for inte in inters:
 		location.load_data(inte)
