@@ -31,7 +31,8 @@ func load_data(data : Interactable_Data, is_child : bool = false):
 	
 	interactable.preview = preview
 	
-	interactable.highlight.color = interactable.nonhighlight_color
+	if interactable.highlight != null:
+		interactable.highlight.color = interactable.nonhighlight_color
 	
 	for child in data.children_interactables:
 		load_data(child, true)

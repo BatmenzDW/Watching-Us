@@ -1,20 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://ba77hdstaid3"]
+[gd_scene load_steps=6 format=3 uid="uid://ba77hdstaid3"]
 
 [ext_resource type="Script" uid="uid://cgt043qnx762a" path="res://Scripts/location.gd" id="1_tx5l4"]
 [ext_resource type="PackedScene" uid="uid://b73o7gyasv71e" path="res://UI/ParanoiaBar.tscn" id="4_a48fp"]
+[ext_resource type="Texture2D" uid="uid://dhsib5100qmov" path="res://Assets/art/Locations/Sheriff_s_Office_Backround.jpg" id="5_1cqvq"]
 [ext_resource type="PackedScene" uid="uid://v7eeb3wbfggi" path="res://Objects/Characters/Player.tscn" id="5_mbtcl"]
-[ext_resource type="Texture2D" uid="uid://cfsap4ew316xx" path="res://Assets/art/Locations/Pharmacy.jpg" id="5_tx5l4"]
-[ext_resource type="Script" uid="uid://b4j3em1jewc02" path="res://Objects/interactable.gd" id="6_tx5l4"]
-[ext_resource type="Texture2D" uid="uid://begr3ummu58p5" path="res://Assets/art/interactables/Pharmacy/Anxiety_Meds_Pirate_Jam_Prop.png" id="7_tx5l4"]
-[ext_resource type="Texture2D" uid="uid://cd0rabw5tt075" path="res://Assets/art/interactables/Pharmacy/Bandages_Pirate_Jam_Prop.png" id="8_643fp"]
-[ext_resource type="Texture2D" uid="uid://c50jrqir83kk3" path="res://Assets/art/interactables/Pharmacy/Tummy_Ache_Meds_Pirate_Jam_Prop.png" id="8_a48fp"]
 [ext_resource type="PackedScene" uid="uid://bpi2lamadyggp" path="res://UI/InteractablePreview.tscn" id="8_cv846"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_643fp"]
-size = Vector2(104, 181)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cv846"]
-size = Vector2(169, 181)
 
 [node name="Location" type="Node2D"]
 script = ExtResource("1_tx5l4")
@@ -31,62 +21,5 @@ metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(957, 539)
-texture = ExtResource("5_tx5l4")
+texture = ExtResource("5_1cqvq")
 metadata/_edit_lock_ = true
-
-[node name="Interactable" type="Area2D" parent="." node_paths=PackedStringArray("preview") groups=["location_elements"]]
-position = Vector2(412, 688)
-script = ExtResource("6_tx5l4")
-preview = NodePath("../Preview")
-metadata/_custom_type_script = "uid://b4j3em1jewc02"
-
-[node name="Sprite2D" type="Sprite2D" parent="Interactable"]
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("7_tx5l4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
-position = Vector2(0, 7.5)
-shape = SubResource("RectangleShape2D_643fp")
-
-[node name="Highlight" type="ColorRect" parent="Interactable"]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Interactable3" type="Area2D" parent="." node_paths=PackedStringArray("preview") groups=["location_elements"]]
-position = Vector2(737, 688)
-script = ExtResource("6_tx5l4")
-preview = NodePath("../Preview")
-metadata/_custom_type_script = "uid://b4j3em1jewc02"
-
-[node name="Sprite2D" type="Sprite2D" parent="Interactable3"]
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("8_a48fp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable3"]
-position = Vector2(0, 7.5)
-shape = SubResource("RectangleShape2D_643fp")
-
-[node name="Highlight" type="ColorRect" parent="Interactable3"]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Interactable2" type="Area2D" parent="." node_paths=PackedStringArray("preview") groups=["location_elements"]]
-position = Vector2(581, 686)
-script = ExtResource("6_tx5l4")
-preview = NodePath("../Preview")
-metadata/_custom_type_script = "uid://b4j3em1jewc02"
-
-[node name="Sprite2D" type="Sprite2D" parent="Interactable2"]
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("8_643fp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable2"]
-position = Vector2(-8.5, 7.5)
-shape = SubResource("RectangleShape2D_cv846")
-
-[node name="Highlight" type="ColorRect" parent="Interactable2"]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0

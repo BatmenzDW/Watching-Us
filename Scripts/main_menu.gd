@@ -2,7 +2,7 @@ extends Node2D
 
 #Play button pressed
 func _on_play_button_pressed() -> void:
-	%GameController.transition_state("map","")
+	%GameController.transition_state("map","start")
 	%MenuBackground.visible = false
 	%MainMenuLayer.visible = false
 
@@ -12,7 +12,7 @@ func _on_options_button_pressed() -> void:
 
 #credits button pressed
 func _on_credits_button_pressed() -> void:
-	%GameController.transition_state("credits","")
+	%GameController.transition_state("credits", "")
 	%MenuBackground.visible = false
 	%MainMenuLayer.visible = false
 

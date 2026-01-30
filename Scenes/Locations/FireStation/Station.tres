@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Interactable_Data" load_steps=9 format=3 uid="uid://b17t37whqigqj"]
+
+[ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_rj8o4"]
+[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_lqscm"]
+[ext_resource type="Texture2D" uid="uid://6wogcyrilacd" path="res://Assets/art/Locations/Firehouse_Background.jpg" id="3_luuxi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
+size = Vector2(987, 582)
+
+[sub_resource type="Resource" id="Resource_t5mse"]
+script = ExtResource("2_lqscm")
+hunger = 1.0
+paranoia = 0.2
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_7k7w0"]
+script = ExtResource("2_lqscm")
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_nbfgi"]
+script = ExtResource("2_lqscm")
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_5odjp"]
+script = ExtResource("2_lqscm")
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[resource]
+script = ExtResource("1_rj8o4")
+is_background = true
+odds = 1.0
+shape = SubResource("RectangleShape2D_8wb5a")
+stat_bundle = Array[ExtResource("2_lqscm")]([SubResource("Resource_t5mse"), SubResource("Resource_7k7w0"), SubResource("Resource_nbfgi"), SubResource("Resource_5odjp")])
+texture = ExtResource("3_luuxi")
+texture_position = Vector2(1030, 539)
+texture_scale = Vector2(1, 1)
+metadata/_custom_type_script = "uid://cn81403dij3yf"

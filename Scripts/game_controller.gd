@@ -22,11 +22,13 @@ func _ready() -> void:
 static func transition_to_state(new_state,variable: String):
 	Instance.transition_state(new_state, variable)
 
-func transition_state(new_state,variable: String):
+func transition_state(new_state,variable: String=""):
+	if(new_state == "win" or variable == "end"):
+		transition_to_win()
 	if(new_state == "location"):
 		transition_to_location(variable)
 	if(new_state == "map"):
-		transition_to_map()
+		transition_to_map(variable)
 	if(new_state == "mainmenu"):
 		transition_to_main_menu()
 	if(new_state == "credits"):
@@ -35,12 +37,11 @@ func transition_state(new_state,variable: String):
 		transition_to_tantrum()
 	if(new_state == "breakdown"):
 		transition_to_breakdown()
-	if(new_state == "win"):
-		transition_to_win()
 
 # move to new location
 func transition_to_location(selected_location: String) -> void:
 	dict_location.check_location_exists(selected_location)
+	#print(selected_location)
 	if not location_index.has(selected_location):
 		print("Could not find location: ", selected_location)
 		selected_location = location_index.keys()[0]
@@ -60,8 +61,11 @@ func transition_to_location(selected_location: String) -> void:
 	next_button.visible = true
 	InputState.set_state(InputState.State.LEVEL)
 
-func transition_to_map():
-	%MapController.map_controller_active_state()
+func transition_to_map(variable: String = ""):
+	if variable == "start":
+		%MapController.map_new_game()
+	else:
+		%MapController.map_controller_active_state()
 
 func transition_to_credits():
 	%CreditsController.roll_credits()
@@ -69,14 +73,19 @@ func transition_to_credits():
 func transition_to_main_menu():
 	%MainMenu._mainmenu_active_state()
 
+static var result : String = ""
+
 func transition_to_tantrum():
-	pass
+	result = "Child Threw a Tantrum"
+	get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
 
 func transition_to_breakdown():
-	pass
+	result = "You had a Breakdown"
+	get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
 
 func transition_to_win():
-	pass
+	result = "You made it home safely"
+	get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
 
 func _on_interact() -> void:
 	interacts_count += 1
