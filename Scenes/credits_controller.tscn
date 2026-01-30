@@ -1,26 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjyhr5wlacfkt"]
+[gd_scene format=3 uid="uid://bjyhr5wlacfkt"]
 
 [ext_resource type="Script" uid="uid://detbvuya02xu6" path="res://Scripts/credits_controller.gd" id="1_ck5o7"]
 [ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="1_eoalw"]
 
-[node name="CreditsController" type="Node2D"]
+[node name="CreditsController" type="Node2D" unique_id=1852854064]
 script = ExtResource("1_ck5o7")
 
-[node name="BackgroundCredits" type="CanvasLayer" parent="."]
+[node name="BackgroundCredits" type="CanvasLayer" parent="." unique_id=580618337]
 unique_name_in_owner = true
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="BackgroundCredits"]
+[node name="ColorRect" type="ColorRect" parent="BackgroundCredits" unique_id=1620705148]
 offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0, 0, 0, 1)
 
-[node name="Credits CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Credits CanvasLayer" type="CanvasLayer" parent="." unique_id=1765884966]
 unique_name_in_owner = true
 
-[node name="PauperTim" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="PauperTim" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=1306615911]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
@@ -42,7 +42,7 @@ Player/Child and Sidewalk Icons
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BatmenzDW" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="BatmenzDW" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=911945838]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
@@ -60,7 +60,7 @@ Sound Effect Controller"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Datlett" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="Datlett" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=1086621371]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
@@ -74,7 +74,7 @@ Music Composer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Freckles_Art" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="Freckles_Art" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=1127732105]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
@@ -88,7 +88,7 @@ Main Artist"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PrinceofWinners" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="PrinceofWinners" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=140401474]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
@@ -102,7 +102,7 @@ Sound Effects"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ThirdParty1" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="ThirdParty1" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=1520944448]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
@@ -122,7 +122,7 @@ SIL Open Font License, Version 1.1 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ThirdParty2" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="ThirdParty2" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=1754464725]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
@@ -136,7 +136,7 @@ Delapouite
 game-icons.net
 
 Traffic lights red icon, Graduate cap icon
-House Icon, Ice cream cone icon
+House Icon, Ice cream cone icon, Party Popper icon
 Bookshelf Icon, Meal Icon, Medicines icon
 
 CC BY 3.0 License
@@ -145,7 +145,7 @@ creativecommons.org/licenses/by/3.0/
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ThirdParty3" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="ThirdParty3" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=1638355910]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
@@ -167,7 +167,7 @@ creativecommons.org/licenses/by/3.0/
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ThirdParty4" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="ThirdParty4" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=1573083710]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
@@ -181,6 +181,27 @@ Andy Meneely
 game-icons.net
 
 Police Badge Icon
+
+CC BY 3.0 License
+creativecommons.org/licenses/by/3.0/
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ThirdParty5" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=1774297697]
+unique_name_in_owner = true
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("1_eoalw")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Third Party Assets
+
+Skoll
+game-icons.net
+
+Hearts Icon
 
 CC BY 3.0 License
 creativecommons.org/licenses/by/3.0/

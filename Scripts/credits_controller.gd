@@ -29,5 +29,8 @@ func roll_credits():
 	%ThirdParty4.visible = true
 	await get_tree().create_timer(3.0).timeout
 	%ThirdParty4.visible = false
+	%ThirdParty5.visible = true
+	await get_tree().create_timer(3.0).timeout
+	%ThirdParty5.visible = false
 	%GameController.transition_state("mainmenu","")
 	%BackgroundCredits.visible = false
