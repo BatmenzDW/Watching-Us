@@ -1,13 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://b73o7gyasv71e"]
+[gd_scene load_steps=7 format=3 uid="uid://b73o7gyasv71e"]
 
 [ext_resource type="Script" uid="uid://fy3nywnom7n" path="res://UI/paranoia_bar.gd" id="1_jpbju"]
 [ext_resource type="Texture2D" uid="uid://ct77veo1p5ae" path="res://Assets/Icons/paranoia.png" id="2_g2t2x"]
+[ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="3_1guik"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1guik"]
+bg_color = Color(0.6, 0.6, 0.6, 0.3529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vykqg"]
+bg_color = Color(0.33333334, 0.33333334, 0.33333334, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_18gah"]
+bg_color = Color(1, 0, 0, 1)
 
 [node name="ParanoiaBar" type="CanvasLayer"]
 script = ExtResource("1_jpbju")
 max_size = 900
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 84.0
 theme_override_constants/margin_left = 900
@@ -19,6 +34,44 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 color = Color(1, 0, 0, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(959.99994, 42)
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/ColorRect"]
 texture = ExtResource("2_g2t2x")
+
+[node name="ParanoiaContainer" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+offset_left = 660.0
+offset_top = 15.0
+offset_right = 1290.0
+offset_bottom = 109.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1guik")
+
+[node name="MarginContainer" type="MarginContainer" parent="ParanoiaContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ParanoiaContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ParanoiaContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+theme = ExtResource("3_1guik")
+theme_override_font_sizes/normal_font_size = 32
+text = "Paranoia"
+
+[node name="TextureRect" type="TextureRect" parent="ParanoiaContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_g2t2x")
+
+[node name="ParanoiaMeter" type="ProgressBar" parent="ParanoiaContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_vykqg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_18gah")
+show_percentage = false

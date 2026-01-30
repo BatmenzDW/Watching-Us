@@ -1,37 +1,18 @@
-[gd_scene load_steps=17 format=3 uid="uid://cdisbxckds82v"]
+[gd_scene load_steps=8 format=3 uid="uid://cdisbxckds82v"]
 
 [ext_resource type="Script" uid="uid://clrkrk0wkn2xh" path="res://Scripts/game_controller.gd" id="1_2irst"]
 [ext_resource type="PackedScene" uid="uid://y7pfhrqq2jjk" path="res://Scenes/main_menu.tscn" id="2_7lihs"]
-[ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="2_dahhg"]
 [ext_resource type="PackedScene" uid="uid://c64go4ir7wuwi" path="res://Scenes/Map_Controller/map_controller.tscn" id="2_j5yw3"]
-[ext_resource type="Resource" uid="uid://c20sbhtift7r" path="res://Scenes/Locations/IceCreamTruck/IceCreamTruck.tres" id="3_3so38"]
-[ext_resource type="Resource" uid="uid://cl5cgq82fowkk" path="res://Scenes/Locations/Park/Park.tres" id="4_3cx6b"]
 [ext_resource type="PackedScene" uid="uid://ba77hdstaid3" path="res://Scenes/Location.tscn" id="4_kldst"]
-[ext_resource type="PackedScene" uid="uid://b7eqbp3blodqq" path="res://UI/next_button.tscn" id="5_b2bpf"]
-[ext_resource type="Resource" uid="uid://dko0shsbmtmc0" path="res://Scenes/Locations/Library/Library.tres" id="5_wxwew"]
-[ext_resource type="Resource" uid="uid://b6sw05kraqovb" path="res://Scenes/Locations/Pharmacy/Pharmacy.tres" id="6_3so38"]
+[ext_resource type="PackedScene" path="res://UI/next_button.tscn" id="5_b2bpf"]
 [ext_resource type="Script" uid="uid://4nqd7saq0eqv" path="res://Scripts/Audio_Controller/audio_controller.gd" id="6_7lihs"]
 [ext_resource type="PackedScene" uid="uid://bjyhr5wlacfkt" path="res://Scenes/credits_controller.tscn" id="6_bf53h"]
-[ext_resource type="Resource" uid="uid://c5v1ulxm055eq" path="res://Scenes/Locations/FireStation/FireStation.tres" id="7_3cx6b"]
-[ext_resource type="Resource" uid="uid://db6buuebak1d4" path="res://Scenes/Locations/SheriffOffice/SheriffOffice.tres" id="8_wxwew"]
-[ext_resource type="Resource" uid="uid://b5vp3uk51s7dr" path="res://Scenes/Locations/BusyStreet/BusyStreet.tres" id="9_acvyw"]
-[ext_resource type="Resource" uid="uid://dry65c8gkaefh" path="res://Scenes/Locations/Sidewalk/Sidewalk.tres" id="10_alh3a"]
 
 [node name="Game" type="Node2D"]
 
 [node name="GameController" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_2irst")
-location_index = Dictionary[String, ExtResource("2_dahhg")]({
-"Crossing Busy Street": ExtResource("9_acvyw"),
-"Fire Station": ExtResource("7_3cx6b"),
-"Ice Cream Truck": ExtResource("3_3so38"),
-"Library": ExtResource("5_wxwew"),
-"Park": ExtResource("4_3cx6b"),
-"Pharmacy": ExtResource("6_3so38"),
-"Police Station": ExtResource("8_wxwew"),
-"Sidewalk": ExtResource("10_alh3a")
-})
 
 [node name="MainMenu" parent="GameController" instance=ExtResource("2_7lihs")]
 unique_name_in_owner = true

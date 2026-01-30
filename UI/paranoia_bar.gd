@@ -18,11 +18,13 @@ func set_target_val(val: float):
 	target_val = clampf(val, 0, 1)
 
 func _set_size(percent: float):
-	var val : float = 1 - percent
-	val *= max_size - min_size
-	val += min_size
-	margin.add_theme_constant_override("margin_left", val as int)
-	margin.add_theme_constant_override("margin_right", val as int)
+	#var val : float = 1 - percent
+	print(percent)
+	#val *= max_size - min_size
+	#val += min_size
+	#margin.add_theme_constant_override("margin_left", val as int)
+	#margin.add_theme_constant_override("margin_right", val as int)
+	%ParanoiaMeter.value = percent
 
 func _process(delta: float) -> void:
 	if abs(current_val - target_val) > target_delta:
