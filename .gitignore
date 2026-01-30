@@ -15,3 +15,4 @@ export_credentials.cfg
 data_*/
 mono_crash.*.json
 Scenes/Game.tscn1953476344.tmp
+*.tmp
