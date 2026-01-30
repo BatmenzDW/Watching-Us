@@ -2,7 +2,7 @@ extends Node2D
 
 class_name GameController
 
-@export var location_index : Location_Index
+@export var location_index: Location_Index
 
 @onready var map: MapController = $MapController
 @onready var location: Location = $Location
