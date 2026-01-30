@@ -13,8 +13,7 @@
 unique_name_in_owner = true
 script = ExtResource("1_2irst")
 
-[node name="MainMenu" parent="GameController" instance=ExtResource("2_7lihs")]
-unique_name_in_owner = true
+[node name="Main Menu" parent="GameController" instance=ExtResource("2_7lihs")]
 
 [node name="MapController" parent="GameController" instance=ExtResource("2_j5yw3")]
 unique_name_in_owner = true
@@ -34,4 +33,5 @@ bus = &"SFX"
 script = ExtResource("6_7lihs")
 metadata/_edit_lock_ = true
 
+[connection signal="location_traversal" from="GameController/MapController" to="GameController" method="_on_map_controller_location_traversal"]
 [connection signal="go_next" from="GameController/NextButton" to="GameController" method="_leave_location"]

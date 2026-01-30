@@ -7,14 +7,15 @@
 [node name="Main Menu" type="Node2D"]
 script = ExtResource("1_ce3w2")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="MenuBackground" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="MenuBackground"]
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.8, 0.8, 0.8, 1)
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="TextureRect" type="TextureRect" parent="MenuBackground"]
 offset_left = 1030.0
 offset_top = 291.0
 offset_right = 1590.0
@@ -22,29 +23,30 @@ offset_bottom = 1016.0
 texture = ExtResource("2_1ehe0")
 stretch_mode = 4
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+[node name="MainMenuLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenuLayer"]
 offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Spacer-HBOX" type="Control" parent="CanvasLayer2/HBoxContainer"]
+[node name="Spacer-HBOX" type="Control" parent="MainMenuLayer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.75
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuLayer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
 
-[node name="Spacer-Before Title" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+[node name="Spacer-Before Title" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Title-RichTextLabel" type="RichTextLabel" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+[node name="Title-RichTextLabel" type="RichTextLabel" parent="MainMenuLayer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
@@ -52,79 +54,79 @@ theme = ExtResource("2_48xlc")
 theme_override_font_sizes/normal_font_size = 100
 text = "Watching Us"
 
-[node name="Spacer-After Title" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+[node name="Spacer-After Title" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenuLayer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 
-[node name="Play Button" type="Button" parent="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Play Button" type="Button" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_48xlc")
 text = "Play"
 
-[node name="Spacer - Menu Buttons 1" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Spacer - Menu Buttons 1" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 
-[node name="Options Button" type="Button" parent="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Options Button" type="Button" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_48xlc")
 text = "Options"
 
-[node name="Spacer - Menu Buttons 2" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Spacer - Menu Buttons 2" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 
-[node name="Credits Button" type="Button" parent="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Credits Button" type="Button" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_48xlc")
 text = "Credits"
 
-[node name="Spacer - Menu Buttons 3" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Spacer - Menu Buttons 3" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 
-[node name="Quit Button" type="Button" parent="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Quit Button" type="Button" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_48xlc")
 text = "Quit"
 
-[node name="Spacer - Menu Buttons 4" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Spacer - Menu Buttons 4" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Spacer - After Menu Buttons" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="Spacer - After Menu Buttons" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 
-[node name="Spacer-After Menu" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+[node name="Spacer-After Menu" type="Control" parent="MainMenuLayer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Spacer-HBOX2" type="Control" parent="CanvasLayer2/HBoxContainer"]
+[node name="Spacer-HBOX2" type="Control" parent="MainMenuLayer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
 
-[connection signal="pressed" from="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Options Button" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Credits Button" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="CanvasLayer2/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Options Button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Credits Button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MainMenuLayer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]

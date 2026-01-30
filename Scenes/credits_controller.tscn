@@ -1,0 +1,185 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjyhr5wlacfkt"]
+
+[ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="1_eoalw"]
+
+[node name="Credits Controller" type="Node2D"]
+
+[node name="Background CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background CanvasLayer"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="Credits CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauperTim" type="RichTextLabel" parent="Credits CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("1_eoalw")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Paupertim
+
+Project Lead
+
+Programmer:
+Game Menus, Credits, Travel Map
+
+Art Assets:
+Player/child, Sidewalk Location, 
+Player/Child and Sidewalk Icons
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BatmenzDW" type="RichTextLabel" parent="Credits CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("1_eoalw")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "BatmenzDW
+
+Programmer:
+Locations
+Interatables
+Audio Controller
+Game State Manager"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Datlett" type="RichTextLabel" parent="Credits CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("1_eoalw")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Datlett
+
+Music Composer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Freckles_Art" type="RichTextLabel" parent="Credits CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("1_eoalw")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Freckles_Art
+
+Main Artist"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PrinceofWinners" type="RichTextLabel" parent="Credits CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("1_eoalw")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Princeofwinners
+
+Sound Effects"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Third Party Assets1" type="RichTextLabel" parent="Credits CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("1_eoalw")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Third Party Assets
+
+Typomondo
+
+Font
+fonts.google.com/specimen/Eater
+
+This Font Software is licensed under:
+SIL Open Font License, Version 1.1 "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Third Party Assets2" type="RichTextLabel" parent="Credits CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("1_eoalw")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Third Party Assets
+
+Delapouite
+game-icons.net
+
+Traffic lights red icon, Graduate cap icon
+House Icon, Ice cream cone icon
+Bookshelf Icon, Meal Icon
+
+CC BY 3.0 License
+creativecommons.org/licenses/by/3.0/
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Third Party Assets3" type="RichTextLabel" parent="Credits CanvasLayer"]
+unique_name_in_owner = true
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("1_eoalw")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Third Party Assets
+
+Lorc
+game-icons.net
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Third Party Assets5" type="RichTextLabel" parent="Credits CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("1_eoalw")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Princeofwinners
+
+Sound Effects"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Third Party Assets6" type="RichTextLabel" parent="Credits CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("1_eoalw")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Princeofwinners
+
+Sound Effects"
+horizontal_alignment = 1
+vertical_alignment = 1

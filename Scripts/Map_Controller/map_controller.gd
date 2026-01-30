@@ -5,8 +5,6 @@ class_name MapController
 const TILEMAP_X_OFFSET = SingTravelMap.TILEMAP_X_OFFSET
 const TILEMAP_Y_OFFSET = SingTravelMap.TILEMAP_Y_OFFSET
 
-signal location_traversal(selected_location: String)
-
 #This script will act sort of like an API from the rest of the program as everything is self contained where it can pass the active state to the Map Controller.
 var map_controller_state: int = 1
 var hovered_cell = Vector2i(0,0)
@@ -19,20 +17,25 @@ func _map_controller_gen_new_map():
 #This will be in case we want the user to be able to view the upcoming map but not traverse it, if they are at a location
 func map_controller_active_state_view():
 	map_controller_state = 2
-	self.visible = true
+	%TravelMap.visible = true
 	%MapHud.visible = true
+	%MapBackground.visible = true
 
 #This will be to traverse the map to a new location.
-func map_controller_active_state():
+func _map_controller_active_state():
 	map_controller_state = 1
-	self.visible = true
+	#self.visible = true
+	%TravelMap.visible = true
 	%MapHud.visible = true
+	%MapBackground.visible = true
+	_map_controller_gen_new_map()
 
 func _map_controller_end_active_state(selected_location : String):
-	location_traversal.emit(selected_location)
+	%GameController.transition_state("location",selected_location)
 	map_controller_state = 0
-	self.visible = false
+	%TravelMap.visible = false
 	%MapHud.visible = false
+	
 
 func _node_traversal(current_cell: Vector2i, selected_location : String):
 	%CursorMap.clear()

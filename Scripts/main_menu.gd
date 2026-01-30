@@ -2,8 +2,9 @@ extends Node2D
 
 #Play button pressed
 func _on_play_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Game.tscn")
-	pass # Replace with function body.
+	%GameController.transition_state("map","")
+	%MenuBackground.visible = false
+	%MainMenuLayer.visible = false
 
 #options button pressed
 func _on_options_button_pressed() -> void:

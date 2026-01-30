@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://ba77hdstaid3"]
+[gd_scene load_steps=9 format=3 uid="uid://chp6gloqkuqal"]
 
-[ext_resource type="Script" path="res://Scripts/location.gd" id="1_tx5l4"]
+[ext_resource type="Script" uid="uid://cgt043qnx762a" path="res://Scripts/location.gd" id="1_tx5l4"]
 [ext_resource type="PackedScene" uid="uid://b73o7gyasv71e" path="res://UI/ParanoiaBar.tscn" id="4_a48fp"]
 [ext_resource type="PackedScene" uid="uid://v7eeb3wbfggi" path="res://Objects/Characters/Player.tscn" id="5_mbtcl"]
 [ext_resource type="Texture2D" uid="uid://cijvu5nbgw7cx" path="res://Assets/art/Locations/IceCream_Truck.jpg" id="5_tx5l4"]
@@ -12,6 +12,7 @@
 size = Vector2(159, 204)
 
 [node name="Location" type="Node2D"]
+visible = false
 script = ExtResource("1_tx5l4")
 
 [node name="Preview" parent="." instance=ExtResource("8_cv846")]
@@ -20,6 +21,7 @@ visible = false
 metadata/_edit_lock_ = true
 
 [node name="ParanoiaBar" parent="." instance=ExtResource("4_a48fp")]
+visible = false
 
 [node name="Player" parent="." instance=ExtResource("5_mbtcl")]
 position = Vector2(1135, 814)

@@ -5,8 +5,8 @@ const MAP_TILE_EMPTY = Vector2i(0, 0) # Atlas coordinates for the empty/backgrou
 const MAP_TILE_LOCATION = Vector2i(1, 0) # Atlas coordinates for the location tile
 const SOURCE_ID: int = 0
 
-func _ready():
-	_gen_new_map()
+#func _ready():
+	#_gen_new_map()
 
 #generates the new map when called.
 func _gen_new_map():

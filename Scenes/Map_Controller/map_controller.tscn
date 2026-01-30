@@ -209,12 +209,15 @@ sources/10 = SubResource("TileSetAtlasSource_ad05m")
 script = ExtResource("1_c117o")
 
 [node name="MapBackground" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
 offset_right = 1922.0
 offset_bottom = 1086.0
 color = Color(0, 0, 0, 1)
 
 [node name="TravelMap" type="TileMapLayer" parent="."]
 unique_name_in_owner = true
+visible = false
 position = Vector2(500, 124)
 tile_set = SubResource("TileSet_p5pve")
 script = ExtResource("3_0nlex")
@@ -263,6 +266,7 @@ tile_set = SubResource("TileSet_6j8ea")
 
 [node name="MapHud" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
+visible = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MapHud"]
 offset_right = 1920.0

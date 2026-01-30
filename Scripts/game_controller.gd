@@ -32,8 +32,17 @@ func _ready() -> void:
 	InputState.set_state(InputState.State.MAP)
 	SignalBus.interact.connect(_on_interact)
 
+func transition_state(new_state,variable: String):
+	if(new_state == "location"):
+		transition_to_location(variable)
+	if(new_state == "map"):
+		transition_to_map()
+	if(new_state == "mainmenu"):
+		transition_to_main_menu()
+
 # move to new location
-func _on_map_controller_location_traversal(selected_location: String) -> void:
+func transition_to_location(selected_location: String) -> void:
+	dict_location.check_location_exists(selected_location)
 	if not location_index.contains(selected_location):
 		print("Could not find location: ", selected_location)
 		selected_location = location_index.keys()[0]
@@ -51,6 +60,12 @@ func _on_map_controller_location_traversal(selected_location: String) -> void:
 	location.visible = true
 	next_button.visible = true
 	InputState.set_state(InputState.State.LEVEL)
+
+func transition_to_map():
+	%MapController._map_controller_active_state()
+	
+func transition_to_main_menu():
+	%MainMenu._map_controller_active_state()
 
 func _on_interact() -> void:
 	interacts_count += 1
