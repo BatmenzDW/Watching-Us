@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="Interactable_Data" load_steps=9 format=3 uid="uid://brrh2edscax8k"]
+[gd_resource type="Resource" script_class="Interactable_Data" format=3 uid="uid://brrh2edscax8k"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_aojcv"]
-[ext_resource type="Script" path="res://Resources/Stats.gd" id="2_66tvg"]
+[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_66tvg"]
 [ext_resource type="Texture2D" uid="uid://7sc6ycw260nl" path="res://Assets/art/interactables/Park/Dog.png" id="2_xutlo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]

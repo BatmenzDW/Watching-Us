@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://v7eeb3wbfggi"]
+[gd_scene format=3 uid="uid://v7eeb3wbfggi"]
 
 [ext_resource type="Script" uid="uid://b33acafdle66b" path="res://Objects/Characters/player.gd" id="1_oo13o"]
 [ext_resource type="Texture2D" uid="uid://c7rp8yn7ec6yl" path="res://Assets/art/player_child.png" id="2_ddc0b"]
@@ -12,27 +12,30 @@ height = 272.0
 radius = 44.0
 height = 176.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=1374814896]
 z_index = 2
 script = ExtResource("1_oo13o")
+hunger = 0.6
+fun = 0.7
+happiness = 0.65
 metadata/_custom_type_script = "uid://b33acafdle66b"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1858513335]
 z_index = 1
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ddc0b")
 
-[node name="ParentCollider" type="CollisionShape2D" parent="."]
+[node name="ParentCollider" type="CollisionShape2D" parent="." unique_id=2033191176]
 visible = false
 position = Vector2(-42, -1)
 shape = SubResource("CapsuleShape2D_1ju47")
 
-[node name="ChildCollider" type="CollisionShape2D" parent="."]
+[node name="ChildCollider" type="CollisionShape2D" parent="." unique_id=1383405855]
 visible = false
 position = Vector2(63, 32)
 shape = SubResource("CapsuleShape2D_oo13o")
 
-[node name="ChildUI" parent="." instance=ExtResource("3_ddc0b")]
+[node name="ChildUI" parent="." unique_id=1815291796 instance=ExtResource("3_ddc0b")]
 z_index = 2
 offset_left = 10.0
 offset_top = -344.0

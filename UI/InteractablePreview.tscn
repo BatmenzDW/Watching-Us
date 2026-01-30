@@ -29,7 +29,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Common" type="HBoxContainer" parent="VBoxContainer" unique_id=25301724]
-visible = false
 custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
 mouse_filter = 2
@@ -47,19 +46,10 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Common/HBoxContainer/MarginContainer" unique_id=2029635988]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Common/HBoxContainer/MarginContainer/MarginContainer2" unique_id=1118698968]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Common/HBoxContainer/MarginContainer" unique_id=1118698968]
 layout_mode = 2
 
-[node name="Paranoia" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer/MarginContainer2/HBoxContainer" unique_id=391395956]
+[node name="Paranoia" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer/HBoxContainer" unique_id=391395956]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 mouse_filter = 2
@@ -67,7 +57,7 @@ texture = ExtResource("7_e6tnc")
 expand_mode = 4
 stretch_mode = 5
 
-[node name="Paranoia1Arrow" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer/MarginContainer2/HBoxContainer" unique_id=360769851]
+[node name="Paranoia1Arrow" type="TextureRect" parent="VBoxContainer/Common/HBoxContainer/MarginContainer/HBoxContainer" unique_id=360769851]
 unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("4_e6tnc")
@@ -165,9 +155,9 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="Uncommon" type="HBoxContainer" parent="VBoxContainer" unique_id=1720544956]
-visible = false
 custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Uncommon" unique_id=1410604159]
 layout_mode = 2
@@ -281,7 +271,6 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="Rare" type="HBoxContainer" parent="VBoxContainer" unique_id=1931448069]
-visible = false
 custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
 
@@ -397,7 +386,6 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="Epic" type="HBoxContainer" parent="VBoxContainer" unique_id=1571139532]
-visible = false
 custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
 

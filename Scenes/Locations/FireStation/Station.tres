@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Interactable_Data" format=3 uid="uid://b17t37whqigqj"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_rj8o4"]
-[ext_resource type="Script" path="res://Resources/Stats.gd" id="2_lqscm"]
+[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_lqscm"]
 [ext_resource type="Texture2D" uid="uid://6wogcyrilacd" path="res://Assets/art/Locations/Firehouse_Background.jpg" id="3_luuxi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]

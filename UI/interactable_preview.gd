@@ -11,28 +11,9 @@ class_name Interactable_Preview
 
 @onready var label: Label = $VBoxContainer/Label
 
-@onready var paranoia_1: TextureRect = $VBoxContainer/Common/HBoxContainer/MarginContainer/Paranoia
-@onready var hunger_1: TextureRect = $VBoxContainer/Common/HBoxContainer/MarginContainer2/Hunger
-@onready var fun_1: TextureRect = $VBoxContainer/Common/HBoxContainer/MarginContainer3/Fun
-@onready var happiness_1: TextureRect = $VBoxContainer/Common/HBoxContainer/MarginContainer4/Happiness
 @onready var label_1: Label = $VBoxContainer/Common/MarginContainer/Label
-
-@onready var paranoia_2: TextureRect = $VBoxContainer/Uncommon/HBoxContainer/MarginContainer/Paranoia
-@onready var hunger_2: TextureRect = $VBoxContainer/Uncommon/HBoxContainer/MarginContainer2/Hunger
-@onready var fun_2: TextureRect = $VBoxContainer/Uncommon/HBoxContainer/MarginContainer3/Fun
-@onready var happiness_2: TextureRect = $VBoxContainer/Uncommon/HBoxContainer/MarginContainer4/Happiness
 @onready var label_2: Label = $VBoxContainer/Uncommon/MarginContainer/Label
-
-@onready var paranoia_3: TextureRect = $VBoxContainer/Rare/HBoxContainer/MarginContainer/Paranoia
-@onready var hunger_3: TextureRect = $VBoxContainer/Rare/HBoxContainer/MarginContainer2/Hunger
-@onready var fun_3: TextureRect = $VBoxContainer/Rare/HBoxContainer/MarginContainer3/Fun
-@onready var happiness_3: TextureRect = $VBoxContainer/Rare/HBoxContainer/MarginContainer4/Happiness
 @onready var label_3: Label = $VBoxContainer/Rare/MarginContainer/Label
-
-@onready var paranoia_4: TextureRect = $VBoxContainer/Epic/HBoxContainer/MarginContainer/Paranoia
-@onready var hunger_4: TextureRect = $VBoxContainer/Epic/HBoxContainer/MarginContainer2/Hunger
-@onready var fun_4: TextureRect = $VBoxContainer/Epic/HBoxContainer/MarginContainer3/Fun
-@onready var happiness_4: TextureRect = $VBoxContainer/Epic/HBoxContainer/MarginContainer4/Happiness
 @onready var label_4: Label = $VBoxContainer/Epic/MarginContainer/Label
 
 const COMMON_COLOR : Color = Color(0xb0b0b0ff)

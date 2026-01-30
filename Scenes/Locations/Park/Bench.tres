@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="Interactable_Data" load_steps=9 format=3 uid="uid://bwa63gxfl221d"]
+[gd_resource type="Resource" script_class="Interactable_Data" format=3 uid="uid://bwa63gxfl221d"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_kyv47"]
-[ext_resource type="Script" path="res://Resources/Stats.gd" id="2_gbj4g"]
+[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_gbj4g"]
 [ext_resource type="Texture2D" uid="uid://8u2cnxhpxwqt" path="res://Assets/art/interactables/Park/Bench.png" id="3_kgs83"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gbj4g"]

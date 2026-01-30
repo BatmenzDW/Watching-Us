@@ -3,3 +3,4 @@ extends MarginContainer
 
 func _ready() -> void:
 	label.text = GameController.result
+	SignalBus.set_music.emit("IceCreamTruck")

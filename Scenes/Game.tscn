@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://dko0shsbmtmc0" path="res://Scenes/Locations/Library/Library.tres" id="3_alh3a"]
 [ext_resource type="Resource" uid="uid://c20sbhtift7r" path="res://Scenes/Locations/IceCreamTruck/IceCreamTruck.tres" id="4_4q8tf"]
 [ext_resource type="PackedScene" uid="uid://ba77hdstaid3" path="res://Scenes/Location.tscn" id="4_kldst"]
-[ext_resource type="PackedScene" path="res://UI/next_button.tscn" id="5_b2bpf"]
+[ext_resource type="PackedScene" uid="uid://b7eqbp3blodqq" path="res://UI/next_button.tscn" id="5_b2bpf"]
 [ext_resource type="Resource" uid="uid://b6sw05kraqovb" path="res://Scenes/Locations/Pharmacy/Pharmacy.tres" id="5_x3xnh"]
 [ext_resource type="Script" uid="uid://4nqd7saq0eqv" path="res://Scripts/Audio_Controller/audio_controller.gd" id="6_7lihs"]
 [ext_resource type="Resource" uid="uid://dry65c8gkaefh" path="res://Scenes/Locations/Sidewalk/Sidewalk.tres" id="6_8r6kd"]
@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://db6buuebak1d4" path="res://Scenes/Locations/SheriffOffice/SheriffOffice.tres" id="7_tfod6"]
 [ext_resource type="Resource" uid="uid://c5v1ulxm055eq" path="res://Scenes/Locations/FireStation/FireStation.tres" id="8_rajel"]
 [ext_resource type="Resource" uid="uid://b5vp3uk51s7dr" path="res://Scenes/Locations/BusyStreet/BusyStreet.tres" id="9_vvhu1"]
+[ext_resource type="Resource" uid="uid://cl5cgq82fowkk" path="res://Scenes/Locations/Park/Park.tres" id="10_alh3a"]
 
 [node name="Game" type="Node2D" unique_id=273078071]
 
@@ -26,6 +27,7 @@ location_index = Dictionary[String, ExtResource("2_acvyw")]({
 "Fire Station": ExtResource("8_rajel"),
 "Ice Cream Truck": ExtResource("4_4q8tf"),
 "Library": ExtResource("3_alh3a"),
+"Park": ExtResource("10_alh3a"),
 "Pharmacy": ExtResource("5_x3xnh"),
 "Police Station": ExtResource("7_tfod6"),
 "Sidewalk": ExtResource("6_8r6kd")
@@ -40,6 +42,7 @@ metadata/_edit_lock_ = true
 
 [node name="CreditsController" parent="GameController" unique_id=122811933 instance=ExtResource("6_bf53h")]
 unique_name_in_owner = true
+visible = false
 
 [node name="Location" parent="GameController" unique_id=1076294949 instance=ExtResource("4_kldst")]
 visible = false

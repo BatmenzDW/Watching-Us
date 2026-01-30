@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Interactable_Data" format=3 uid="uid://dvloit15w0wjl"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_3aqmt"]
-[ext_resource type="Script" path="res://Resources/Stats.gd" id="2_k3tlj"]
+[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_k3tlj"]
 [ext_resource type="Texture2D" uid="uid://gwyfpg4b75df" path="res://Assets/art/Locations/sidewalk.jpg" id="3_3aqmt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
