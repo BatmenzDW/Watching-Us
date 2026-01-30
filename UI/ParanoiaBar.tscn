@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b73o7gyasv71e"]
 
 [ext_resource type="Script" uid="uid://fy3nywnom7n" path="res://UI/paranoia_bar.gd" id="1_jpbju"]
-[ext_resource type="Texture2D" uid="uid://buqm8llj1pqrm" path="res://Assets/Icons/icon_visibility.png" id="2_g2t2x"]
+[ext_resource type="Texture2D" uid="uid://ct77veo1p5ae" path="res://Assets/Icons/paranoia.png" id="2_g2t2x"]
 
 [node name="ParanoiaBar" type="CanvasLayer"]
 script = ExtResource("1_jpbju")
@@ -21,5 +21,4 @@ color = Color(1, 0, 0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(959.99994, 42)
-scale = Vector2(2.1249979, 1.9999999)
 texture = ExtResource("2_g2t2x")

@@ -14,6 +14,8 @@ unique_name_in_owner = true
 metadata/_edit_lock_ = true
 
 [node name="ParanoiaBar" parent="." instance=ExtResource("4_a48fp")]
+unique_name_in_owner = true
+visible = false
 
 [node name="Player" parent="." instance=ExtResource("5_mbtcl")]
 position = Vector2(1135, 814)

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Interactable_Data" load_steps=9 format=3 uid="uid://coykd5562jvg6"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_ia3o8"]
-[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_2ifpv"]
+[ext_resource type="Script" path="res://Resources/Stats.gd" id="2_2ifpv"]
 [ext_resource type="Texture2D" uid="uid://dhsib5100qmov" path="res://Assets/art/Locations/Sheriff_s_Office_Backround.jpg" id="3_nyia4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]

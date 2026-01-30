@@ -64,7 +64,7 @@ func transition_to_location(selected_location: String) -> void:
 func transition_to_map(variable: String = ""):
 	if variable == "start":
 		%MapController.map_new_game()
-	else:
+	if variable != "start":
 		%MapController.map_controller_active_state()
 
 func transition_to_credits():

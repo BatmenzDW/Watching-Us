@@ -5,9 +5,6 @@ const MAP_TILE_EMPTY = Vector2i(0, 0) # Atlas coordinates for the empty/backgrou
 const MAP_TILE_LOCATION = Vector2i(1, 0) # Atlas coordinates for the location tile
 const SOURCE_ID: int = 0
 
-#func _ready():
-	#_gen_new_map()
-
 #generates the new map when called.
 func _gen_new_map():
 	_clear_old_map()
@@ -53,7 +50,7 @@ func _gen_new_map():
 	%genPath._gen_node_path(random_node_array)
 
 
-	
+#Generate the cell and check the node to see if it is a location
 func _gen_cell_check_node(map_coords, random_node_array):
 	#checks if it is the start or end
 	if(map_coords.y == 0 or map_coords.y == 12):
@@ -97,7 +94,7 @@ func _gen_cell_check_node(map_coords, random_node_array):
 		print("BUG ALERT: This shouldn't be used: map_coords= ", map_coords, " source_id= ")
 
 
-#generates a random node
+#generates a random location in a node
 func _gen_cell_random_node(map_coords):
 	#set_cell(map_coords, -1)
 	set_cell(map_coords, SOURCE_ID, MAP_TILE_LOCATION)

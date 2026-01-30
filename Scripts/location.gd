@@ -9,6 +9,8 @@ func load_data(data : Interactable_Data, is_child : bool = false):
 	var interactable : Interactable
 	var sprite : Sprite2D
 	
+	%ParanoiaBar.visible = true
+	
 	if not data.is_background and data.odds < 1.0:
 		if randf() <= data.odds: # random chance to spawn
 			return
@@ -54,6 +56,7 @@ func load_data(data : Interactable_Data, is_child : bool = false):
 		sprite.scale = data.texture_scale
 
 func unload() -> void:
+	%ParanoiaBar.visible = false
 	print("Unload")
 	var nodes_to_remove = get_tree().get_nodes_in_group("location_elements")
 	print("Unloading ", nodes_to_remove.size(), " nodes")
