@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjyhr5wlacfkt"]
+[gd_scene load_steps=3 format=3 uid="uid://bjyhr5wlacfkt"]
 
+[ext_resource type="Script" uid="uid://detbvuya02xu6" path="res://Scripts/credits_controller.gd" id="1_ck5o7"]
 [ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="1_eoalw"]
 
 [node name="Credits Controller" type="Node2D"]
+script = ExtResource("1_ck5o7")
 
 [node name="Background CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -14,6 +16,7 @@ size_flags_vertical = 3
 color = Color(0, 0, 0, 1)
 
 [node name="Credits CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="PauperTim" type="RichTextLabel" parent="Credits CanvasLayer"]
 unique_name_in_owner = true
@@ -132,7 +135,7 @@ game-icons.net
 
 Traffic lights red icon, Graduate cap icon
 House Icon, Ice cream cone icon
-Bookshelf Icon, Meal Icon
+Bookshelf Icon, Meal Icon, Medicines icon
 
 CC BY 3.0 License
 creativecommons.org/licenses/by/3.0/
@@ -142,6 +145,7 @@ vertical_alignment = 1
 
 [node name="Third Party Assets3" type="RichTextLabel" parent="Credits CanvasLayer"]
 unique_name_in_owner = true
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 theme = ExtResource("1_eoalw")
@@ -152,11 +156,16 @@ text = "Third Party Assets
 Lorc
 game-icons.net
 
+Fire shield icon, Beech icon,
+Paranoia icon
+
+CC BY 3.0 License
+creativecommons.org/licenses/by/3.0/
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Third Party Assets5" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="Third Party Assets4" type="RichTextLabel" parent="Credits CanvasLayer"]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
@@ -164,22 +173,15 @@ offset_bottom = 1080.0
 theme = ExtResource("1_eoalw")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 50
-text = "Princeofwinners
+text = "Third Party Assets
 
-Sound Effects"
-horizontal_alignment = 1
-vertical_alignment = 1
+Andy Meneely
+game-icons.net
 
-[node name="Third Party Assets6" type="RichTextLabel" parent="Credits CanvasLayer"]
-unique_name_in_owner = true
-visible = false
-offset_right = 1920.0
-offset_bottom = 1080.0
-theme = ExtResource("1_eoalw")
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/normal_font_size = 50
-text = "Princeofwinners
+Police Badge Icon
 
-Sound Effects"
+CC BY 3.0 License
+creativecommons.org/licenses/by/3.0/
+"
 horizontal_alignment = 1
 vertical_alignment = 1
