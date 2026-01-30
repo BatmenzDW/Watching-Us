@@ -1,15 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://q06nf60uajs1"]
+[gd_scene format=3 uid="uid://q06nf60uajs1"]
 
 [ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="1_2ybbf"]
 [ext_resource type="Script" uid="uid://d3rdd7ay10lld" path="res://UI/child_ui.gd" id="1_eyl31"]
-[ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="2_nltll"]
-[ext_resource type="Texture2D" uid="uid://5c386rwed2jm" path="res://Assets/Icons/icon_puzzle.png" id="3_2ybbf"]
-[ext_resource type="Texture2D" uid="uid://dy3humxav1cu0" path="res://Assets/Icons/icon_face.png" id="4_5ytho"]
+[ext_resource type="Texture2D" uid="uid://o4f0s68ak40w" path="res://Assets/Icons/hunger.png" id="3_2ybbf"]
+[ext_resource type="Texture2D" uid="uid://jggrfqy3p63l" path="res://Assets/Icons/fun.png" id="4_5ytho"]
+[ext_resource type="Texture2D" uid="uid://3lmprdb7cixs" path="res://Assets/Icons/happiness.png" id="5_y7j32"]
 
 [sub_resource type="Theme" id="Theme_olfrx"]
 HBoxContainer/constants/separation = 0
 
-[node name="ChildUI" type="FoldableContainer"]
+[node name="ChildUI" type="FoldableContainer" unique_id=520274540]
 z_index = 1
 custom_minimum_size = Vector2(100, 100)
 offset_right = 286.0
@@ -20,17 +20,17 @@ title = "Child Stats"
 title_position = 1
 script = ExtResource("1_eyl31")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=713571289]
 z_index = 1
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=673392969]
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_olfrx")
 
-[node name="Hunger" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="Hunger" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=1600700403]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 5
@@ -38,45 +38,22 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/Hunger"]
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/Hunger" unique_id=1324196981]
 layout_mode = 2
 color = Color(0.42, 0.28601998, 0.1764, 1)
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(50, 0)
-layout_mode = 2
-texture = ExtResource("2_nltll")
-expand_mode = 4
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme = SubResource("Theme_olfrx")
-
-[node name="Fun" type="MarginContainer" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer2/Fun"]
-layout_mode = 2
-color = Color(0, 1, 0.16666651, 1)
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=1583754244]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 texture = ExtResource("3_2ybbf")
 expand_mode = 4
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=847374794]
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_olfrx")
 
-[node name="Happiness" type="MarginContainer" parent="VBoxContainer/HBoxContainer3"]
+[node name="Fun" type="MarginContainer" parent="VBoxContainer/HBoxContainer2" unique_id=328095043]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 5
@@ -84,17 +61,40 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer3/Happiness"]
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer2/Fun" unique_id=788496416]
 layout_mode = 2
-color = Color(0.95000005, 1, 0, 1)
+color = Color(0, 1, 0.16666651, 1)
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer3"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer2" unique_id=491269269]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 texture = ExtResource("4_5ytho")
 expand_mode = 4
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=148988018]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_olfrx")
+
+[node name="Happiness" type="MarginContainer" parent="VBoxContainer/HBoxContainer3" unique_id=1657523899]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer3/Happiness" unique_id=858407928]
+layout_mode = 2
+color = Color(0.95000005, 1, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer3" unique_id=900724635]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+texture = ExtResource("5_y7j32")
+expand_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=409742644]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 color = Color(0.31431624, 0.3143161, 0.31431603, 1)
