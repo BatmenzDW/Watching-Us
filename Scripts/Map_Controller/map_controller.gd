@@ -23,7 +23,7 @@ func map_controller_active_state_view():
 
 func map_new_game():
 	%TravelMap._gen_new_map()
-	_map_controller_active_state()
+	map_controller_active_state()
 
 #This will be to traverse the map to a new location.
 func map_controller_active_state():
