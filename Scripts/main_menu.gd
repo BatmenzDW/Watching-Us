@@ -12,8 +12,14 @@ func _on_options_button_pressed() -> void:
 
 #credits button pressed
 func _on_credits_button_pressed() -> void:
-	pass # Replace with function body.
+	%GameController.transition_state("credits","")
+	%MenuBackground.visible = false
+	%MainMenuLayer.visible = false
 
 #quit button pressed
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
+	
+func _mainmenu_active_state():
+	%MenuBackground.visible = true
+	%MainMenuLayer.visible = true

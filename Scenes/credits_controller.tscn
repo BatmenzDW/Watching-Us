@@ -3,12 +3,14 @@
 [ext_resource type="Script" uid="uid://detbvuya02xu6" path="res://Scripts/credits_controller.gd" id="1_ck5o7"]
 [ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="1_eoalw"]
 
-[node name="Credits Controller" type="Node2D"]
+[node name="CreditsController" type="Node2D"]
 script = ExtResource("1_ck5o7")
 
-[node name="Background CanvasLayer" type="CanvasLayer" parent="."]
+[node name="BackgroundCredits" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
 
-[node name="ColorRect" type="ColorRect" parent="Background CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="BackgroundCredits"]
 offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_horizontal = 3
@@ -16,7 +18,7 @@ size_flags_vertical = 3
 color = Color(0, 0, 0, 1)
 
 [node name="Credits CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
+unique_name_in_owner = true
 
 [node name="PauperTim" type="RichTextLabel" parent="Credits CanvasLayer"]
 unique_name_in_owner = true
@@ -100,7 +102,7 @@ Sound Effects"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Third Party Assets1" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="ThirdParty1" type="RichTextLabel" parent="Credits CanvasLayer"]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
@@ -120,7 +122,7 @@ SIL Open Font License, Version 1.1 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Third Party Assets2" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="ThirdParty2" type="RichTextLabel" parent="Credits CanvasLayer"]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
@@ -143,7 +145,7 @@ creativecommons.org/licenses/by/3.0/
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Third Party Assets3" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="ThirdParty3" type="RichTextLabel" parent="Credits CanvasLayer"]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
@@ -165,7 +167,7 @@ creativecommons.org/licenses/by/3.0/
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Third Party Assets4" type="RichTextLabel" parent="Credits CanvasLayer"]
+[node name="ThirdParty4" type="RichTextLabel" parent="Credits CanvasLayer"]
 unique_name_in_owner = true
 visible = false
 offset_right = 1920.0
