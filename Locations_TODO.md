@@ -8,14 +8,14 @@
 - ?
 
 # Library
-- Book
+- Book (Stats/Desc)
 - ?
 - ?
 
 # Pharmacy
-- Drugs
-- ?
-- ?
+- Anxiety Meds
+- Bandages
+- Tummy Ache
 
 
 # Other Location

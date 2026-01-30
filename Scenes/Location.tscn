@@ -1,27 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://chp6gloqkuqal"]
+[gd_scene load_steps=9 format=3 uid="uid://ba77hdstaid3"]
 
 [ext_resource type="Script" uid="uid://cgt043qnx762a" path="res://Scripts/location.gd" id="1_tx5l4"]
 [ext_resource type="PackedScene" uid="uid://b73o7gyasv71e" path="res://UI/ParanoiaBar.tscn" id="4_a48fp"]
 [ext_resource type="PackedScene" uid="uid://v7eeb3wbfggi" path="res://Objects/Characters/Player.tscn" id="5_mbtcl"]
-[ext_resource type="Texture2D" uid="uid://cijvu5nbgw7cx" path="res://Assets/art/Locations/IceCream_Truck.jpg" id="5_tx5l4"]
+[ext_resource type="Texture2D" uid="uid://t1j2scvkd5cm" path="res://Assets/art/Locations/Library.jpg" id="5_tx5l4"]
 [ext_resource type="Script" uid="uid://b4j3em1jewc02" path="res://Objects/interactable.gd" id="6_tx5l4"]
-[ext_resource type="Texture2D" uid="uid://cxuactjl6b804" path="res://Assets/art/interactables/Ice_Cream_Truck/Trash_Pirate_Jam_Prop.png" id="7_tx5l4"]
+[ext_resource type="Texture2D" uid="uid://cp77ve8ltppun" path="res://Assets/art/interactables/Library/Children_s_Book_Pirate_Jam_Prop.png" id="7_643fp"]
 [ext_resource type="PackedScene" uid="uid://bpi2lamadyggp" path="res://UI/InteractablePreview.tscn" id="8_cv846"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_643fp"]
-size = Vector2(159, 204)
+size = Vector2(177, 122)
 
 [node name="Location" type="Node2D"]
-visible = false
 script = ExtResource("1_tx5l4")
 
 [node name="Preview" parent="." instance=ExtResource("8_cv846")]
 unique_name_in_owner = true
-visible = false
 metadata/_edit_lock_ = true
 
 [node name="ParanoiaBar" parent="." instance=ExtResource("4_a48fp")]
-visible = false
 
 [node name="Player" parent="." instance=ExtResource("5_mbtcl")]
 position = Vector2(1135, 814)
@@ -34,17 +31,17 @@ texture = ExtResource("5_tx5l4")
 metadata/_edit_lock_ = true
 
 [node name="Interactable" type="Area2D" parent="." node_paths=PackedStringArray("preview")]
-position = Vector2(1806, 712)
+position = Vector2(317, 791)
 script = ExtResource("6_tx5l4")
 preview = NodePath("../Preview")
 metadata/_custom_type_script = "uid://b4j3em1jewc02"
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactable"]
-scale = Vector2(0.075, 0.075)
-texture = ExtResource("7_tx5l4")
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("7_643fp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
-position = Vector2(3.5, 1)
+position = Vector2(-0.5, -4)
 shape = SubResource("RectangleShape2D_643fp")
 
 [node name="Highlight" type="ColorRect" parent="Interactable"]

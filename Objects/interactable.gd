@@ -40,20 +40,6 @@ enum Rarity
 	EPIC = 05
 }
 
-func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if event.is_action_pressed("left_click") and not _has_used and InputState.allow_input(InputState.State.LEVEL):
-		_has_used = true
-		#print(self)
-		SignalBus.interact.emit()
-		highlight.color = SPENT_COLOR
-		var rarities = Rarity.values()
-		for i in range(4):
-			var rare : int = rarities[i]
-			if randi_range(0, 100) <= rare:
-				result_index = i
-				_apply_values(stat_bundle[i])
-				return
-
 func _apply_values(stats: Stats) -> void:
 	SignalBus.apply_stats.emit(stats, false)
 	preview.check_setup(stat_bundle, result_index, result_texts[result_index])
@@ -68,7 +54,24 @@ func set_collision_shape(shape : Shape2D) -> void:
 	else:
 		temp_shape = shape
 
+func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	print("click ", InputState.allow_input(InputState.State.LEVEL))
+	if event.is_action_pressed("left_click") and not _has_used and InputState.allow_input(InputState.State.LEVEL):
+		print("clicked")
+		_has_used = true
+		#print(self)
+		SignalBus.interact.emit()
+		highlight.color = SPENT_COLOR
+		var rarities = Rarity.values()
+		for i in range(4):
+			var rare : int = rarities[i]
+			if randi_range(0, 100) <= rare:
+				result_index = i
+				_apply_values(stat_bundle[i])
+				return
+
 func _on_mouse_entered() -> void:
+	print("in")
 	preview.inside_count += 1
 	preview.current_inside = self
 	preview.check_setup(stat_bundle, result_index, "" if result_index == -1 else result_texts[result_index])
@@ -77,6 +80,7 @@ func _on_mouse_entered() -> void:
 		SignalBus.play_audio.emit(hover_audio_key)
 
 func _on_mouse_exited() -> void:
+	print("out")
 	preview.inside_count -= 1
 	preview.check_setup()
 	if not _has_used:

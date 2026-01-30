@@ -47,6 +47,7 @@ func transition_to_location(selected_location: String) -> void:
 		print("Could not find location: ", selected_location)
 		selected_location = location_index.keys()[0]
 	
+	%MapController.hide()
 	var data : Location_Data = location_index.get_(selected_location)
 	var inters : Array[Interactable_Data] = data.interactables
 	for inte in inters:

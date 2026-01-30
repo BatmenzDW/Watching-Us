@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Location_Index" load_steps=7 format=3 uid="uid://dnknfn51i5d4j"]
+
+[ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="1_osc88"]
+[ext_resource type="Resource" uid="uid://c20sbhtift7r" path="res://Scenes/Locations/IceCreamTruck/IceCreamTruck.tres" id="2_mm6el"]
+[ext_resource type="Script" uid="uid://co2njudqsbxqw" path="res://Resources/Location_Index.gd" id="2_un545"]
+[ext_resource type="Resource" uid="uid://dko0shsbmtmc0" path="res://Scenes/Locations/Library/Library.tres" id="3_i5ish"]
+[ext_resource type="Resource" uid="uid://cl5cgq82fowkk" path="res://Scenes/Locations/Park/Park.tres" id="4_q06pt"]
+[ext_resource type="Resource" uid="uid://b6sw05kraqovb" path="res://Scenes/Locations/Pharmacy/Pharmacy.tres" id="5_h77jl"]
+
+[resource]
+script = ExtResource("2_un545")
+location_lookup = Dictionary[String, ExtResource("1_osc88")]({
+"Ice Cream Truck": ExtResource("2_mm6el"),
+"Library": ExtResource("3_i5ish"),
+"Park": ExtResource("4_q06pt"),
+"Pharmacy": ExtResource("5_h77jl")
+})
+metadata/_custom_type_script = "uid://co2njudqsbxqw"
