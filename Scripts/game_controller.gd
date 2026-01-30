@@ -16,16 +16,6 @@ enum GameEndState {
 	BREAKDOWN
 }
 
-# TODO
-static func game_end(state: GameEndState) -> void:
-	match state:
-		GameEndState.WIN:
-			pass
-		GameEndState.TANTRUM:
-			pass
-		GameEndState.BREAKDOWN:
-			pass
-
 func _ready() -> void:
 	location.visible = false
 	next_button.visible = false
@@ -39,6 +29,14 @@ func transition_state(new_state,variable: String):
 		transition_to_map()
 	if(new_state == "mainmenu"):
 		transition_to_main_menu()
+	if(new_state == "credits"):
+		transition_to_credits()
+	if(new_state == "tantrum"):
+		transition_to_tantrum()
+	if(new_state == "breakdown"):
+		transition_to_breakdown()
+	if(new_state == "win"):
+		transition_to_win()
 
 # move to new location
 func transition_to_location(selected_location: String) -> void:
@@ -64,9 +62,21 @@ func transition_to_location(selected_location: String) -> void:
 
 func transition_to_map():
 	%MapController._map_controller_active_state()
-	
+
+func transition_to_credits():
+	%CreditsController.roll_credits()
+
 func transition_to_main_menu():
-	%MainMenu._map_controller_active_state()
+	%MainMenu._mainmenu_active_state()
+
+func transition_to_tantrum():
+	pass
+
+func transition_to_breakdown():
+	pass
+
+func transition_to_win():
+	pass
 
 func _on_interact() -> void:
 	interacts_count += 1
