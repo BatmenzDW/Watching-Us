@@ -1,19 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdisbxckds82v"]
+[gd_scene load_steps=10 format=3 uid="uid://cdisbxckds82v"]
 
 [ext_resource type="Script" uid="uid://clrkrk0wkn2xh" path="res://Scripts/game_controller.gd" id="1_2irst"]
+[ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="2_2irst"]
 [ext_resource type="PackedScene" uid="uid://y7pfhrqq2jjk" path="res://Scenes/main_menu.tscn" id="2_7lihs"]
-[ext_resource type="Resource" uid="uid://dnknfn51i5d4j" path="res://Resources/Location_Index.tres" id="2_fgofq"]
 [ext_resource type="PackedScene" uid="uid://c64go4ir7wuwi" path="res://Scenes/Map_Controller/map_controller.tscn" id="2_j5yw3"]
+[ext_resource type="Script" uid="uid://co2njudqsbxqw" path="res://Resources/Location_Index.gd" id="3_bf53h"]
 [ext_resource type="PackedScene" uid="uid://ba77hdstaid3" path="res://Scenes/Location.tscn" id="4_kldst"]
-[ext_resource type="PackedScene" uid="uid://b7eqbp3blodqq" path="res://UI/next_button.tscn" id="5_b2bpf"]
+[ext_resource type="PackedScene" path="res://UI/next_button.tscn" id="5_b2bpf"]
 [ext_resource type="Script" uid="uid://4nqd7saq0eqv" path="res://Scripts/Audio_Controller/audio_controller.gd" id="6_7lihs"]
+
+[sub_resource type="Resource" id="Resource_71axn"]
+script = ExtResource("3_bf53h")
+metadata/_custom_type_script = "uid://co2njudqsbxqw"
 
 [node name="Game" type="Node2D"]
 
 [node name="GameController" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_2irst")
-location_index = ExtResource("2_fgofq")
+location_index = SubResource("Resource_71axn")
 
 [node name="MainMenu" parent="GameController" instance=ExtResource("2_7lihs")]
 unique_name_in_owner = true
