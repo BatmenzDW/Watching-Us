@@ -1,7 +1,6 @@
 extends Node2D
 
 func roll_credits():
-	print("oansdfoinawfoinwefoinwfoinwgonwenwganwfnewf")
 	%BackgroundCredits.visible = true
 	%PauperTim.visible = true
 	await get_tree().create_timer(3.0).timeout

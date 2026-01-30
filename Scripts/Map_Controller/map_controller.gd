@@ -21,14 +21,17 @@ func map_controller_active_state_view():
 	%MapHud.visible = true
 	%MapBackground.visible = true
 
+func map_new_game():
+	%TravelMap._gen_new_map()
+	_map_controller_active_state()
+
 #This will be to traverse the map to a new location.
 func _map_controller_active_state():
 	map_controller_state = 1
-	#self.visible = true
 	%TravelMap.visible = true
 	%MapHud.visible = true
 	%MapBackground.visible = true
-	_map_controller_gen_new_map()
+	
 
 func _map_controller_end_active_state(selected_location : String):
 	%GameController.transition_state("location",selected_location)
