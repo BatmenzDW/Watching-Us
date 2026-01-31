@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://v686mfpv8mck" path="res://Assets/art/player_child_v3.png" id="2_wiu0u"]
 [ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="3_3qf0w"]
 [ext_resource type="Texture2D" uid="uid://eqqisgs3rgsw" path="res://Assets/art/breakdownv1.png" id="5_83bs5"]
+[ext_resource type="Texture2D" uid="uid://dmjeqscn70imx" path="res://Assets/art/breakdownv3.png" id="6_83bs5"]
 
 [node name="GameEnd" type="Node2D" unique_id=759705634]
 script = ExtResource("1_jasv6")
@@ -83,7 +84,6 @@ horizontal_alignment = 1
 
 [node name="EndBreakdown" type="CanvasLayer" parent="." unique_id=557017143]
 unique_name_in_owner = true
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="EndBreakdown" unique_id=2052001911]
 offset_right = 1920.0
@@ -119,7 +119,6 @@ horizontal_alignment = 1
 
 [node name="EndWin2" type="CanvasLayer" parent="." unique_id=1564825288]
 unique_name_in_owner = true
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="EndWin2" unique_id=433584047]
 offset_right = 1920.0
@@ -131,7 +130,7 @@ offset_left = 515.0
 offset_top = 185.0
 offset_right = 971.0
 offset_bottom = 1067.0
-texture = ExtResource("5_83bs5")
+texture = ExtResource("6_83bs5")
 
 [node name="TextureRect" type="TextureRect" parent="EndWin2" unique_id=2141204469]
 offset_left = 614.0
