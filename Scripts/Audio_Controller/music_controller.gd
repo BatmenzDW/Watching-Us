@@ -7,6 +7,7 @@ var lookup : Dictionary[String, AudioStreamMP3] = {
 }
 
 func _ready() -> void:
+	bus = &"Music"
 	SignalBus.set_music.connect(_play_audio)
 	_play_audio("MainTheme")
 

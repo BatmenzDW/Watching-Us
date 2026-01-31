@@ -19,6 +19,8 @@ theme_override_font_sizes/font_size = 48
 title = "Child Stats"
 title_position = 1
 script = ExtResource("1_eyl31")
+max_size = 286
+speed = -0.5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=713571289]
 z_index = 1

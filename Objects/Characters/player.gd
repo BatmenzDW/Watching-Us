@@ -16,7 +16,7 @@ class_name Player
 func _ready() -> void:
 	SignalBus.apply_stats.connect(_apply_stats)
 	
-	_set_stats(Stats.new(hunger, fun, happiness, paranoia))
+	setup_stats()
 
 func _update_stats():
 	child_ui.set_target_hunger(hunger)
@@ -26,9 +26,10 @@ func _update_stats():
 func map_transition(to: bool) -> void:
 	child_ui.visible = !to
 
-func _set_stats(stats : Stats) -> void:
+func setup_stats() -> void:
+	print("Setup Stats: ", hunger, " : ", fun, " : ", happiness, " : ", paranoia)
 	_update_stats()
-	SignalBus.set_paranoia.emit(stats.paranoia)
+	SignalBus.set_paranoia.emit(paranoia)
 
 func _apply_stats(stats : Stats, _is_mult : bool = false) -> void:
 	hunger += stats.hunger

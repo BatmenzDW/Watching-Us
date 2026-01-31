@@ -60,6 +60,8 @@ func transition_to_location(selected_location: String) -> void:
 	location.visible = true
 	next_button.visible = true
 	InputState.set_state(InputState.State.LEVEL)
+	#await get_tree().physics_frame
+	location.player.setup_stats()
 
 func transition_to_map(variable: String = ""):
 	if variable == "start":
