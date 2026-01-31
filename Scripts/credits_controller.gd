@@ -18,22 +18,22 @@ func roll_credits():
 	await get_tree().create_timer(4.0).timeout
 	%PrinceofWinners.visible = false
 	%ThirdParty1.visible = true
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	%ThirdParty1.visible = false
 	%ThirdParty2.visible = true
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	%ThirdParty2.visible = false
 	%ThirdParty3.visible = true
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	%ThirdParty3.visible = false
 	%ThirdParty4.visible = true
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	%ThirdParty4.visible = false
 	%ThirdParty5.visible = true
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	%ThirdParty5.visible = false
 	%ThirdParty6.visible = true
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	%ThirdParty6.visible = false
 	%BackgroundCredits.visible = false
 	
