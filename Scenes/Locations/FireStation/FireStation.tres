@@ -1,13 +1,14 @@
-[gd_resource type="Resource" script_class="Location_Data" load_steps=5 format=3 uid="uid://c5v1ulxm055eq"]
+[gd_resource type="Resource" script_class="Location_Data" format=3 uid="uid://c5v1ulxm055eq"]
 
 [ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="1_t13pp"]
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="2_ladvn"]
 [ext_resource type="Resource" uid="uid://b17t37whqigqj" path="res://Scenes/Locations/FireStation/Station.tres" id="3_blpyb"]
+[ext_resource type="Resource" uid="uid://dh7db422dy3xd" path="res://Scenes/Locations/TrashCan.tres" id="4_feppe"]
 [ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="6_df62t"]
 
 [resource]
 script = ExtResource("6_df62t")
-interactables = Array[ExtResource("2_ladvn")]([ExtResource("3_blpyb")])
+interactables = Array[ExtResource("2_ladvn")]([ExtResource("3_blpyb"), ExtResource("4_feppe")])
 icons = Array[CompressedTexture2D]([ExtResource("1_t13pp")])
 mult_factor = 0.25
 metadata/_custom_type_script = "uid://cw4x4txcmedtn"

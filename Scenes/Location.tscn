@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cgt043qnx762a" path="res://Scripts/location.gd" id="1_tx5l4"]
 [ext_resource type="PackedScene" uid="uid://b73o7gyasv71e" path="res://UI/ParanoiaBar.tscn" id="4_a48fp"]
-[ext_resource type="Texture2D" uid="uid://6wogcyrilacd" path="res://Assets/art/Locations/Firehouse_Background.jpg" id="5_7gg0f"]
+[ext_resource type="Texture2D" uid="uid://cp30fdgpbm1s8" path="res://Assets/art/Locations/Busy_Street_Backround.jpg" id="5_7gg0f"]
 [ext_resource type="PackedScene" uid="uid://v7eeb3wbfggi" path="res://Objects/Characters/Player.tscn" id="5_mbtcl"]
 [ext_resource type="Script" uid="uid://b4j3em1jewc02" path="res://Objects/interactable.gd" id="6_tx5l4"]
 [ext_resource type="PackedScene" uid="uid://bpi2lamadyggp" path="res://UI/InteractablePreview.tscn" id="8_cv846"]
@@ -34,7 +34,7 @@ metadata/_edit_lock_ = true
 
 [node name="Interactable" type="Area2D" parent="." unique_id=1021579816 groups=["location_elements"]]
 visible = false
-position = Vector2(916, 546)
+position = Vector2(864, 692)
 script = ExtResource("6_tx5l4")
 metadata/_custom_type_script = "uid://b4j3em1jewc02"
 
@@ -48,7 +48,6 @@ mouse_filter = 2
 color = Color(0.96, 0, 0.94399977, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1182485735]
-position = Vector2(-116, 127)
 shape = SubResource("RectangleShape2D_643fp")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactable" unique_id=135915466]

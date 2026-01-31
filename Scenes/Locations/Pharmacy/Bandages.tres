@@ -35,6 +35,4 @@ position = Vector2(581, 686)
 stat_bundle = Array[ExtResource("2_0ousc")]([SubResource("Resource_dwne8"), SubResource("Resource_u60a2"), SubResource("Resource_7hrpr"), SubResource("Resource_8r3fy")])
 texture = ExtResource("3_1nn5j")
 texture_scale = Vector2(0.05, 0.05)
-hover_audio_key = "PillBottle"
-use_audio_key = "Swallow"
 metadata/_custom_type_script = "uid://cn81403dij3yf"

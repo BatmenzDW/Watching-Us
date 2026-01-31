@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="Interactable_Data" format=3 uid="uid://coykd5562jvg6"]
+[gd_resource type="Resource" script_class="Interactable_Data" format=3 uid="uid://dg0a6ws8qoumj"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_ia3o8"]
 [ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_2ifpv"]
 [ext_resource type="Texture2D" uid="uid://dhsib5100qmov" path="res://Assets/art/Locations/Sheriff_s_Office_Backround.jpg" id="3_nyia4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
-size = Vector2(1539, 574)
+size = Vector2(1074, 454)
 
 [sub_resource type="Resource" id="Resource_t5mse"]
 script = ExtResource("2_2ifpv")
@@ -30,6 +30,7 @@ script = ExtResource("1_ia3o8")
 is_background = true
 odds = 1.0
 shape = SubResource("RectangleShape2D_8wb5a")
+position = Vector2(864, 692)
 stat_bundle = Array[ExtResource("2_2ifpv")]([SubResource("Resource_t5mse"), SubResource("Resource_7k7w0"), SubResource("Resource_nbfgi"), SubResource("Resource_5odjp")])
 texture = ExtResource("3_nyia4")
 texture_position = Vector2(957, 539)
