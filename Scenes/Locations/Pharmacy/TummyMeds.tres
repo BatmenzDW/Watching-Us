@@ -11,7 +11,7 @@ size = Vector2(96, 181)
 script = ExtResource("2_u4pua")
 hunger = -0.1
 fun = -0.1
-happiness = 1.0
+happiness = 0.5
 paranoia = 0.1
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
@@ -19,7 +19,7 @@ metadata/_custom_type_script = "uid://cbpqxd0g56685"
 script = ExtResource("2_u4pua")
 hunger = -0.1
 fun = -0.1
-happiness = 1.0
+happiness = 0.5
 paranoia = 0.1
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
@@ -27,7 +27,7 @@ metadata/_custom_type_script = "uid://cbpqxd0g56685"
 script = ExtResource("2_u4pua")
 hunger = -0.1
 fun = -0.1
-happiness = 1.0
+happiness = 0.5
 paranoia = 0.1
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
@@ -35,7 +35,7 @@ metadata/_custom_type_script = "uid://cbpqxd0g56685"
 script = ExtResource("2_u4pua")
 hunger = -0.1
 fun = -0.1
-happiness = 1.0
+happiness = 0.5
 paranoia = 0.1
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
