@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 class_name Player
 
-@onready var child_ui: ChildUI = $ChildUI
+@onready var child_ui: ChildUI = $CanvasLayer/ChildUI
 
 @export var speed = 400
 
@@ -65,3 +65,6 @@ func _apply_stats(stats : Stats, _is_mult : bool = false) -> void:
 		GameController.transition_to_state("breakdown","")
 	
 	_update_stats()
+
+func set_child_ui_visible(vis : bool) -> void:
+	child_ui.visible = vis

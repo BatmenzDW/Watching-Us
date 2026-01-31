@@ -35,9 +35,12 @@ visible = false
 position = Vector2(63, 32)
 shape = SubResource("CapsuleShape2D_oo13o")
 
-[node name="ChildUI" parent="." unique_id=1815291796 instance=ExtResource("3_ddc0b")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=206334302]
+
+[node name="ChildUI" parent="CanvasLayer" unique_id=1815291796 instance=ExtResource("3_ddc0b")]
+visible = false
 z_index = 2
-offset_left = 116.0
-offset_top = -347.0
-offset_right = 460.0
-offset_bottom = -83.0
+offset_left = 1569.0
+offset_top = 6.0
+offset_right = 1913.0
+offset_bottom = 270.0

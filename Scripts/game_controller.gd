@@ -15,6 +15,7 @@ static var Instance : GameController
 func _ready() -> void:
 	Instance = self
 	location.visible = false
+	location.player.set_child_ui_visible(false)
 	next_button.visible = false
 	InputState.set_state(InputState.State.MAP)
 	SignalBus.interact.connect(_on_interact)
@@ -60,6 +61,7 @@ func transition_to_location(selected_location: String) -> void:
 	
 	interacts_count = 0
 	location.visible = true
+	location.player.set_child_ui_visible(true)
 	next_button.visible = true
 	InputState.set_state(InputState.State.LEVEL)
 	#await get_tree().physics_frame
@@ -112,6 +114,7 @@ func _leave_location() -> void:
 	print("Leaving Location")
 	location.unload()
 	next_button.visible = false
+	location.player.set_child_ui_visible(false)
 	location.visible = false
 	transition_to_map()
 	InputState.set_state(InputState.State.MAP)
