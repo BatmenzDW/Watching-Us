@@ -92,9 +92,9 @@ func _setup(stat_bundle: Array[Stats], result_index : int = -1, used_string : St
 		%Fun1Arrow.texture = load("res://Assets/Icons/arrow_up.png")
 	if(stats.fun <= 0):
 		%Fun1Arrow.texture = load("res://Assets/Icons/arrow_down.png")
-	if(stats.fun > 0):
+	if(stats.happiness > 0):
 		%Happiness1Arrow.texture = load("res://Assets/Icons/arrow_up.png")
-	if(stats.fun <= 0):
+	if(stats.happiness <= 0):
 		%Happiness1Arrow.texture = load("res://Assets/Icons/arrow_down.png")
 	
 	stats = stat_bundle[1]
@@ -110,9 +110,9 @@ func _setup(stat_bundle: Array[Stats], result_index : int = -1, used_string : St
 		%Fun2Arrow.texture = load("res://Assets/Icons/arrow_up.png")
 	if(stats.fun <= 0):
 		%Fun2Arrow.texture = load("res://Assets/Icons/arrow_down.png")
-	if(stats.fun > 0):
+	if(stats.happiness > 0):
 		%Happiness2Arrow.texture = load("res://Assets/Icons/arrow_up.png")
-	if(stats.fun <= 0):
+	if(stats.happiness <= 0):
 		%Happiness2Arrow.texture = load("res://Assets/Icons/arrow_down.png")
 	
 	stats = stat_bundle[2]
@@ -128,9 +128,9 @@ func _setup(stat_bundle: Array[Stats], result_index : int = -1, used_string : St
 		%Fun3Arrow.texture = load("res://Assets/Icons/arrow_up.png")
 	if(stats.fun <= 0):
 		%Fun3Arrow.texture = load("res://Assets/Icons/arrow_down.png")
-	if(stats.fun > 0):
+	if(stats.happiness > 0):
 		%Happiness3Arrow.texture = load("res://Assets/Icons/arrow_up.png")
-	if(stats.fun <= 0):
+	if(stats.happiness <= 0):
 		%Happiness3Arrow.texture = load("res://Assets/Icons/arrow_down.png")
 	
 	stats = stat_bundle[3]
@@ -146,9 +146,9 @@ func _setup(stat_bundle: Array[Stats], result_index : int = -1, used_string : St
 		%Fun4Arrow.texture = load("res://Assets/Icons/arrow_up.png")
 	if(stats.fun <= 0):
 		%Fun4Arrow.texture = load("res://Assets/Icons/arrow_down.png")
-	if(stats.fun > 0):
+	if(stats.happiness > 0):
 		%Happiness4Arrow.texture = load("res://Assets/Icons/arrow_up.png")
-	if(stats.fun <= 0):
+	if(stats.happiness <= 0):
 		%Happiness4Arrow.texture = load("res://Assets/Icons/arrow_down.png")
 	
 	if result_index != -1:

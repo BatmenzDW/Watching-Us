@@ -9,22 +9,34 @@ size = Vector2(169, 181)
 
 [sub_resource type="Resource" id="Resource_dwne8"]
 script = ExtResource("2_0ousc")
+hunger = -0.1
 fun = 1.0
+happiness = -0.1
+paranoia = 0.1
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [sub_resource type="Resource" id="Resource_u60a2"]
 script = ExtResource("2_0ousc")
+hunger = -0.1
 fun = 1.0
+happiness = -0.1
+paranoia = 0.1
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [sub_resource type="Resource" id="Resource_7hrpr"]
 script = ExtResource("2_0ousc")
+hunger = -0.1
 fun = 1.0
+happiness = -0.1
+paranoia = 0.1
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [sub_resource type="Resource" id="Resource_8r3fy"]
 script = ExtResource("2_0ousc")
+hunger = -0.1
 fun = 1.0
+happiness = -0.1
+paranoia = 0.1
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [resource]

@@ -9,7 +9,7 @@ size = Vector2(1074, 454)
 
 [sub_resource type="Resource" id="Resource_t5mse"]
 script = ExtResource("2_lqscm")
-hunger = 1.0
+hunger = -0.1
 paranoia = 0.2
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 

@@ -15,16 +15,16 @@ func end_win():
 	await get_tree().create_timer(4.0).timeout
 	%EndWin2.visible = true
 	%EndWin.visible = false
-	await get_tree().create_timer(8.0).timeout
+	await get_tree().create_timer(6.0).timeout
 	%GameController.transition_state("credits")
 	%EndWin2.visible = false
 
 func end_tantrum():
 	%EndTantrum.visible = true
-	await get_tree().create_timer(8.0).timeout
+	await get_tree().create_timer(6.0).timeout
 	%GameController.transition_state("credits")
 
 func end_breakdown():
 	%EndBreakdown.visible = true
-	await get_tree().create_timer(8.0).timeout
+	await get_tree().create_timer(6.0).timeout
 	%GameController.transition_state("credits")

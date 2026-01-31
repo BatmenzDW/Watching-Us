@@ -85,7 +85,7 @@ func transition_to_main_menu():
 static var result : String = ""
 
 func _end_game() -> void:
-	#location.hide_paranoia()
+	location.player.set_child_ui_visible(false)
 	%GameEnd.end()
 
 func transition_to_tantrum():
