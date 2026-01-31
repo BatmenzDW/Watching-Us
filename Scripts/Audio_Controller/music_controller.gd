@@ -1,7 +1,6 @@
 extends AudioStreamPlayer2D
 
 var lookup : Dictionary[String, AudioStreamMP3] = {
-	"None": null,
 	"MainTheme": preload("uid://cjhu8ci5fbsrl"),
 	"IceCreamTruck": preload("uid://cb8vt3h0yndya")
 }
@@ -13,7 +12,7 @@ func _ready() -> void:
 
 func _play_audio(key : String) -> void:
 	print("music signal with key: " + key)
-	if lookup.has(key) and not self.is_playing():
+	if lookup.has(key):
 		stream = lookup[key]
 		self.play()
 	
