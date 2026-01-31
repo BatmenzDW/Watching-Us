@@ -40,9 +40,11 @@ func transition_state(new_state,variable: String=""):
 
 # move to new location
 func transition_to_location(selected_location: String) -> void:
-	dict_location.check_location_exists(selected_location)
-	#print(selected_location)
-	if not location_index.has(selected_location):
+	if selected_location == "end":
+		%MapController.hide()
+		return
+	var exists : bool = dict_location.check_location_exists(selected_location)
+	if not location_index.has(selected_location) or not exists:
 		print("Could not find location: ", selected_location)
 		selected_location = location_index.keys()[0]
 	
@@ -73,12 +75,16 @@ func transition_to_credits():
 	%CreditsController.roll_credits()
 
 func transition_to_main_menu():
+	GameController.result = ""
+	location.player.reset_stats()
+	SignalBus.set_music.emit("MainTheme")
 	%MainMenu._mainmenu_active_state()
 
 static var result : String = ""
 
 func _end_game() -> void:
-	get_tree().change_scene_to_file("res://Scenes/game_end.tscn")
+	#location.hide_paranoia()
+	%GameEnd.end()
 
 func transition_to_tantrum():
 	if result == "":

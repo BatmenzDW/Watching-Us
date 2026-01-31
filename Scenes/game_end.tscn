@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://csxh6nynwu1a8"]
+[gd_scene format=3 uid="uid://bx4gylh5bf8o8"]
 
 [ext_resource type="Script" uid="uid://c7j1xfsoqk5bp" path="res://game_end.gd" id="1_jasv6"]
 [ext_resource type="Texture2D" uid="uid://bqbagvmhuhmdr" path="res://Assets/art/win.png" id="2_3qf0w"]
@@ -84,6 +84,7 @@ horizontal_alignment = 1
 
 [node name="EndBreakdown" type="CanvasLayer" parent="." unique_id=557017143]
 unique_name_in_owner = true
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="EndBreakdown" unique_id=2052001911]
 offset_right = 1920.0
@@ -119,6 +120,7 @@ horizontal_alignment = 1
 
 [node name="EndWin2" type="CanvasLayer" parent="." unique_id=1564825288]
 unique_name_in_owner = true
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="EndWin2" unique_id=433584047]
 offset_right = 1920.0

@@ -41,7 +41,7 @@ func gen_random_location(location_type):
 	return [location_name,location_source]
 
 func check_location_exists(searchterm):
-	var returnbool: bool = 0
+	var returnbool: bool = false
 	if(location_travel_dictionary.has(searchterm) or location_main_dictionary.has(searchterm)):
-		returnbool = 1
+		returnbool = true
 	return returnbool

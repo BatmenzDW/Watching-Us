@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://brrh2edscax8k" path="res://Scenes/Locations/Park/Dog.tres" id="4_64npw"]
 [ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="4_88o1j"]
 [ext_resource type="Resource" uid="uid://bwa63gxfl221d" path="res://Scenes/Locations/Park/Bench.tres" id="5_5sco3"]
-[ext_resource type="Resource" path="res://Scenes/Locations/Park/_Workaround_.tres" id="6_wewbv"]
+[ext_resource type="Resource" uid="uid://ded5okbqxj7fv" path="res://Scenes/Locations/Park/_Workaround_.tres" id="6_wewbv"]
 
 [resource]
 script = ExtResource("4_88o1j")

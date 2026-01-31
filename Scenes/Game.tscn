@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://dko0shsbmtmc0" path="res://Scenes/Locations/Library/Library.tres" id="3_alh3a"]
 [ext_resource type="Resource" uid="uid://c20sbhtift7r" path="res://Scenes/Locations/IceCreamTruck/IceCreamTruck.tres" id="4_4q8tf"]
 [ext_resource type="PackedScene" uid="uid://ba77hdstaid3" path="res://Scenes/Location.tscn" id="4_kldst"]
-[ext_resource type="PackedScene" path="res://UI/next_button.tscn" id="5_b2bpf"]
+[ext_resource type="PackedScene" uid="uid://b7eqbp3blodqq" path="res://UI/next_button.tscn" id="5_b2bpf"]
 [ext_resource type="Resource" uid="uid://b6sw05kraqovb" path="res://Scenes/Locations/Pharmacy/Pharmacy.tres" id="5_x3xnh"]
 [ext_resource type="Script" uid="uid://4nqd7saq0eqv" path="res://Scripts/Audio_Controller/audio_controller.gd" id="6_7lihs"]
 [ext_resource type="Resource" uid="uid://dry65c8gkaefh" path="res://Scenes/Locations/Sidewalk/Sidewalk.tres" id="6_8r6kd"]
@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://c5v1ulxm055eq" path="res://Scenes/Locations/FireStation/FireStation.tres" id="8_rajel"]
 [ext_resource type="Resource" uid="uid://b5vp3uk51s7dr" path="res://Scenes/Locations/BusyStreet/BusyStreet.tres" id="9_vvhu1"]
 [ext_resource type="Resource" uid="uid://cl5cgq82fowkk" path="res://Scenes/Locations/Park/Park.tres" id="10_alh3a"]
+[ext_resource type="PackedScene" uid="uid://bx4gylh5bf8o8" path="res://Scenes/game_end.tscn" id="14_4q8tf"]
 
 [node name="Game" type="Node2D" unique_id=273078071]
 
@@ -42,7 +43,9 @@ metadata/_edit_lock_ = true
 
 [node name="CreditsController" parent="GameController" unique_id=122811933 instance=ExtResource("6_bf53h")]
 unique_name_in_owner = true
-visible = false
+
+[node name="GameEnd" parent="GameController" unique_id=759705634 instance=ExtResource("14_4q8tf")]
+unique_name_in_owner = true
 
 [node name="Location" parent="GameController" unique_id=1076294949 instance=ExtResource("4_kldst")]
 visible = false

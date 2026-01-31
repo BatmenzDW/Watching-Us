@@ -14,7 +14,7 @@ func load_data(data : Interactable_Data, is_child : bool = false):
 	%ParanoiaBar.visible = true
 	
 	if not data.is_background and data.odds < 1.0:
-		if randf() <= data.odds: # random chance to spawn
+		if randf() < data.odds: # random chance to spawn
 			return
 	
 	if !background and data.is_background and not is_child:

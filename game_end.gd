@@ -17,6 +17,7 @@ func end_win():
 	%EndWin.visible = false
 	await get_tree().create_timer(5.0).timeout
 	%GameController.transition_state("credits")
+	%EndWin2.visible = false
 
 func end_tantrum():
 	%EndTantrum.visible = true

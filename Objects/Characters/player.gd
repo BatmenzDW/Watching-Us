@@ -13,9 +13,17 @@ class_name Player
 @export var happiness = 1.0
 @export var paranoia = 0.0
 
+var hunger_init : float
+var fun_int : float
+var happiness_init : float
+var paranoia_init : float
+
 func _ready() -> void:
 	SignalBus.apply_stats.connect(_apply_stats)
-	
+	hunger_init = hunger
+	fun_int = fun
+	happiness_init = happiness
+	paranoia_init = paranoia
 	setup_stats()
 
 func _update_stats():
@@ -30,6 +38,13 @@ func setup_stats() -> void:
 	print("Setup Stats: ", hunger, " : ", fun, " : ", happiness, " : ", paranoia)
 	_update_stats()
 	SignalBus.set_paranoia.emit(paranoia)
+
+func reset_stats() -> void:
+	hunger = hunger_init
+	fun = fun_int
+	happiness = happiness_init
+	paranoia = paranoia_init
+	setup_stats()
 
 func _apply_stats(stats : Stats, _is_mult : bool = false) -> void:
 	hunger += stats.hunger
