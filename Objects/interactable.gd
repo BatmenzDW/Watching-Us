@@ -63,13 +63,11 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 		SignalBus.interact.emit()
 		highlight.color = SPENT_COLOR
 		var rarities = Rarity.values()
-		for i in range(4):
-			var rare : int = rarities[i]
-			if randi_range(0, 100) <= rare:
-				result_index = i
-				Location.text_box.display_text(result_texts[i])
-				_apply_values(stat_bundle[i])
-				return
+		var random = RandomNumberGenerator.new()
+		var i = random.rand_weighted(rarities)
+		result_index = i
+		Location.text_box.display_text(result_texts[i])
+		_apply_values(stat_bundle[i])
 
 func _on_mouse_entered() -> void:
 	#print("in")

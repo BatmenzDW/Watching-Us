@@ -32,9 +32,9 @@ metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [resource]
 script = ExtResource("1_kyv47")
-odds = 0.75
+odds = 0.8
 shape = SubResource("RectangleShape2D_gbj4g")
-position = Vector2(51, 788)
+position = Vector2(1296, 655)
 stat_bundle = Array[Object]([SubResource("Resource_kvh7w"), SubResource("Resource_xh8j3"), SubResource("Resource_0nd1l"), SubResource("Resource_5lcjh")])
 result_texts = Array[String](["Sit on Bench", "Man Reading Newspaper", "Homeless Man", "???"])
 texture = ExtResource("3_gbj4g")
