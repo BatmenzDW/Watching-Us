@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://c64go4ir7wuwi"]
+[gd_scene format=3 uid="uid://c64go4ir7wuwi"]
 
 [ext_resource type="Script" uid="uid://dp0b35sgoc8h6" path="res://Scripts/Map_Controller/map_controller.gd" id="1_c117o"]
 [ext_resource type="Script" uid="uid://cf3cx6tc8by4m" path="res://Scripts/Map_Controller/travel_map.gd" id="3_0nlex"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://wl6irs144hi6" path="res://Assets/tileset/park_tileset.png" id="5_w1vll"]
 [ext_resource type="Script" uid="uid://dpu4ptk3gqx5h" path="res://Scripts/Map_Controller/gen_path_2.gd" id="6_kisi7"]
 [ext_resource type="Texture2D" uid="uid://bbs75f73btq0x" path="res://Assets/tileset/pharmacy_tileset.png" id="6_t0mi1"]
-[ext_resource type="Script" path="res://Scripts/Map_Controller/map_line_2d.gd" id="6_xq01p"]
+[ext_resource type="Script" uid="uid://ckssbt6i17a5" path="res://Scripts/Map_Controller/map_line_2d.gd" id="6_xq01p"]
 [ext_resource type="Script" uid="uid://c7fi7qqe237te" path="res://Scripts/Map_Controller/gen_path_3.gd" id="7_ux5v1"]
 [ext_resource type="Script" uid="uid://djsgouwptgecw" path="res://Scripts/Map_Controller/gen_path_1.gd" id="7_wmia7"]
 [ext_resource type="Texture2D" uid="uid://c1llgbujmlvd0" path="res://Assets/tileset/sidewalk_tileset.png" id="8_fdpmf"]
@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cywli8u34agwt" path="res://Assets/tileset/tileset_current_position_v2.png" id="11_p3c3f"]
 [ext_resource type="Texture2D" uid="uid://1ycvibit15jd" path="res://Assets/tileset/busy_crosswalk_tileset.png" id="11_vwqk0"]
 [ext_resource type="Texture2D" uid="uid://bq0dylcp77tdg" path="res://Assets/tileset/school_tileset.png" id="12_1wy3x"]
-[ext_resource type="Script" uid="uid://yk3b3b1atnnv" path="res://Scripts/Map_Controller/gen_location.gd" id="22_0cg75"]
+[ext_resource type="Script" path="res://Scripts/Map_Controller/gen_location.gd" id="22_0cg75"]
 [ext_resource type="Texture2D" uid="uid://te11mrsl0co1" path="res://Assets/tileset/map_key/beech.png" id="23_0cg75"]
 [ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="24_sexfr"]
 [ext_resource type="Texture2D" uid="uid://cvpahydh1fxbl" path="res://Assets/tileset/map_key/bookshelf.png" id="25_ad05m"]
@@ -205,40 +205,40 @@ sources/8 = SubResource("TileSetAtlasSource_2y7gk")
 sources/9 = SubResource("TileSetAtlasSource_x1odq")
 sources/10 = SubResource("TileSetAtlasSource_ad05m")
 
-[node name="MapController" type="Node2D"]
+[node name="MapController" type="Node2D" unique_id=309591129]
 script = ExtResource("1_c117o")
 
-[node name="MapBackground" type="ColorRect" parent="."]
+[node name="MapBackground" type="ColorRect" parent="." unique_id=1025322746]
 unique_name_in_owner = true
 visible = false
 offset_right = 1922.0
 offset_bottom = 1086.0
 color = Color(0, 0, 0, 1)
 
-[node name="TravelMap" type="TileMapLayer" parent="."]
+[node name="TravelMap" type="TileMapLayer" parent="." unique_id=1019445031]
 unique_name_in_owner = true
 position = Vector2(500, 124)
 tile_set = SubResource("TileSet_p5pve")
 script = ExtResource("3_0nlex")
 
-[node name="genPath" type="Node2D" parent="TravelMap"]
+[node name="genPath" type="Node2D" parent="TravelMap" unique_id=1094260744]
 unique_name_in_owner = true
 texture_repeat = 2
 script = ExtResource("4_kisi7")
 
-[node name="genPath1" type="Node2D" parent="TravelMap/genPath"]
+[node name="genPath1" type="Node2D" parent="TravelMap/genPath" unique_id=1471925530]
 unique_name_in_owner = true
 script = ExtResource("7_wmia7")
 
-[node name="genPath2" type="Node2D" parent="TravelMap/genPath"]
+[node name="genPath2" type="Node2D" parent="TravelMap/genPath" unique_id=777261667]
 unique_name_in_owner = true
 script = ExtResource("6_kisi7")
 
-[node name="genPath3" type="Node2D" parent="TravelMap/genPath"]
+[node name="genPath3" type="Node2D" parent="TravelMap/genPath" unique_id=307479101]
 unique_name_in_owner = true
 script = ExtResource("7_ux5v1")
 
-[node name="pathLine" parent="TravelMap/genPath" instance=ExtResource("5_ux5v1")]
+[node name="pathLine" parent="TravelMap/genPath" unique_id=1832255667 instance=ExtResource("5_ux5v1")]
 unique_name_in_owner = true
 texture_repeat = 2
 width = 5.0
@@ -247,61 +247,61 @@ texture_mode = 1
 joint_mode = 2
 script = ExtResource("6_xq01p")
 
-[node name="GenRandom" type="Node2D" parent="TravelMap"]
+[node name="GenRandom" type="Node2D" parent="TravelMap" unique_id=1608927158]
 unique_name_in_owner = true
 script = ExtResource("10_17h85")
 
-[node name="CurrentPosition" type="TileMapLayer" parent="TravelMap"]
+[node name="CurrentPosition" type="TileMapLayer" parent="TravelMap" unique_id=2010804299]
 unique_name_in_owner = true
 tile_set = SubResource("TileSet_2a6wi")
 
-[node name="GenLocation" type="Node2D" parent="TravelMap"]
+[node name="GenLocation" type="Node2D" parent="TravelMap" unique_id=1987725353]
 unique_name_in_owner = true
 script = ExtResource("22_0cg75")
 
-[node name="CursorMap" type="TileMapLayer" parent="TravelMap"]
+[node name="CursorMap" type="TileMapLayer" parent="TravelMap" unique_id=1088594630]
 unique_name_in_owner = true
 tile_set = SubResource("TileSet_6j8ea")
 
-[node name="MapHud" type="CanvasLayer" parent="."]
+[node name="MapHud" type="CanvasLayer" parent="." unique_id=401767617]
 unique_name_in_owner = true
 visible = false
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MapHud"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MapHud" unique_id=1111409024]
 offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Space_H2" type="Control" parent="MapHud/HBoxContainer"]
+[node name="Space_H2" type="Control" parent="MapHud/HBoxContainer" unique_id=1836872466]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 12.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MapHud/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MapHud/HBoxContainer" unique_id=119354508]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
 
-[node name="Spacer_V1" type="Control" parent="MapHud/HBoxContainer/VBoxContainer"]
+[node name="Spacer_V1" type="Control" parent="MapHud/HBoxContainer/VBoxContainer" unique_id=1513414823]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Park HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+[node name="Park HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer" unique_id=1247618523]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Park TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Park HBox"]
+[node name="Park TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Park HBox" unique_id=62330121]
 layout_mode = 2
 texture = ExtResource("23_0cg75")
 stretch_mode = 4
 
-[node name="Park Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Park HBox"]
+[node name="Park Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Park HBox" unique_id=1718718980]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Park Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Park HBox"]
+[node name="Park Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Park HBox" unique_id=725057274]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("24_sexfr")
@@ -309,21 +309,21 @@ theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 32
 text = "Park"
 
-[node name="Library HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+[node name="Library HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer" unique_id=530765709]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Library TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Library HBox"]
+[node name="Library TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Library HBox" unique_id=913214334]
 layout_mode = 2
 texture = ExtResource("25_ad05m")
 stretch_mode = 4
 
-[node name="Library Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Library HBox"]
+[node name="Library Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Library HBox" unique_id=156094853]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Library Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Library HBox"]
+[node name="Library Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Library HBox" unique_id=969619861]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("24_sexfr")
@@ -331,21 +331,21 @@ theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 32
 text = "Library"
 
-[node name="Ice Cream Truck HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+[node name="Ice Cream Truck HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer" unique_id=879276173]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Ice Cream Truck TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Ice Cream Truck HBox"]
+[node name="Ice Cream Truck TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Ice Cream Truck HBox" unique_id=1828818412]
 layout_mode = 2
 texture = ExtResource("26_lhmc5")
 stretch_mode = 4
 
-[node name="Ice Cream Truck Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Ice Cream Truck HBox"]
+[node name="Ice Cream Truck Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Ice Cream Truck HBox" unique_id=1570361778]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Ice Cream Truck Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Ice Cream Truck HBox"]
+[node name="Ice Cream Truck Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Ice Cream Truck HBox" unique_id=1473218621]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("24_sexfr")
@@ -353,21 +353,21 @@ theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 32
 text = "Ice Cream Truck"
 
-[node name="Pharmacy HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+[node name="Pharmacy HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer" unique_id=2003761505]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Phramacy TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Pharmacy HBox"]
+[node name="Phramacy TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Pharmacy HBox" unique_id=393105346]
 layout_mode = 2
 texture = ExtResource("27_cn7kv")
 stretch_mode = 4
 
-[node name="Pharmacy  Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Pharmacy HBox"]
+[node name="Pharmacy  Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Pharmacy HBox" unique_id=737236629]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Pharmacy Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Pharmacy HBox"]
+[node name="Pharmacy Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Pharmacy HBox" unique_id=1221370172]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("24_sexfr")
@@ -375,21 +375,21 @@ theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 32
 text = "Pharmacy"
 
-[node name="Firestation HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+[node name="Firestation HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer" unique_id=1712309148]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Firestation TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Firestation HBox"]
+[node name="Firestation TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Firestation HBox" unique_id=770406735]
 layout_mode = 2
 texture = ExtResource("28_h1hx5")
 stretch_mode = 4
 
-[node name="Firestation Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Firestation HBox"]
+[node name="Firestation Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Firestation HBox" unique_id=2092409224]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Firestation Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Firestation HBox"]
+[node name="Firestation Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Firestation HBox" unique_id=2027424939]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("24_sexfr")
@@ -397,21 +397,21 @@ theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 32
 text = "Firestation"
 
-[node name="Police Station HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+[node name="Police Station HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer" unique_id=1042714489]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Police Station TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Police Station HBox"]
+[node name="Police Station TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Police Station HBox" unique_id=1412858576]
 layout_mode = 2
 texture = ExtResource("30_x1odq")
 stretch_mode = 4
 
-[node name="Police Station Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Police Station HBox"]
+[node name="Police Station Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Police Station HBox" unique_id=1708842731]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Police Station Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Police Station HBox"]
+[node name="Police Station Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Police Station HBox" unique_id=1467874993]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("24_sexfr")
@@ -419,21 +419,21 @@ theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 32
 text = "Police Station"
 
-[node name="Crosswalk HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+[node name="Crosswalk HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer" unique_id=374450461]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Crosswalk TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Crosswalk HBox"]
+[node name="Crosswalk TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Crosswalk HBox" unique_id=779594228]
 layout_mode = 2
 texture = ExtResource("31_1joie")
 stretch_mode = 4
 
-[node name="Crosswalk Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Crosswalk HBox"]
+[node name="Crosswalk Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Crosswalk HBox" unique_id=959239907]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Crosswalk Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Crosswalk HBox"]
+[node name="Crosswalk Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Crosswalk HBox" unique_id=1049622082]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("24_sexfr")
@@ -441,21 +441,21 @@ theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 32
 text = "Crosswalk"
 
-[node name="Home HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+[node name="Home HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer" unique_id=1121823270]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Home TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Home HBox"]
+[node name="Home TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/Home HBox" unique_id=1226799472]
 layout_mode = 2
 texture = ExtResource("29_2y7gk")
 stretch_mode = 4
 
-[node name="Home Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Home HBox"]
+[node name="Home Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/Home HBox" unique_id=1710109418]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Home Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Home HBox"]
+[node name="Home Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/Home HBox" unique_id=493837406]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("24_sexfr")
@@ -463,22 +463,22 @@ theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 32
 text = "Home"
 
-[node name="School HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer"]
+[node name="School HBox" type="HBoxContainer" parent="MapHud/HBoxContainer/VBoxContainer" unique_id=2075858230]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="School TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/School HBox"]
+[node name="School TextureRect" type="TextureRect" parent="MapHud/HBoxContainer/VBoxContainer/School HBox" unique_id=673532237]
 layout_mode = 2
 theme = ExtResource("24_sexfr")
 texture = ExtResource("32_is7gp")
 stretch_mode = 4
 
-[node name="School Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/School HBox"]
+[node name="School Spacer" type="Control" parent="MapHud/HBoxContainer/VBoxContainer/School HBox" unique_id=1331587498]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="School Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/School HBox"]
+[node name="School Label" type="RichTextLabel" parent="MapHud/HBoxContainer/VBoxContainer/School HBox" unique_id=1694703896]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("24_sexfr")
@@ -486,11 +486,11 @@ theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 32
 text = "School"
 
-[node name="Spacer_V2" type="Control" parent="MapHud/HBoxContainer/VBoxContainer"]
+[node name="Spacer_V2" type="Control" parent="MapHud/HBoxContainer/VBoxContainer" unique_id=1835347926]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Spacer_H1" type="Control" parent="MapHud/HBoxContainer"]
+[node name="Spacer_H1" type="Control" parent="MapHud/HBoxContainer" unique_id=1455070350]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5

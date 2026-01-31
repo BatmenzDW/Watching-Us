@@ -10,19 +10,33 @@ size = Vector2(1074, 454)
 [sub_resource type="Resource" id="Resource_t5mse"]
 script = ExtResource("2_lqscm")
 hunger = -0.1
+fun = 0.3
+happiness = 0.1
 paranoia = 0.2
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [sub_resource type="Resource" id="Resource_7k7w0"]
 script = ExtResource("2_lqscm")
+hunger = -0.1
+fun = 0.1
+happiness = 0.3
+paranoia = 0.2
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [sub_resource type="Resource" id="Resource_nbfgi"]
 script = ExtResource("2_lqscm")
+hunger = -0.1
+fun = -0.1
+happiness = -0.1
+paranoia = -0.1
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [sub_resource type="Resource" id="Resource_5odjp"]
 script = ExtResource("2_lqscm")
+hunger = -0.1
+fun = 0.2
+happiness = -0.2
+paranoia = 0.3
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [resource]
@@ -32,6 +46,7 @@ odds = 1.0
 shape = SubResource("RectangleShape2D_8wb5a")
 position = Vector2(800, 677)
 stat_bundle = Array[ExtResource("2_lqscm")]([SubResource("Resource_t5mse"), SubResource("Resource_7k7w0"), SubResource("Resource_nbfgi"), SubResource("Resource_5odjp")])
+result_texts = Array[String](["Fire Truck!", "Honk! Honk!", "Nothing", "Fire Truck Drives Away"])
 texture = ExtResource("3_luuxi")
 texture_position = Vector2(957, 539)
 texture_scale = Vector2(1, 1)
