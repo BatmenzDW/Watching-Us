@@ -62,7 +62,8 @@ func load_data(data : Interactable_Data, is_child : bool = false) -> bool:
 		sprite.texture = data.texture
 		sprite.position = data.texture_position
 		sprite.scale = data.texture_scale
-	return true
+		
+	return data.position.y > -100
 
 func unload() -> void:
 	%ParanoiaBar.visible = false

@@ -16,7 +16,7 @@
 [ext_resource type="Resource" uid="uid://c5v1ulxm055eq" path="res://Scenes/Locations/FireStation/FireStation.tres" id="8_rajel"]
 [ext_resource type="Resource" uid="uid://b5vp3uk51s7dr" path="res://Scenes/Locations/BusyStreet/BusyStreet.tres" id="9_vvhu1"]
 [ext_resource type="Resource" uid="uid://cl5cgq82fowkk" path="res://Scenes/Locations/Park/Park.tres" id="10_alh3a"]
-[ext_resource type="PackedScene" uid="uid://bx4gylh5bf8o8" path="res://Scenes/game_end.tscn" id="14_4q8tf"]
+[ext_resource type="PackedScene" uid="uid://csxh6nynwu1a8" path="res://Scenes/game_end.tscn" id="14_4q8tf"]
 
 [node name="Game" type="Node2D" unique_id=273078071]
 
@@ -51,10 +51,10 @@ unique_name_in_owner = true
 metadata/_edit_lock_ = true
 
 [node name="NextButton" parent="GameController" unique_id=2078336471 instance=ExtResource("5_b2bpf")]
-offset_left = 1562.0
-offset_top = 792.0
-offset_right = 1905.0
-offset_bottom = 1066.0
+offset_left = 1622.0
+offset_top = 738.0
+offset_right = 1965.0
+offset_bottom = 1072.0
 
 [node name="SFXPlayer" type="AudioStreamPlayer2D" parent="GameController" unique_id=1315026123]
 bus = &"SFX"

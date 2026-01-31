@@ -30,6 +30,3 @@ func _play_audio(key : String) -> void:
 		stream = lookup[key]
 		last_timestamp = current
 		self.play()
-	
-	elif not lookup.has(key):
-		print("Unknown audio key: ", key)

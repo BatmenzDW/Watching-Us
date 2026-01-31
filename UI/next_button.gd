@@ -45,7 +45,7 @@ func reset() -> void:
 	next_button.disabled = true
 	progress_label.visible = true
 	var times : float = mult * (1 - GameController.interacts_count*1.0/GameController.total_interactables)
-	print("reset Times: ", times)
+	#print("reset Times: ", times, " : ", GameController.interacts_count, "/", GameController.total_interactables)
 	if _type == Stats.Stat.PARANOIA:
 		mult_label.text = "+".repeat(floor(times * 10))
 	else:
@@ -53,7 +53,7 @@ func reset() -> void:
 
 func on_interactable_interact(new_count : int) -> void:
 	var times : float = mult * (1 - new_count*1.0/GameController.total_interactables)
-	print("on interact Times: ", times)
+	#print("on interact Times: ", times, " : ", GameController.interacts_count, "/", GameController.total_interactables)
 	if _type == Stats.Stat.PARANOIA:
 		mult_label.text = "+".repeat(floor(times * 10))
 	else:
@@ -67,7 +67,7 @@ func _on_texture_button_pressed() -> void:
 	if InputState.allow_input(InputState.State.LEVEL):
 		var new_stats : Stats = Stats.new()
 		var times : float = mult * (1 - GameController.interacts_count*1.0/GameController.total_interactables)
-		print("go next Times: ", times)
+		#print("go next Times: ", times, " : ", GameController.interacts_count, "/", GameController.total_interactables)
 		match _type:
 			Stats.Stat.HAPPINESS:
 				new_stats.happiness = -times
@@ -79,3 +79,4 @@ func _on_texture_button_pressed() -> void:
 				new_stats.paranoia = times
 		SignalBus.apply_stats.emit(new_stats)
 		go_next.emit()
+		GameController.interacts_count = 0
