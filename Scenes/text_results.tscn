@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dfcidfk2qy186"]
+
+[ext_resource type="Script" uid="uid://c16bdrd4qimmd" path="res://Scenes/text_results.gd" id="1_c8sjj"]
+[ext_resource type="Theme" uid="uid://b0ljbivp3477y" path="res://Themes/main_theme.tres" id="1_yfopb"]
+
+[node name="TextResults" type="Node2D" unique_id=1928011639]
+script = ExtResource("1_c8sjj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1058100335]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=805753388]
+offset_left = 61.0
+offset_top = 799.0
+offset_right = 661.0
+offset_bottom = 1049.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PanelContainer" unique_id=811729200]
+layout_mode = 2
+color = Color(0.6509804, 0.8627451, 0.93333334, 0.6666667)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer" unique_id=661127439]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextResultsBox" type="RichTextLabel" parent="CanvasLayer/PanelContainer/MarginContainer" unique_id=926825857]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_yfopb")
+theme_override_font_sizes/normal_font_size = 32

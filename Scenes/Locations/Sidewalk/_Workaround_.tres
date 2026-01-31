@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Interactable_Data" format=3 uid="uid://dvloit15w0wjl"]
+[gd_resource type="Resource" script_class="Interactable_Data" format=3 uid="uid://dphw0482vyi5y"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_x1vtu"]
 [ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_iy0ai"]

@@ -19,7 +19,6 @@ color = Color(0, 0, 0, 1)
 
 [node name="Credits CanvasLayer" type="CanvasLayer" parent="." unique_id=1765884966]
 unique_name_in_owner = true
-visible = false
 
 [node name="PauperTim" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=1306615911]
 unique_name_in_owner = true

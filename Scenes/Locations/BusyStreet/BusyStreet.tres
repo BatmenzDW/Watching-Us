@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="1_y24ib"]
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="2_48qvv"]
 [ext_resource type="Resource" uid="uid://bmah51cgipoqo" path="res://Scenes/Locations/BusyStreet/Street.tres" id="3_y1ilr"]
-[ext_resource type="Resource" uid="uid://dh7db422dy3xd" path="res://Scenes/Locations/TrashCan.tres" id="4_48qvv"]
+[ext_resource type="Resource" uid="uid://c5nowqnna30bu" path="res://Scenes/Locations/TrashCan.tres" id="4_48qvv"]
 [ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="4_wgkkd"]
 
 [resource]
