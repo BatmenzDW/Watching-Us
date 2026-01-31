@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://dg67l7xi226ve" path="res://Scenes/Locations/Library/Book.tres" id="3_6ryjo"]
 [ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="4_dofio"]
 [ext_resource type="Resource" uid="uid://bpyi6qnb2d5he" path="res://Scenes/Locations/Library/_Workaround_.tres" id="4_hlknk"]
-[ext_resource type="Resource" uid="uid://dh7db422dy3xd" path="res://Scenes/Locations/TrashCan.tres" id="5_6ryjo"]
+[ext_resource type="Resource" path="res://Scenes/Locations/IceCreamTruck/TrashCan.tres" id="5_6ryjo"]
 
 [resource]
 script = ExtResource("4_dofio")

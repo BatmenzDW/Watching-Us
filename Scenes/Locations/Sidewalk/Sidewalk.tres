@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="1_pmng8"]
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="2_ywpug"]
-[ext_resource type="Resource" uid="uid://dvloit15w0wjl" path="res://Scenes/Locations/Sidewalk/_Workaround_.tres" id="3_4em7n"]
-[ext_resource type="Resource" uid="uid://dh7db422dy3xd" path="res://Scenes/Locations/TrashCan.tres" id="4_4em7n"]
+[ext_resource type="Resource" path="res://Scenes/Locations/Sidewalk/Side.tres" id="3_4em7n"]
+[ext_resource type="Resource" path="res://Scenes/Locations/IceCreamTruck/TrashCan.tres" id="4_4em7n"]
 [ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="4_xsw3j"]
 
 [resource]
