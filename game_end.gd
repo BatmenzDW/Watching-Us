@@ -23,8 +23,10 @@ func end_tantrum():
 	%EndTantrum.visible = true
 	await get_tree().create_timer(6.0).timeout
 	%GameController.transition_state("credits")
+	%EndTantrum.visible = false
 
 func end_breakdown():
 	%EndBreakdown.visible = true
 	await get_tree().create_timer(6.0).timeout
 	%GameController.transition_state("credits")
+	%EndBreakdown.visible = false
