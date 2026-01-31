@@ -8,6 +8,7 @@ script = ExtResource("1_ck5o7")
 
 [node name="BackgroundCredits" type="CanvasLayer" parent="." unique_id=580618337]
 unique_name_in_owner = true
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="BackgroundCredits" unique_id=1620705148]
 offset_right = 1920.0
@@ -18,6 +19,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="Credits CanvasLayer" type="CanvasLayer" parent="." unique_id=1765884966]
 unique_name_in_owner = true
+visible = false
 
 [node name="PauperTim" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=1306615911]
 unique_name_in_owner = true
@@ -210,6 +212,7 @@ vertical_alignment = 1
 
 [node name="ThirdParty6" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=170250297]
 unique_name_in_owner = true
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 theme = ExtResource("1_eoalw")
