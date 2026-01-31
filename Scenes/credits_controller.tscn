@@ -124,6 +124,7 @@ vertical_alignment = 1
 
 [node name="ThirdParty2" type="RichTextLabel" parent="Credits CanvasLayer" unique_id=1754464725]
 unique_name_in_owner = true
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 theme = ExtResource("1_eoalw")
