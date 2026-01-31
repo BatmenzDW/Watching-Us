@@ -6,6 +6,12 @@ class_name Location
 @onready var background: Sprite2D = $Background
 @onready var preview: Interactable_Preview = %Preview
 @onready var player: Player = %Player
+@onready var text_results: TextResults = $TextResults
+
+static var text_box : TextResults
+
+func _ready() -> void:
+	text_box = text_results
 
 func load_data(data : Interactable_Data, is_child : bool = false):
 	var interactable : Interactable

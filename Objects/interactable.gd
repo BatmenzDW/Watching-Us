@@ -67,6 +67,7 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 			var rare : int = rarities[i]
 			if randi_range(0, 100) <= rare:
 				result_index = i
+				Location.text_box.display_text(result_texts[i])
 				_apply_values(stat_bundle[i])
 				return
 
