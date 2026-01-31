@@ -5,11 +5,11 @@
 [ext_resource type="Resource" uid="uid://djumdmp2hu7ae" path="res://Scenes/Locations/IceCreamTruck/IceCream.tres" id="3_1hnli"]
 [ext_resource type="Resource" uid="uid://tual0fvk6gnb" path="res://Scenes/Locations/IceCreamTruck/_Workaround_.tres" id="3_whayp"]
 [ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="4_1j2v3"]
-[ext_resource type="Resource" uid="uid://to1fgw1famii" path="res://Scenes/Locations/IceCreamTruck/TrashCan.tres" id="5_1hnli"]
+[ext_resource type="Resource" uid="uid://dh7db422dy3xd" path="res://Scenes/Locations/TrashCan.tres" id="7_nvjxw"]
 
 [resource]
 script = ExtResource("4_1j2v3")
-interactables = Array[ExtResource("2_whayp")]([ExtResource("3_whayp"), ExtResource("3_1hnli"), ExtResource("5_1hnli")])
+interactables = Array[ExtResource("2_whayp")]([ExtResource("3_whayp"), ExtResource("3_1hnli"), ExtResource("7_nvjxw")])
 icons = Array[CompressedTexture2D]([ExtResource("1_wih6p")])
 mult_factor = 0.25
 mult_type = 1

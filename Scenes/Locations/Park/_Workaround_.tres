@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Interactable_Data" format=3 uid="uid://cb7mbisos7qym"]
+
+[ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_hqx4n"]
+[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_gemsv"]
+[ext_resource type="Texture2D" uid="uid://bydldpex1kv72" path="res://Assets/art/Locations/Park.jpg" id="3_fx4yj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqx4n"]
+
+[sub_resource type="Resource" id="Resource_jgy8e"]
+script = ExtResource("2_gemsv")
+hunger = -0.1
+fun = 0.3
+paranoia = 0.2
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_uwpep"]
+script = ExtResource("2_gemsv")
+hunger = -0.2
+fun = 0.2
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_ifx5p"]
+script = ExtResource("2_gemsv")
+happiness = -0.1
+paranoia = 0.2
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_3pka5"]
+script = ExtResource("2_gemsv")
+hunger = 0.2
+happiness = -0.2
+paranoia = 0.2
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[resource]
+script = ExtResource("1_hqx4n")
+is_background = true
+odds = 1.0
+shape = SubResource("RectangleShape2D_hqx4n")
+position = Vector2(-1000, -1000)
+stat_bundle = Array[Object]([SubResource("Resource_jgy8e"), SubResource("Resource_uwpep"), SubResource("Resource_ifx5p"), SubResource("Resource_3pka5")])
+result_texts = Array[String](["Jungle Gym", "Slide", "Scraped Knee", "Eat Dirt"])
+texture = ExtResource("3_fx4yj")
+texture_position = Vector2(1030, 539)
+texture_scale = Vector2(0.63, 0.63)
+metadata/_custom_type_script = "uid://cn81403dij3yf"

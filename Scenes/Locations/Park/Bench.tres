@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_kyv47"]
 [ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_gbj4g"]
-[ext_resource type="Texture2D" uid="uid://8u2cnxhpxwqt" path="res://Assets/art/interactables/Park/Bench.png" id="3_kgs83"]
+[ext_resource type="Texture2D" uid="uid://rtftbcu7vmit" path="res://Assets/art/interactables/Park/Benchv2.png" id="3_gbj4g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gbj4g"]
 size = Vector2(516, 268.5)
@@ -37,7 +37,6 @@ shape = SubResource("RectangleShape2D_gbj4g")
 position = Vector2(51, 788)
 stat_bundle = Array[Object]([SubResource("Resource_kvh7w"), SubResource("Resource_xh8j3"), SubResource("Resource_0nd1l"), SubResource("Resource_5lcjh")])
 result_texts = Array[String](["Sit on Bench", "Man Reading Newspaper", "Homeless Man", "???"])
-texture = ExtResource("3_kgs83")
-texture_position = Vector2(28, -170)
-texture_scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_gbj4g")
+texture_scale = Vector2(1, 1)
 metadata/_custom_type_script = "uid://cn81403dij3yf"

@@ -1,5 +1,15 @@
 extends Node2D
 
+func end():
+	SignalBus.set_music.emit("IceCreamTruck")
+	match GameController.result:
+		"Tantrum":
+			end_tantrum()
+		"Breakdown":
+			end_breakdown()
+		"Win":
+			end_win()
+
 func end_win():
 	%EndWin.visible = true
 	await get_tree().create_timer(2.0).timeout

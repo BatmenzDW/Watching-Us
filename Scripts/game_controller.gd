@@ -77,20 +77,23 @@ func transition_to_main_menu():
 
 static var result : String = ""
 
+func _end_game() -> void:
+	get_tree().change_scene_to_file("res://Scenes/game_end.tscn")
+
 func transition_to_tantrum():
 	if result == "":
-		result = "Child Threw a Tantrum"
-		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
+		result = "Tantrum"
+		_end_game()
 
 func transition_to_breakdown():
 	if result == "":
-		result = "You had a Breakdown"
-		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
+		result = "Breakdown"
+		_end_game()
 
 func transition_to_win():
 	if result == "":
-		result = "You made it home safely"
-		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
+		result = "Win"
+		_end_game()
 
 func _on_interact() -> void:
 	interacts_count += 1

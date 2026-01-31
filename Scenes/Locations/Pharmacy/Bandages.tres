@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_1nn5j"]
 [ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_0ousc"]
-[ext_resource type="Texture2D" uid="uid://cd0rabw5tt075" path="res://Assets/art/interactables/Pharmacy/Bandages_Pirate_Jam_Prop.png" id="3_1nn5j"]
+[ext_resource type="Texture2D" uid="uid://f2t3v13mqqxc" path="res://Assets/art/interactables/Pharmacy/Bandages_Pirate_Jam_Prop2.png" id="3_1nn5j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1nn5j"]
 size = Vector2(169, 181)
@@ -34,5 +34,5 @@ shape = SubResource("RectangleShape2D_1nn5j")
 position = Vector2(581, 686)
 stat_bundle = Array[ExtResource("2_0ousc")]([SubResource("Resource_dwne8"), SubResource("Resource_u60a2"), SubResource("Resource_7hrpr"), SubResource("Resource_8r3fy")])
 texture = ExtResource("3_1nn5j")
-texture_scale = Vector2(0.05, 0.05)
+texture_scale = Vector2(0.5, 0.5)
 metadata/_custom_type_script = "uid://cn81403dij3yf"

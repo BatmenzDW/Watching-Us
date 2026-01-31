@@ -36,6 +36,7 @@ func _set_bar_size(percent: float, bar: MarginContainer):
 	val *= max_size - min_size
 	val += min_size
 	bar.add_theme_constant_override("margin_right", val as int)
+
 func _process(delta: float) -> void:
 	# set hunger bar
 	if abs(_current_hunger - _target_hunger) > target_delta and _current_hunger > 0:
@@ -46,7 +47,7 @@ func _process(delta: float) -> void:
 	
 	# set fun bar
 	if abs(_current_fun - _target_fun) > target_delta and _current_fun > 0:
-		print("Fun: ", _current_fun, " : ", _target_fun)
+		#print("Fun: ", _current_fun, " : ", _target_fun)
 		_set_bar_size(_current_fun, fun)
 	
 		var dif = (_current_fun - _target_fun)

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Location_Data" load_steps=7 format=3 uid="uid://cl5cgq82fowkk"]
+[gd_resource type="Resource" script_class="Location_Data" format=3 uid="uid://cl5cgq82fowkk"]
 
 [ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="1_prbmp"]
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="2_fn02t"]
@@ -6,10 +6,11 @@
 [ext_resource type="Resource" uid="uid://brrh2edscax8k" path="res://Scenes/Locations/Park/Dog.tres" id="4_64npw"]
 [ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="4_88o1j"]
 [ext_resource type="Resource" uid="uid://bwa63gxfl221d" path="res://Scenes/Locations/Park/Bench.tres" id="5_5sco3"]
+[ext_resource type="Resource" uid="uid://cb7mbisos7qym" path="res://Scenes/Locations/Park/_Workaround_.tres" id="6_wewbv"]
 
 [resource]
 script = ExtResource("4_88o1j")
-interactables = Array[ExtResource("2_fn02t")]([ExtResource("3_rn273"), ExtResource("4_64npw"), ExtResource("5_5sco3")])
+interactables = Array[ExtResource("2_fn02t")]([ExtResource("3_rn273"), ExtResource("4_64npw"), ExtResource("5_5sco3"), ExtResource("6_wewbv")])
 icons = Array[CompressedTexture2D]([ExtResource("1_prbmp")])
 mult_factor = 0.25
 mult_type = 2

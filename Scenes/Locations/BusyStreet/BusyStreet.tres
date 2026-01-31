@@ -2,13 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bc5ejm3n8hd17" path="res://Assets/Icons/icon_meat.png" id="1_y24ib"]
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="2_48qvv"]
-[ext_resource type="Resource" uid="uid://bmah51cgipoqo" path="res://Scenes/Locations/BusyStreet/Street.tres" id="3_y1ilr"]
-[ext_resource type="Resource" uid="uid://to1fgw1famii" path="res://Scenes/Locations/IceCreamTruck/TrashCan.tres" id="4_48qvv"]
 [ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="4_wgkkd"]
 
 [resource]
 script = ExtResource("4_wgkkd")
-interactables = Array[ExtResource("2_48qvv")]([ExtResource("3_y1ilr"), ExtResource("4_48qvv")])
 icons = Array[CompressedTexture2D]([ExtResource("1_y24ib")])
 mult_factor = 0.25
 metadata/_custom_type_script = "uid://cw4x4txcmedtn"

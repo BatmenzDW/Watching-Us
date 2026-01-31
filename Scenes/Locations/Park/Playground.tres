@@ -1,16 +1,17 @@
 [gd_resource type="Resource" script_class="Interactable_Data" format=3 uid="uid://dq3j8leioaftf"]
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_jgy8e"]
-[ext_resource type="Texture2D" uid="uid://bydldpex1kv72" path="res://Assets/art/Locations/Park.jpg" id="2_2ocrq"]
 [ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_hgd07"]
+[ext_resource type="Texture2D" uid="uid://dj5pk0au60mls" path="res://Assets/art/interactables/Park/JungleGym.png" id="3_hgd07"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
-size = Vector2(773.5, 443)
+size = Vector2(783, 469)
 
 [sub_resource type="Resource" id="Resource_jgy8e"]
 script = ExtResource("2_hgd07")
 hunger = -0.1
 fun = 0.3
+happiness = 0.1
 paranoia = 0.2
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
@@ -18,10 +19,14 @@ metadata/_custom_type_script = "uid://cbpqxd0g56685"
 script = ExtResource("2_hgd07")
 hunger = -0.2
 fun = 0.2
+happiness = 0.1
+paranoia = 0.1
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [sub_resource type="Resource" id="Resource_ifx5p"]
 script = ExtResource("2_hgd07")
+hunger = -0.1
+fun = -0.1
 happiness = -0.1
 paranoia = 0.2
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
@@ -29,19 +34,19 @@ metadata/_custom_type_script = "uid://cbpqxd0g56685"
 [sub_resource type="Resource" id="Resource_3pka5"]
 script = ExtResource("2_hgd07")
 hunger = 0.2
+fun = 0.1
 happiness = -0.2
 paranoia = 0.2
 metadata/_custom_type_script = "uid://cbpqxd0g56685"
 
 [resource]
 script = ExtResource("1_jgy8e")
-is_background = true
 odds = 1.0
 shape = SubResource("RectangleShape2D_8wb5a")
-position = Vector2(464.25, 510.5)
+position = Vector2(460, 495)
 stat_bundle = Array[Object]([SubResource("Resource_jgy8e"), SubResource("Resource_uwpep"), SubResource("Resource_ifx5p"), SubResource("Resource_3pka5")])
 result_texts = Array[String](["Jungle Gym", "Slide", "Scraped Knee", "Eat Dirt"])
-texture = ExtResource("2_2ocrq")
-texture_position = Vector2(1030, 539)
+texture = ExtResource("3_hgd07")
+texture_position = Vector2(4, 24)
 texture_scale = Vector2(0.63, 0.63)
 metadata/_custom_type_script = "uid://cn81403dij3yf"

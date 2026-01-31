@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_amrgf"]
 [ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_u4pua"]
-[ext_resource type="Texture2D" uid="uid://c50jrqir83kk3" path="res://Assets/art/interactables/Pharmacy/Tummy_Ache_Meds_Pirate_Jam_Prop.png" id="3_amrgf"]
+[ext_resource type="Texture2D" uid="uid://dnxbcc2oe5xdq" path="res://Assets/art/interactables/Pharmacy/Tummy_Ache_Meds_Pirate_Jam_Propv2.png" id="3_amrgf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
 size = Vector2(96, 181)
@@ -34,7 +34,7 @@ shape = SubResource("RectangleShape2D_8wb5a")
 position = Vector2(737, 688)
 stat_bundle = Array[ExtResource("2_u4pua")]([SubResource("Resource_dwne8"), SubResource("Resource_u60a2"), SubResource("Resource_7hrpr"), SubResource("Resource_8r3fy")])
 texture = ExtResource("3_amrgf")
-texture_scale = Vector2(0.05, 0.05)
+texture_scale = Vector2(0.5, 0.5)
 hover_audio_key = "PillBottle"
 use_audio_key = "Swallow"
 metadata/_custom_type_script = "uid://cn81403dij3yf"
