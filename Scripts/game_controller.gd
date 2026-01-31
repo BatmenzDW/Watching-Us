@@ -116,5 +116,6 @@ func _leave_location() -> void:
 	next_button.visible = false
 	location.player.set_child_ui_visible(false)
 	location.visible = false
+	location.text_box.display_text("")
 	transition_to_map()
 	InputState.set_state(InputState.State.MAP)
