@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Interactable_Data" format=3 uid="uid://c42yxn0bvri2"]
+
+[ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_h4554"]
+[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_r17xe"]
+[ext_resource type="Texture2D" uid="uid://cxuactjl6b804" path="res://Assets/art/interactables/Ice_Cream_Truck/Trash_Pirate_Jam_Prop.png" id="3_h4554"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
+size = Vector2(159, 204)
+
+[sub_resource type="Resource" id="Resource_t5mse"]
+script = ExtResource("2_r17xe")
+fun = -0.1
+paranoia = -0.2
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_7k7w0"]
+script = ExtResource("2_r17xe")
+fun = 0.1
+paranoia = 0.2
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_nbfgi"]
+script = ExtResource("2_r17xe")
+happiness = -0.3
+paranoia = 0.2
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_5odjp"]
+script = ExtResource("2_r17xe")
+fun = 0.2
+paranoia = 0.3
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[resource]
+script = ExtResource("1_h4554")
+odds = 1.0
+shape = SubResource("RectangleShape2D_8wb5a")
+position = Vector2(1806, 712)
+stat_bundle = Array[ExtResource("2_r17xe")]([SubResource("Resource_t5mse"), SubResource("Resource_7k7w0"), SubResource("Resource_nbfgi"), SubResource("Resource_5odjp")])
+result_texts = Array[String](["Throw Away Wrapper", "Dig Through Trash", "Ate Something?", "Racoon In the Trash"])
+texture = ExtResource("3_h4554")
+texture_scale = Vector2(0.075, 0.075)
+metadata/_custom_type_script = "uid://cn81403dij3yf"
