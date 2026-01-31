@@ -9,8 +9,8 @@ script = ExtResource("1_c8sjj")
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=805753388]
 offset_left = 61.0
 offset_top = 799.0
-offset_right = 661.0
-offset_bottom = 1049.0
+offset_right = 761.0
+offset_bottom = 999.0
 size_flags_horizontal = 4
 size_flags_vertical = 8
 
