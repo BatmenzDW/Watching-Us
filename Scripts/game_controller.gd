@@ -8,7 +8,8 @@ class_name GameController
 @onready var location: Location = $Location
 @onready var next_button: NextButton = $NextButton
 
-var interacts_count : int = 0
+static var total_interactables : int = 0
+static var interacts_count : int = 0
 
 static var Instance : GameController
 
@@ -49,11 +50,13 @@ func transition_to_location(selected_location: String) -> void:
 		print("Could not find location: ", selected_location)
 		selected_location = location_index.keys()[0]
 	
+	total_interactables = 0
 	%MapController.hide()
 	var data : Location_Data = location_index[selected_location]
 	var inters : Array[Interactable_Data] = data.interactables
 	for inte in inters:
-		location.load_data(inte)
+		if location.load_data(inte):
+			total_interactables += 1
 	
 	next_button.setup(data.mult_factor, data.mult_type)
 	
@@ -86,6 +89,7 @@ static var result : String = ""
 
 func _end_game() -> void:
 	location.player.set_child_ui_visible(false)
+	location.unload()
 	%GameEnd.end()
 
 func transition_to_tantrum():

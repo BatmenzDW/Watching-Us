@@ -13,5 +13,4 @@ script = ExtResource("4_88o1j")
 interactables = Array[ExtResource("2_fn02t")]([ExtResource("3_rn273"), ExtResource("4_64npw"), ExtResource("5_5sco3"), ExtResource("6_wewbv")])
 icons = Array[CompressedTexture2D]([ExtResource("1_prbmp")])
 mult_factor = 0.25
-mult_type = 2
 metadata/_custom_type_script = "uid://cw4x4txcmedtn"

@@ -35,5 +35,7 @@ func roll_credits():
 	%ThirdParty6.visible = true
 	await get_tree().create_timer(4.0).timeout
 	%ThirdParty6.visible = false
-	%GameController.transition_state("mainmenu","")
+	#%GameController.transition_state("mainmenu","")
 	%BackgroundCredits.visible = false
+	
+	get_tree().change_scene_to_file("res://Scenes/Game.tscn")

@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Interactable_Data" format=3 uid="uid://bvutlvprc65av"]
+
+[ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_7l28w"]
+[ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_0tw6p"]
+[ext_resource type="Texture2D" uid="uid://cow85ge6feawq" path="res://Assets/art/interactables/Loitering_Person_Pirate_Jam_Characterv2.png" id="3_7l28w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
+size = Vector2(141, 362)
+
+[sub_resource type="Resource" id="Resource_t5mse"]
+script = ExtResource("2_0tw6p")
+fun = -0.1
+paranoia = 0.2
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_7k7w0"]
+script = ExtResource("2_0tw6p")
+fun = 0.1
+paranoia = 0.3
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_nbfgi"]
+script = ExtResource("2_0tw6p")
+happiness = -0.3
+paranoia = 0.2
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[sub_resource type="Resource" id="Resource_5odjp"]
+script = ExtResource("2_0tw6p")
+fun = 0.2
+paranoia = 0.3
+metadata/_custom_type_script = "uid://cbpqxd0g56685"
+
+[resource]
+script = ExtResource("1_7l28w")
+odds = 0.7
+shape = SubResource("RectangleShape2D_8wb5a")
+position = Vector2(253, 673)
+stat_bundle = Array[ExtResource("2_0tw6p")]([SubResource("Resource_t5mse"), SubResource("Resource_7k7w0"), SubResource("Resource_nbfgi"), SubResource("Resource_5odjp")])
+result_texts = Array[String](["", "Somebody's Watching Us", "", ""])
+texture = ExtResource("3_7l28w")
+texture_scale = Vector2(0.4, 0.4)
+metadata/_custom_type_script = "uid://cn81403dij3yf"

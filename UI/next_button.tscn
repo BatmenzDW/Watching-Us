@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b7eqbp3blodqq"]
+[gd_scene format=3 uid="uid://b7eqbp3blodqq"]
 
 [ext_resource type="Script" uid="uid://cfm7shs2firem" path="res://UI/next_button.gd" id="1_8h5vb"]
 [ext_resource type="Texture2D" uid="uid://b7pe4ij7m2i1a" path="res://Assets/Icons/green_icon_play.png" id="1_dyaqy"]
@@ -14,35 +14,35 @@ keycode = 4194309
 [sub_resource type="Shortcut" id="Shortcut_y73sj"]
 events = [SubResource("InputEventKey_dyaqy")]
 
-[node name="Next Button" type="VBoxContainer"]
+[node name="Next Button" type="VBoxContainer" unique_id=359120530]
 z_index = 4
 offset_right = 16.0
 offset_bottom = 20.0
 alignment = 1
 script = ExtResource("1_8h5vb")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=239618900]
 layout_mode = 2
 theme_override_constants/separation = 0
 alignment = 1
 
-[node name="Label" type="Label" parent="HBoxContainer"]
-custom_minimum_size = Vector2(175, 0)
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=944081621]
 layout_mode = 2
 theme = ExtResource("2_iq6o6")
 theme_override_font_sizes/font_size = 64
-text = "1.00x - "
+text = "---"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=48192141]
 layout_mode = 2
 texture = ExtResource("1_y73sj")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="TextureButton" type="TextureButton" parent="."]
-custom_minimum_size = Vector2(150, 150)
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1411030019]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 disabled = true
 shortcut = SubResource("Shortcut_y73sj")
@@ -51,7 +51,7 @@ texture_pressed = ExtResource("2_y73sj")
 texture_disabled = ExtResource("3_8h5vb")
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="TextureButton"]
+[node name="Label" type="Label" parent="TextureButton" unique_id=5231046]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

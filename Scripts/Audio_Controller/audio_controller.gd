@@ -16,7 +16,7 @@ const lookup : Dictionary[String, AudioStreamMP3] = {
 	"WhichOne": preload("uid://hp2qj3i01d7c")
 }
 
-@export var min_interval : float = 0.1
+@export var min_interval : float = 0.05
 
 var last_timestamp : float = 0.0
 
@@ -24,7 +24,7 @@ func _ready() -> void:
 	SignalBus.play_audio.connect(_play_audio)
 
 func _play_audio(key : String) -> void:
-	print("audio signal with key: " + key)
+	#print("audio signal with key: " + key)
 	var current = Time.get_unix_time_from_system()
 	if lookup.has(key) and not self.is_playing() and last_timestamp + min_interval <= current:
 		stream = lookup[key]
@@ -33,6 +33,3 @@ func _play_audio(key : String) -> void:
 	
 	elif not lookup.has(key):
 		print("Unknown audio key: ", key)
-	
-	else:
-		print("Not enough time since last sfx play: ", last_timestamp, " : ", current)

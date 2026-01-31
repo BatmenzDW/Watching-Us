@@ -63,6 +63,7 @@ func _process(_delta):
 			# Mouse moved to a different cell or entered/exited the grid
 			# Reset previous hovered cell's appearance (if any)
 			%CursorMap.set_cell(hovered_cell, -1)
+			SignalBus.play_audio.emit("Menu_1")
 		#if the hovered_cell is not the current cell and we do a dictianry lookup and it is a location, then do a hover over effect.
 		if (hovered_cell != current_cell and dict_tile.check_tile_dictionary(current_cell) != null):
 			var location_source_id = dict_location.check_source_id(dict_tile.check_tile_dictionary(current_cell),current_cell)
@@ -87,7 +88,7 @@ func _input(event):
 		if(path_dictionary_exists != null):
 			for path_location in path_dictionary_exists:
 				if(current_cell == path_location):
-					print(path_location.y)
 					selected_location = dict_tile.check_tile_dictionary(path_location)
 					_node_traversal(current_cell, selected_location)
 					#_map_controller_end_active_state(selected_location)
+					SignalBus.play_audio.emit("Menu_2")

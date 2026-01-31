@@ -5,10 +5,11 @@
 [ext_resource type="Resource" uid="uid://dphw0482vyi5y" path="res://Scenes/Locations/Sidewalk/_Workaround_.tres" id="3_4em7n"]
 [ext_resource type="Resource" uid="uid://c5nowqnna30bu" path="res://Scenes/Locations/TrashCan.tres" id="4_4em7n"]
 [ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="4_xsw3j"]
+[ext_resource type="Resource" uid="uid://bvutlvprc65av" path="res://Scenes/Locations/Loiterer.tres" id="5_0m437"]
 
 [resource]
 script = ExtResource("4_xsw3j")
-interactables = Array[ExtResource("2_ywpug")]([ExtResource("3_4em7n"), ExtResource("4_4em7n")])
+interactables = Array[ExtResource("2_ywpug")]([ExtResource("3_4em7n"), ExtResource("4_4em7n"), ExtResource("5_0m437")])
 icons = Array[CompressedTexture2D]([ExtResource("1_pmng8")])
 mult_factor = 0.25
 metadata/_custom_type_script = "uid://cw4x4txcmedtn"

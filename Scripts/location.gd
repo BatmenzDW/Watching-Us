@@ -13,7 +13,7 @@ static var text_box : TextResults
 func _ready() -> void:
 	text_box = text_results
 
-func load_data(data : Interactable_Data, is_child : bool = false):
+func load_data(data : Interactable_Data, is_child : bool = false) -> bool:
 	var interactable : Interactable
 	var sprite : Sprite2D
 	
@@ -21,7 +21,7 @@ func load_data(data : Interactable_Data, is_child : bool = false):
 	
 	if not data.is_background and data.odds < 1.0:
 		if randf() < data.odds: # random chance to spawn
-			return
+			return false
 	
 	if !background and data.is_background and not is_child:
 		background = Sprite2D.new()
@@ -48,7 +48,7 @@ func load_data(data : Interactable_Data, is_child : bool = false):
 		load_data(child, true)
 	
 	if is_child:
-		return
+		return false
 	
 	if not data.is_background:
 		sprite = Sprite2D.new()
@@ -62,6 +62,7 @@ func load_data(data : Interactable_Data, is_child : bool = false):
 		sprite.texture = data.texture
 		sprite.position = data.texture_position
 		sprite.scale = data.texture_scale
+	return true
 
 func unload() -> void:
 	%ParanoiaBar.visible = false

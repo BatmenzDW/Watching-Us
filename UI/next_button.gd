@@ -44,12 +44,20 @@ func setup(mult_val : float, type : Stats.Stat) -> void:
 func reset() -> void:
 	next_button.disabled = true
 	progress_label.visible = true
-	mult_label.text = "%.2fx - " % 1.0
+	var times : float = mult * (1 - GameController.interacts_count*1.0/GameController.total_interactables)
+	print("reset Times: ", times)
+	if _type == Stats.Stat.PARANOIA:
+		mult_label.text = "+".repeat(floor(times * 10))
+	else:
+		mult_label.text = "-".repeat(floor(times * 10))
 
 func on_interactable_interact(new_count : int) -> void:
-	#print(new_count)
-	var times : float = mult * new_count + 1.0
-	mult_label.text = "%.2fx - " % times
+	var times : float = mult * (1 - new_count*1.0/GameController.total_interactables)
+	print("on interact Times: ", times)
+	if _type == Stats.Stat.PARANOIA:
+		mult_label.text = "+".repeat(floor(times * 10))
+	else:
+		mult_label.text = "-".repeat(floor(times * 10))
 	
 	if new_count >= 1:
 		next_button.disabled = false
@@ -57,25 +65,17 @@ func on_interactable_interact(new_count : int) -> void:
 
 func _on_texture_button_pressed() -> void:
 	if InputState.allow_input(InputState.State.LEVEL):
+		var new_stats : Stats = Stats.new()
+		var times : float = mult * (1 - GameController.interacts_count*1.0/GameController.total_interactables)
+		print("go next Times: ", times)
+		match _type:
+			Stats.Stat.HAPPINESS:
+				new_stats.happiness = -times
+			Stats.Stat.HUNGER:
+				new_stats.hunger = -times
+			Stats.Stat.FUN:
+				new_stats.fun = -times
+			Stats.Stat.PARANOIA:
+				new_stats.paranoia = times
+		SignalBus.apply_stats.emit(new_stats)
 		go_next.emit()
-
-func _ready() -> void:
-	SignalBus.apply_stats.connect(_on_apply_stats)
-
-func _on_apply_stats(stats: Stats, is_mult : bool = false) -> void:
-	# if recursive call
-	if is_mult:
-		return
-	
-	var new_stats : Stats = Stats.new()
-	match _type:
-		Stats.Stat.HAPPINESS:
-			new_stats.happiness = stats.happiness * mult
-		Stats.Stat.HUNGER:
-			new_stats.hunger = stats.hunger * mult
-		Stats.Stat.FUN:
-			new_stats.fun = stats.fun * mult
-		Stats.Stat.PARANOIA:
-			new_stats.paranoia = stats.paranoia * mult
-
-	SignalBus.apply_stats.emit(new_stats, true)

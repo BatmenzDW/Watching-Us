@@ -41,7 +41,7 @@ enum Rarity
 }
 
 func _apply_values(stats: Stats) -> void:
-	SignalBus.apply_stats.emit(stats, false)
+	SignalBus.apply_stats.emit(stats)
 	preview.check_setup(stat_bundle, result_index, result_texts[result_index])
 
 func set_collision_shape(shape : Shape2D) -> void:

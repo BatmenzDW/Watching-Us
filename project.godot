@@ -40,6 +40,7 @@ window/stretch/aspect="ignore"
 [global_group]
 
 location_elements=""
+line2d=""
 
 [input]
 

@@ -2,16 +2,15 @@
 
 [ext_resource type="Script" uid="uid://cgt043qnx762a" path="res://Scripts/location.gd" id="1_tx5l4"]
 [ext_resource type="PackedScene" uid="uid://b73o7gyasv71e" path="res://UI/ParanoiaBar.tscn" id="4_a48fp"]
-[ext_resource type="Texture2D" uid="uid://bydldpex1kv72" path="res://Assets/art/Locations/Park.jpg" id="5_7gg0f"]
+[ext_resource type="Texture2D" uid="uid://co746i3s4gy8h" path="res://Assets/art/Locations/sidewalk2.jpg" id="5_643fp"]
 [ext_resource type="PackedScene" uid="uid://v7eeb3wbfggi" path="res://Objects/Characters/Player.tscn" id="5_mbtcl"]
 [ext_resource type="Script" uid="uid://b4j3em1jewc02" path="res://Objects/interactable.gd" id="6_tx5l4"]
-[ext_resource type="Texture2D" uid="uid://begr3ummu58p5" path="res://Assets/art/interactables/Pharmacy/Anxiety_Meds_Pirate_Jam_Prop.png" id="7_643fp"]
-[ext_resource type="Texture2D" uid="uid://nshaandcob5w" path="res://Assets/art/interactables/Pharmacy/Anxiety_Meds_Pirate_Jam_Propv2.png" id="8_a48fp"]
+[ext_resource type="Texture2D" uid="uid://cow85ge6feawq" path="res://Assets/art/interactables/Loitering_Person_Pirate_Jam_Characterv2.png" id="7_643fp"]
 [ext_resource type="PackedScene" uid="uid://bpi2lamadyggp" path="res://UI/InteractablePreview.tscn" id="8_cv846"]
 [ext_resource type="PackedScene" uid="uid://dfcidfk2qy186" path="res://Scenes/text_results.tscn" id="9_cv846"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_643fp"]
-size = Vector2(220, 163)
+size = Vector2(141, 362)
 
 [node name="Location" type="Node2D" unique_id=1758127206]
 script = ExtResource("1_tx5l4")
@@ -32,13 +31,13 @@ metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="." unique_id=500700340]
 position = Vector2(957, 539)
-scale = Vector2(0.63, 0.63)
-texture = ExtResource("5_7gg0f")
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("5_643fp")
 metadata/_edit_lock_ = true
 
 [node name="Interactable" type="Area2D" parent="." unique_id=1021579816 groups=["location_elements"]]
 visible = false
-position = Vector2(1734, 703)
+position = Vector2(253, 673)
 script = ExtResource("6_tx5l4")
 metadata/_custom_type_script = "uid://b4j3em1jewc02"
 
@@ -56,12 +55,8 @@ color = Color(0.96, 0, 0.94399977, 1)
 shape = SubResource("RectangleShape2D_643fp")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactable" unique_id=135915466]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("7_643fp")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Interactable" unique_id=669340811]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_a48fp")
 
 [node name="TextResults" parent="." unique_id=1928011639 instance=ExtResource("9_cv846")]
 unique_name_in_owner = true

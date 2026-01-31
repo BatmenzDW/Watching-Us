@@ -46,7 +46,7 @@ func reset_stats() -> void:
 	paranoia = paranoia_init
 	setup_stats()
 
-func _apply_stats(stats : Stats, _is_mult : bool = false) -> void:
+func _apply_stats(stats : Stats) -> void:
 	hunger += stats.hunger
 	fun += stats.fun
 	happiness += stats.happiness

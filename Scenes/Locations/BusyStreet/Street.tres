@@ -32,6 +32,6 @@ shape = SubResource("RectangleShape2D_8wb5a")
 position = Vector2(-1000, -1000)
 stat_bundle = Array[ExtResource("2_ijjxc")]([SubResource("Resource_t5mse"), SubResource("Resource_7k7w0"), SubResource("Resource_nbfgi"), SubResource("Resource_5odjp")])
 texture = ExtResource("3_g0a7r")
-texture_position = Vector2(1030, 539)
+texture_position = Vector2(957, 539)
 texture_scale = Vector2(1, 1)
 metadata/_custom_type_script = "uid://cn81403dij3yf"

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="1_x1vtu"]
 [ext_resource type="Script" uid="uid://cbpqxd0g56685" path="res://Resources/Stats.gd" id="2_iy0ai"]
-[ext_resource type="Texture2D" uid="uid://gwyfpg4b75df" path="res://Assets/art/Locations/sidewalk.jpg" id="3_xjt27"]
+[ext_resource type="Texture2D" uid="uid://co746i3s4gy8h" path="res://Assets/art/Locations/sidewalk2.jpg" id="3_x1vtu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wb5a"]
 
@@ -31,7 +31,7 @@ odds = 1.0
 shape = SubResource("RectangleShape2D_8wb5a")
 position = Vector2(-1000, -1000)
 stat_bundle = Array[ExtResource("2_iy0ai")]([SubResource("Resource_t5mse"), SubResource("Resource_7k7w0"), SubResource("Resource_nbfgi"), SubResource("Resource_5odjp")])
-texture = ExtResource("3_xjt27")
+texture = ExtResource("3_x1vtu")
 texture_position = Vector2(957, 539)
 texture_scale = Vector2(1.8, 1.8)
 metadata/_custom_type_script = "uid://cn81403dij3yf"

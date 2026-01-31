@@ -4,11 +4,12 @@
 [ext_resource type="Script" uid="uid://cn81403dij3yf" path="res://Resources/interactable_data.gd" id="2_ladvn"]
 [ext_resource type="Resource" uid="uid://b17t37whqigqj" path="res://Scenes/Locations/FireStation/Station.tres" id="3_blpyb"]
 [ext_resource type="Resource" uid="uid://c5nowqnna30bu" path="res://Scenes/Locations/TrashCan.tres" id="4_feppe"]
+[ext_resource type="Resource" uid="uid://bvutlvprc65av" path="res://Scenes/Locations/Loiterer.tres" id="5_uhy0w"]
 [ext_resource type="Script" uid="uid://cw4x4txcmedtn" path="res://Resources/Location_Data.gd" id="6_df62t"]
 
 [resource]
 script = ExtResource("6_df62t")
-interactables = Array[ExtResource("2_ladvn")]([ExtResource("3_blpyb"), ExtResource("4_feppe")])
+interactables = Array[ExtResource("2_ladvn")]([ExtResource("3_blpyb"), ExtResource("4_feppe"), ExtResource("5_uhy0w")])
 icons = Array[CompressedTexture2D]([ExtResource("1_t13pp")])
 mult_factor = 0.25
 metadata/_custom_type_script = "uid://cw4x4txcmedtn"
